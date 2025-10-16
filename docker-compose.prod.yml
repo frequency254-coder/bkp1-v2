@@ -1,0 +1,19 @@
+services:
+  web-1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: prod   # 👈 very important
+#    image: frequency-ent-web:prod
+    env_file:
+      - .env
+    volumes:
+      - node_modules:/usr/src/app/node_modules
+      - workDir:/usr/src/app
+    ports:
+      - "4000:5000" # or "3000:3000" depending on server.js
+    restart: unless-stopped
+volumes:
+ node_modules:
+ workDir:
+

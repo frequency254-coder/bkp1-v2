@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Pro ISP — Internet Packages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Fonts are optional; system fonts fallback keeps it light -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ------------------------------
+           Base / Reset-ish
+        ------------------------------ */
+        * { box-sizing: border-box; }
+        html, body { margin:0; padding:0; }
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            color: #333;
+            background: #f5f7fa;
+            transition: background .4s ease, color .2s ease;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        /* ------------------------------
+           Layout
+        ------------------------------ */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+        header {
+            position: relative;
+            padding: 28px 0 22px;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+        header .bg-gradient {
+            position:absolute; inset:0; z-index:0;
+            background: linear-gradient(135deg, #0a74da, #064a96);
+        }
+        header .pattern {
+            position:absolute; inset:0; opacity:.08; z-index:0;
+            background-image: radial-gradient(white 1px, transparent 1px);
+            background-size: 12px 12px;
+        }
+        header .content { position:relative; z-index:1; }
+        header .brand {
+            display:flex; align-items:center; justify-content:center; gap:12px;
+        }
+        header img.logo { width:112px; height:112px; object-fit:contain; border-radius:22px; background: rgba(255,255,255,.15); }
+        header h1 { margin:8px 0 4px; font-size: 28px; font-weight: 700; }
+        header p { margin:0; opacity:.95; }
+
+        .toolbar {
+            display:flex; flex-wrap:wrap; gap:12px; justify-content:center;
+            padding: 14px 0 6px;
+        }
+        .toolbar .btn, .toolbar select {
+            font: inherit;
+            border-radius: 10px;
+            border: 1px solid rgba(0,0,0,.08);
+            padding: 10px 14px;
+            background: #fff;
+            cursor: pointer;
+            min-height: 40px;
+        }
+        .toolbar .btn.primary {
+            background: #0a74da; color:#fff; border: none;
+            box-shadow: 0 6px 14px rgba(10,116,218,.25);
+            transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+        }
+        .toolbar .btn.primary:hover { transform: translateY(-1px); }
+        .toolbar .btn.primary:active { transform: translateY(0); filter:brightness(.95); }
+        .toolbar .swatches { display:flex; gap:8px; align-items:center; }
+        .swatch {
+            width: 22px; height:22px; border-radius: 50%; border: 2px solid rgba(0,0,0,.12);
+            cursor:pointer; display:inline-block;
+        }
+
+        /* ------------------------------
+           Packages grid
+        ------------------------------ */
+        .packages {
+            display:grid; gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            padding: 20px 0 8px;
+        }
+        .card {
+            position:relative;
+            background:#fff; border-radius: 14px; overflow:hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,.08);
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 10px 26px rgba(0,0,0,.12); }
+        .card::before {
+            content:""; position:absolute; left:0; top:0; width:100%; height:6px;
+            background: #0a74da; /* will be overridden per plan color */
+        }
+        .card-body { padding: 16px 16px 18px; text-align:center; }
+        .title { font-size: 18px; font-weight:700; margin: 6px 0; }
+        .price { font-size: 20px; font-weight: 700; margin: 2px 0 12px; }
+        .meta { list-style:none; padding:0; margin:0 0 14px; color:#444; font-size:14px; }
+        .meta li { padding: 6px 0; border-top:1px dashed rgba(0,0,0,.08); }
+        .meta li:first-child { border-top: none; }
+
+        .pill {
+            display:inline-block; font-size:12px; font-weight:700;
+            padding: 6px 10px; border-radius: 999px; margin-bottom: 10px;
+            color: #fff; background: #0a74da;
+        }
+
+        .ribbon {
+            position:absolute; right:-40px; top:14px; transform: rotate(35deg);
+            background: #ff9800; color:#fff; font-weight:700; font-size: 12px;
+            padding: 6px 48px; box-shadow: 0 8px 16px rgba(0,0,0,.2);
+        }
+
+        .btn {
+            display:inline-block; border:none; border-radius: 10px; cursor:pointer;
+            padding: 10px 16px; font-weight:700; font-size: 14px;
+            background:#0a74da; color:#fff;
+            box-shadow: 0 6px 14px rgba(10,116,218,.25);
+            transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+        }
+        .btn:hover { transform: translateY(-1px); }
+        .btn:active { transform: translateY(0); filter: brightness(.95); }
+
+        footer {
+            text-align:center; padding: 18px 0; margin-top: 28px;
+            color:#fff; background: linear-gradient(135deg, #0a74da, #064a96);
+        }
+
+        /* ------------------------------
+           Modal
+        ------------------------------ */
+        .modal {
+            display:none; position:fixed; inset:0; z-index:1000;
+            background: rgba(0,0,0,.5);
+            align-items:center; justify-content:center; padding: 18px;
+        }
+        .modal.open { display:flex; }
+        .modal-content {
+            width: 100%; max-width: 380px; background:#fff; border-radius: 14px; overflow:hidden;
+            box-shadow: 0 16px 40px rgba(0,0,0,.22); animation: pop .18s ease-out;
+        }
+        @keyframes pop { from { transform: scale(.96); opacity:.6; } to { transform: scale(1); opacity:1; } }
+        .modal-head { padding: 14px 16px; font-weight:700; background: #0a74da; color:#fff; }
+        .modal-body { padding: 16px; }
+        .close-x { position:absolute; right:16px; top:12px; font-size:22px; line-height:1; cursor:pointer; color:#fff; }
+
+        .field {
+            margin: 8px 0 14px;
+        }
+        .field label { display:block; font-size: 13px; margin-bottom: 6px; color:#444; }
+        .field input {
+            width:100%; padding: 10px 12px; border-radius:10px; border:1px solid #cfd8e3; font: inherit;
+            transition: box-shadow .2s ease, border-color .2s ease;
+        }
+        .field input:focus { outline: none; border-color: #0a74da; box-shadow: 0 0 0 3px rgba(10,116,218,.15); }
+
+        .actions { display:flex; gap:10px; }
+        .btn.ghost { background:#f1f5f9; color:#0a74da; box-shadow:none; }
+
+        /* ------------------------------
+           Theme System (10 themes)
+           (applies to header gradient, buttons, pills, ribbons)
+        ------------------------------ */
+        /* Defaults (theme-1) already in base */
+
+        .theme-2 header .bg-gradient { background: linear-gradient(135deg, #ffb020, #ff6b00); }
+        .theme-2 .btn, .theme-2 .pill, .theme-2 .toolbar .btn.primary { background:#ff8a00; }
+        .theme-2 .ribbon { background:#e65100; }
+        .theme-2 body { background:#fff9f0; }
+
+        .theme-3 header .bg-gradient { background: linear-gradient(135deg, #22c55e, #15803d); }
+        .theme-3 .btn, .theme-3 .pill, .theme-3 .toolbar .btn.primary { background:#16a34a; }
+        .theme-3 .ribbon { background:#059669; }
+        .theme-3 body { background:#f0fdf4; }
+
+        .theme-4 header .bg-gradient { background: linear-gradient(135deg, #6366f1, #4338ca); }
+        .theme-4 .btn, .theme-4 .pill, .theme-4 .toolbar .btn.primary { background:#4f46e5; }
+        .theme-4 .ribbon { background:#7c3aed; }
+        .theme-4 body { background:#eef2ff; }
+
+        .theme-5 header .bg-gradient { background: linear-gradient(135deg, #ec4899, #db2777); }
+        .theme-5 .btn, .theme-5 .pill, .theme-5 .toolbar .btn.primary { background:#db2777; }
+        .theme-5 .ribbon { background:#be185d; }
+        .theme-5 body { background:#fff0f6; }
+
+        .theme-6 header .bg-gradient { background: linear-gradient(135deg, #06b6d4, #0e7490); }
+        .theme-6 .btn, .theme-6 .pill, .theme-6 .toolbar .btn.primary { background:#0891b2; }
+        .theme-6 .ribbon { background:#0ea5b9; }
+        .theme-6 body { background:#ecfeff; }
+
+        .theme-7 header .bg-gradient { background: linear-gradient(135deg, #ef4444, #b91c1c); }
+        .theme-7 .btn, .theme-7 .pill, .theme-7 .toolbar .btn.primary { background:#dc2626; }
+        .theme-7 .ribbon { background:#b91c1c; }
+        .theme-7 body { background:#fff1f2; }
+
+        .theme-8 header .bg-gradient { background: linear-gradient(135deg, #14b8a6, #0f766e); }
+        .theme-8 .btn, .theme-8 .pill, .theme-8 .toolbar .btn.primary { background:#0d9488; }
+        .theme-8 .ribbon { background:#0ea5a3; }
+        .theme-8 body { background:#f0fdfa; }
+
+        .theme-9 header .bg-gradient { background: linear-gradient(135deg, #a855f7, #7e22ce); }
+        .theme-9 .btn, .theme-9 .pill, .theme-9 .toolbar .btn.primary { background:#9333ea; }
+        .theme-9 .ribbon { background:#7c3aed; }
+        .theme-9 body { background:#faf5ff; }
+
+        .theme-10 header .bg-gradient { background: linear-gradient(135deg, #0ea5e9, #0369a1); }
+        .theme-10 .btn, .theme-10 .pill, .theme-10 .toolbar .btn.primary { background:#0284c7; }
+        .theme-10 .ribbon { background:#0369a1; }
+        .theme-10 body { background:#f0f9ff; }
+
+        /* swatch colors */
+        .sw-1 { background: linear-gradient(135deg, #0a74da, #064a96); }
+        .sw-2 { background: linear-gradient(135deg, #ffb020, #ff6b00); }
+        .sw-3 { background: linear-gradient(135deg, #22c55e, #15803d); }
+        .sw-4 { background: linear-gradient(135deg, #6366f1, #4338ca); }
+        .sw-5 { background: linear-gradient(135deg, #ec4899, #db2777); }
+        .sw-6 { background: linear-gradient(135deg, #06b6d4, #0e7490); }
+        .sw-7 { background: linear-gradient(135deg, #ef4444, #b91c1c); }
+        .sw-8 { background: linear-gradient(135deg, #14b8a6, #0f766e); }
+        .sw-9 { background: linear-gradient(135deg, #a855f7, #7e22ce); }
+        .sw-10 { background: linear-gradient(135deg, #0ea5e9, #0369a1); }
+
+        /* Card color accents per plan (applied inline by JS for compatibility) */
+    </style>
+</head>
+<body class="theme-1">
+<header>
+    <div class="bg-gradient"></div>
+    <div class="pattern"></div>
+    <div class="content container">
+        <div class="brand">
+            <img class="logo" src="/htmls/IMAGE/download (4).png" alt="Frequency Networks Logo" />
+            <div>
+                <h1>Pro ISP</h1>
+                <p>Fast • Reliable • Affordable Internet</p>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <a class="btn primary" href="#reconnect">Already Paid? Reconnect</a>
+
+            <div class="swatches" aria-label="Theme Swatches">
+                <span>Theme:</span>
+                <span class="swatch sw-1"  onclick="applyTheme(1)"></span>
+                <span class="swatch sw-2"  onclick="applyTheme(2)"></span>
+                <span class="swatch sw-3"  onclick="applyTheme(3)"></span>
+                <span class="swatch sw-4"  onclick="applyTheme(4)"></span>
+                <span class="swatch sw-5"  onclick="applyTheme(5)"></span>
+                <span class="swatch sw-6"  onclick="applyTheme(6)"></span>
+                <span class="swatch sw-7"  onclick="applyTheme(7)"></span>
+                <span class="swatch sw-8"  onclick="applyTheme(8)"></span>
+                <span class="swatch sw-9"  onclick="applyTheme(9)"></span>
+                <span class="swatch sw-10" onclick="applyTheme(10)"></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <section aria-labelledby="plans">
+        <h2 id="plans" style="margin:18px 0 6px; font-size:22px;">Choose Your Package</h2>
+        <p style="margin:0 0 16px; color:#555;">Simple pricing, instant connection. Pick a plan and pay via your phone.</p>
+
+        <div id="packageList" class="packages"><!-- cards injected here --></div>
+    </section>
+</main>
+
+<footer>
+    © 2025 Frequency Networks. All rights reserved.
+</footer>
+
+<!-- Payment Modal -->
+<div id="paymentModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+        <div class="modal-head">
+            <span id="modalTitle">Complete Purchase</span>
+            <span class="close-x" onclick="closeModal()" aria-label="Close">×</span>
+        </div>
+        <div class="modal-body">
+            <div id="selectedPlan" class="pill">Selected Plan</div>
+
+            <div class="field">
+                <label for="phoneInput">Phone Number</label>
+                <input type="text" id="phoneInput" placeholder="e.g. 0712345678" />
+            </div>
+
+            <div class="actions">
+                <button class="btn ghost" onclick="closeModal()">Cancel</button>
+                <button class="btn" style="flex:1" onclick="confirmPayment()">Pay Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /* ===========================
+       Data + Logic
+       - No arrow functions
+       - No template strings
+       - Works on older browsers
+    ============================*/
+
+    // Simulated plans (can be replaced by API)
+    var plans = [
+        { name: "Basic",       price: 500,  color: "#0a74da", features: ["Up to 5 Mbps", "Single device", "Daily support"], badge: "POPULAR" },
+        { name: "Standard",    price: 1000, color: "#16a34a", features: ["Up to 15 Mbps", "2 devices", "Priority support"], badge: "" },
+        { name: "Premium",     price: 2000, color: "#ff8a00", features: ["Up to 30 Mbps", "3 devices", "Priority support"], badge: "BEST VALUE" },
+        { name: "Gold",        price: 3500, color: "#a855f7", features: ["Up to 50 Mbps", "5 devices", "Pro support"], badge: "" },
+        { name: "Diamond",     price: 5000, color: "#14b8a6", features: ["Up to 80 Mbps", "7 devices", "Pro support"], badge: "" },
+        { name: "Platinum",    price: 7500, color: "#ef4444", features: ["Up to 100 Mbps", "Unlimited devices", "VIP support"], badge: "PREMIUM" }
+    ];
+
+    var selectedPlanIndex = null;
+
+    function money(kes) {
+        // formats KES with thousands, no Intl for very old devices
+        var s = String(kes);
+        var out = "", i, c, count = 0;
+        for (i = s.length - 1; i >= 0; i--) {
+            c = s.charAt(i);
+            out = c + out;
+            count++;
+            if (count % 3 === 0 && i !== 0) { out = "," + out; }
+        }
+        return "Ksh " + out;
+    }
+
+    function buildFeatureList(features) {
+        var html = '<ul class="meta">';
+        var i;
+        for (i = 0; i < features.length; i++) {
+            html += '<li>' + features[i] + '</li>';
+        }
+        html += '</ul>';
+        return html;
+    }
+
+    function loadPackages() {
+        var container = document.getElementById("packageList");
+        var html = "";
+        var i, plan, badgeHTML;
+
+        for (i = 0; i < plans.length; i++) {
+            plan = plans[i];
+            badgeHTML = plan.badge ? '<div class="ribbon">' + plan.badge + '</div>' : '';
+
+            html += '' +
+                '<div class="card">' +
+                badgeHTML +
+                '<div class="card-body">' +
+                '<span class="pill" style="background:' + plan.color + ';">' + plan.name + '</span>' +
+                '<div class="title" style="color:' + plan.color + '">' + plan.name + ' Plan</div>' +
+                '<div class="price">' + money(plan.price) + '</div>' +
+                buildFeatureList(plan.features) +
+                '<button class="btn" onclick="openPaymentModal(' + i + ')" style="background:' + plan.color + ';">Buy Now</button>' +
+                '</div>' +
+                '<span style="position:absolute;left:0;top:0;width:100%;height:6px;background:' + plan.color + ';"></span>' +
+                '</div>';
+        }
+
+        container.innerHTML = html;
+    }
+
+    /* ===========================
+       Modal control
+    ============================*/
+    function openPaymentModal(index) {
+        selectedPlanIndex = index;
+        var modal = document.getElementById("paymentModal");
+        var pill = document.getElementById("selectedPlan");
+        var plan = plans[index];
+        pill.innerHTML = plan.name + " — " + money(plan.price);
+        pill.style.background = plan.color;
+        document.getElementById("phoneInput").value = "";
+        modal.className = "modal open";
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("paymentModal");
+        modal.className = "modal";
+    }
+
+    function confirmPayment() {
+        var phone = document.getElementById("phoneInput").value;
+        if (!phone) {
+            alert("Please enter your phone number");
+            return;
+        }
+        var plan = plans[selectedPlanIndex];
+        closeModal();
+        // Hook your API here
+        alert("Payment initiated for " + phone + " — " + plan.name + " (" + money(plan.price) + ")");
+    }
+
+    /* ===========================
+       Theme handling
+    ============================*/
+    function applyTheme(n) {
+        var b = document.body;
+        // remove any theme-* classes
+        var i, cls = b.className.split(" "), out = [];
+        for (i = 0; i < cls.length; i++) {
+            if (cls[i].indexOf("theme-") !== 0 && cls[i] !== "") { out.push(cls[i]); }
+        }
+        out.push("theme-" + n);
+        b.className = out.join(" ").replace(/\s+/g, " ").replace(/^\s|\s$/g, "");
+
+        try { localStorage.setItem("proisp-theme", String(n)); } catch (e) {}
+    }
+
+    (function restoreTheme(){
+        var n = 1;
+        try {
+            var saved = localStorage.getItem("proisp-theme");
+            if (saved) { n = parseInt(saved, 10); if (!(n > 0 && n <= 10)) { n = 1; } }
+        } catch (e) {}
+        applyTheme(n);
+    })();
+
+    // Init packages after DOM is ready
+    (function onReady(){
+        if (document.readyState === "complete" || document.readyState === "interactive") {
+            loadPackages();
+        } else if (document.addEventListener) {
+            document.addEventListener("DOMContentLoaded", loadPackages);
+        } else {
+            window.onload = loadPackages;
+        }
+    })();
+</script>
+</body>
+</html>

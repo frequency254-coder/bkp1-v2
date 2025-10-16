@@ -1,0 +1,68 @@
+<%
+/* ===========================================
+   SAFE DEFAULTS
+   =========================================== */
+const heroImageSafe = typeof heroImage !== 'undefined' ? heroImage : '/img/default-hero.jpg';
+const heroSizeSafe = typeof heroSize !== 'undefined' ? heroSize : 'hero-md';
+const pageTypeSafe = typeof pageType !== 'undefined' ? pageType.toLowerCase() : 'movies';
+
+/* ===========================================
+   AUTO-GENERATED HERO CONTENT BY PAGE TYPE
+   =========================================== */
+let titleSafe = 'Welcome to Frequency ENT';
+let subtitleSafe = 'Where entertainment meets technology';
+let ctaButtonSafe = null;
+
+switch (pageTypeSafe) {
+    case 'movies':
+        titleSafe = 'Explore Latest Movies';
+        subtitleSafe = 'Stream or download the newest releases now';
+        ctaButtonSafe = { text: 'Browse Movies', href: '/movies', theme: 'neon' };
+        break;
+
+    case 'tvshows':
+        titleSafe = 'Stream Trending TV Shows';
+        subtitleSafe = 'Catch up with the hottest series';
+        ctaButtonSafe = { text: 'Browse Shows', href: '/tvshows', theme: 'gold' };
+        break;
+
+    case 'games':
+        titleSafe = 'Play the Latest Games';
+        subtitleSafe = 'Challenge yourself, solo or multiplayer';
+        ctaButtonSafe = { text: 'Start Playing', href: '/games', theme: 'neon' };
+        break;
+
+    case 'anime':
+        titleSafe = 'Discover New Anime';
+        subtitleSafe = 'Action, fantasy, and emotions — all here';
+        ctaButtonSafe = { text: 'Watch Anime', href: '/anime', theme: 'gold' };
+        break;
+
+    default:
+        titleSafe = typeof pageTitle !== 'undefined' ? pageTitle : 'Featured Selection';
+        subtitleSafe = typeof pageSubtitle !== 'undefined' ? pageSubtitle : 'Explore the best content';
+        ctaButtonSafe = typeof ctaButton !== 'undefined'
+                ? ctaButton
+                : { text: 'Browse Now', href: '/movies', theme: 'neon' };
+        break;
+}
+%>
+
+<section class="hero-background <%= heroSizeSafe %>"
+         style="background-image: url('<%= heroImageSafe %>');">
+    <div class="hero-overlay"></div>
+    <div class="hero-gradient"></div>
+    <canvas class="hero-particles"></canvas>
+
+    <div class="container py-5 hero-content text-center text-glow">
+        <h1 class="display-4 fw-bold"><%= titleSafe %></h1>
+        <p class="lead text-shadow-sm mb-4"><%= subtitleSafe %></p>
+
+        <% if (ctaButtonSafe) { %>
+            <a href="<%= ctaButtonSafe.href %>"
+               class="btn btn-neon <%= ctaButtonSafe.theme === 'gold' ? 'btn-gold' : '' %> px-4 py-2">
+                <%= ctaButtonSafe.text %>
+            </a>
+        <% } %>
+    </div>
+</section>

@@ -1,0 +1,33 @@
+<!-- views/partials/_responsiveImage.ejs -->
+<picture>
+    <% if (imageWebp) { %>
+        <source type="image/webp" srcset="<%= imageWebp %>">
+    <% } %>
+
+    <% if (srcLarge) { %>
+        <source media="(min-width:1024px)" srcset="<%= srcLarge %>">
+    <% } %>
+
+    <% if (srcMedium) { %>
+        <source media="(min-width:640px)" srcset="<%= srcMedium %>">
+    <% } %>
+
+    <% const resolvedSizes = typeof sizes !== "undefined"
+            ? sizes
+            : "(min-width:1024px) 1024px, (min-width:640px) 640px, 320px"; %>
+
+    <img
+            src="<%= srcFallback %>"
+            srcset="<%= [
+                srcLarge ? (srcLarge + ' 1024w') : null,
+                srcMedium ? (srcMedium + ' 640w') : null,
+                srcFallback ? (srcFallback + ' 320w') : null
+            ].filter(Boolean).join(', ') %>"
+            sizes="<%= resolvedSizes %>"
+            alt="<%= alt || '' %>"
+            loading="lazy"
+            decoding="async"
+            class="<%= className || '' %>"
+
+    />
+</picture>

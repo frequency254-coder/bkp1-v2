@@ -1,0 +1,46 @@
+<%- include('partials/_hero', { title: "Contact Us" }) %>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <h2 class="mb-4 text-center">Contact Us</h2>
+            <p class="text-center text-muted mb-5">
+                Have questions, suggestions, or just want to say hi? Reach out to us via the form below or use the provided details.
+            </p>
+
+            <!-- Contact Form -->
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Your Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-warning fw-bold">Send Message</button>
+                </div>
+            </form>
+
+            <!-- Contact Info -->
+            <div class="mt-5 text-center">
+                <h5 class="mb-3">Other ways to reach us:</h5>
+                <p><i class="fas fa-envelope me-2"></i> support@frequency-ent.com</p>
+                <p><i class="fas fa-phone me-2"></i> +254 700 000 000</p>
+                <p><i class="fas fa-map-marker-alt me-2"></i> Thika, Kenya</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<%- include('partials/_footer') %>

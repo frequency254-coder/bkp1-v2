@@ -1,0 +1,63 @@
+<!-- ===========================
+     MOVIES BODY PARTIAL
+     =========================== -->
+<div class="container-fluid py-4 px-3 content-zone" id="moviesBody">
+
+    <!-- GENRE FILTERS -->
+    <% if (genres && genres.length) { %>
+        <div id="genreLinks" class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+            <button
+                    class="btn btn-sm genre-pill <%= currentGenre === 'all' ? 'active btn-primary' : 'btn-outline-primary' %>"
+                    data-genres="all"
+            >
+                <i class="fa-solid fa-film me-1"></i> All
+            </button>
+
+            <% genres.forEach(g => { %>
+                <button
+                        class="btn btn-sm genre-pill <%= currentGenre === g ? 'active btn-primary' : 'btn-outline-primary' %>"
+                        data-genres="<%= g %>"
+                >
+                    <i class="fa-solid fa-tag me-1"></i> <%= g.charAt(0).toUpperCase() + g.slice(1) %>
+                </button>
+            <% }) %>
+        </div>
+    <% } else { %>
+        <div class="text-center text-muted fst-italic mb-4">
+            No genres found
+        </div>
+    <% } %>
+
+    <!-- MOVIES GRID -->
+    <div id="moviesContainer" class="row g-4 justify-content-center">
+        <% if (movies && movies.length) { %>
+            <% movies.forEach(item => { %>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in-card">
+                    <%- include('partials/_contentcard', { item }) %>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <div class="col-12 text-center py-5">
+                <p class="text-muted fs-5">🎬 No movies found for this genre.</p>
+            </div>
+        <% } %>
+    </div>
+
+    <!-- PAGINATION -->
+    <% if (totalPages && totalPages > 1) { %>
+        <div class="d-flex justify-content-center align-items-center mt-5 pagination-zone">
+            <button id="prevPage" class="btn btn-outline-secondary me-3" <%= currentPage <= 1 ? 'disabled' : '' %>>
+                <i class="fa-solid fa-arrow-left me-1"></i> Prev
+            </button>
+
+            <span id="paginationInfo" class="mx-2 fw-semibold text-neon">
+      Page <%= currentPage %> of <%= totalPages %>
+    </span>
+
+            <button id="nextPage" class="btn btn-outline-secondary ms-3" <%= currentPage >= totalPages ? 'disabled' : '' %>>
+                Next <i class="fa-solid fa-arrow-right ms-1"></i>
+            </button>
+        </div>
+    <% } %>
+
+</div>

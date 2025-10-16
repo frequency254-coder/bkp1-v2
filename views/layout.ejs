@@ -1,0 +1,244 @@
+<head>
+
+    <meta http-equiv="Content-Security-Policy"
+          content="script-src 'self' 'nonce-<%= cspNonce %>' https://cdn.jsdelivr.net https://www.youtube.com https://www.youtube-nocookie.com https://s.ytimg.com http://localhost:5173;">
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title><%= title ? `${title} | Frequency ENT` : "Frequency ENT" %></title>
+    <meta name="description" content="<%= metaDescription || 'Your hub for entertainment, gadgets, movies & PlayStation gaming in Thika.' %>">
+    <meta name="keywords" content="<%= metaKeywords || 'movies, tv shows, playstation, gadgets, shop, Thika, Frequency ENT' %>">
+    <meta name="author" content="Frequency ENT">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#080812">
+
+    <!-- Social / Open Graph -->
+    <meta property="og:site_name" content="Frequency ENT">
+    <meta property="og:title" content="<%= title || 'Frequency ENT' %>">
+    <meta property="og:description" content="<%= metaDescription || 'Your hub for entertainment, gadgets, movies & PlayStation gaming.' %>">
+    <meta property="og:image" content="<%= ogImage || '/images/default-og.jpg' %>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= ogUrl || req.originalUrl %>">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%= title || 'Frequency ENT' %>">
+    <meta name="twitter:description" content="<%= metaDescription || 'Your hub for entertainment, gadgets, movies & PlayStation gaming.' %>">
+    <meta name="twitter:image" content="<%= ogImage || '/images/default-og.jpg' %>">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- ✨ Neon-Pro Font Stack -->
+    <!-- Orbitron for neon headings, Poppins for body, Roboto fallback -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap base -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" crossorigin="anonymous">
+
+    <!-- 🧠 Neon & Custom Styles (Load Order: Variables → Overrides → Components) -->
+    <link rel="stylesheet" href="/bootstrap-icons-1.13.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="/css/neon-bootstrap.css">   <!-- defines glow vars, color themes -->
+    <link rel="stylesheet" href="/css/style.css">            <!-- main layout, final overrides -->
+
+    <!-- CSP-safe JSON-LD -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Frequency ENT",
+            "url": "<%= ogUrl || req.originalUrl %>"
+    }
+    </script>
+
+    <!-- Build Switching (Vite/Dev/Prod) -->
+    <% if (!isProd) { %>
+        <!-- DEV MODE -->
+        <script type="module" src="http://localhost:5173/frontend/js/main.js"></script>
+    <% } else { %>
+        <!-- PROD MODE -->
+        <link rel="preload" href="/assets/index-CcqBkvl5.css" as="style">
+        <link rel="stylesheet" href="/assets/index-CcqBkvl5.css">
+        <script type="module" src="/assets/index-B8wBsCbo.js" nonce="<%= cspNonce %>"></script>
+    <% } %>
+</head>
+
+
+<body
+        role="document"
+        data-theme="<%= pageType === 'shop' ? 'techy' : 'cinematic' %>"
+        class="<%= typeof bodyClass !== 'undefined' ? bodyClass : '' %>"
+>
+<!-- Accessibility skip link -->
+<a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
+
+<!-- Loading spinner (page-level) -->
+<div id="loadingSpinner" class="position-fixed top-0 start-50 translate-middle-x mt-3 d-none" style="z-index:1200" aria-hidden="true">
+    <div class="neon-loader" aria-hidden="true" role="status">
+        <span></span><span></span><span></span>
+    </div>
+</div>
+
+<!-- Offline banner -->
+<div id="offlineBanner" class="alert alert-warning d-none position-fixed top-0 end-0 m-3" role="status" style="z-index:1200">
+    You appear offline. Some features may be unavailable.
+</div>
+
+<!-- NAVBAR (partial) -->
+<header role="banner">
+    <%- include("partials/_navbar", {
+    activePage: typeof activePage !== "undefined" ? activePage : "",
+    cart: typeof cart !== "undefined" ? cart : [],
+    cartCount: typeof cartCount !== "undefined" ? cartCount : 0
+    }) %>
+</header>
+
+<!-- THEME TOGGLE (hybrid: minimal + expressive) -->
+<div class="position-fixed top-0 end-0 m-3" style="z-index:1250">
+    <button id="themeToggleBtn"
+            class="btn btn-sm btn-outline-light d-flex align-items-center gap-1 px-2 py-1 shadow-sm border-neon"
+            aria-label="Toggle theme">
+        <i class="bi bi-palette"></i>
+        <span class="d-none d-md-inline">Theme</span>
+    </button>
+</div>
+
+<!-- HERO -->
+<% if (heroImage) { %>
+    <section role="region" aria-label="Hero" class="hero-section">
+        <%- include("partials/_hero", {
+        heroImage,
+        heroSize,
+        pageTitle,
+        pageSubtitle,
+        pageType
+        }) %>
+    </section>
+<% } %>
+
+
+<!-- MAIN -->
+<main id="main-content" role="main" class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12 mb-4">
+            <%- body %>
+        </div>
+    </div>
+
+    <!-- Inline ad placeholder (route can pass inlineAd) -->
+    <% if (typeof inlineAd !== 'undefined' && inlineAd) { %>
+        <section aria-label="Advertisement" class="mb-4">
+            <%- include("partials/_adBanner", { ad: inlineAd }) %>
+        </section>
+    <% } %>
+</main>
+
+<!-- ADS / Panels -->
+<aside role="complementary" class="container my-4">
+    <% if (typeof movieAd !== 'undefined' && movieAd) { %>
+        <%- include("partials/_adBanner", { ad: movieAd }) %>
+    <% } %>
+    <% if (typeof ad !== 'undefined' && ad) { %>
+        <%- include("partials/_adBanner", { ad }) %>
+    <% } %>
+</aside>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+    <%- include("partials/_footer") %>
+</footer>
+
+<!-- TRAILER MODAL (moved into body) -->
+<div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="trailerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark border-0">
+            <div class="modal-header">
+                <h5 id="trailerModalLabel" class="modal-title text-light"></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0 ratio ratio-16x9"></div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+<!-- Critical scripts: Bootstrap bundle, theme-init, then app scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer integrity="" crossorigin="anonymous"></script>
+
+<!-- theme-init: applies persisted theme, prefers-color-scheme, quick FOUC guard -->
+<script nonce="<%= cspNonce %>" defer>
+    (function(){
+        try {
+            const el = document.documentElement;
+            const body = document.body;
+            const serverTheme = body.getAttribute('data-theme') || 'cinematic';
+            const saved = sessionStorage.getItem('freqent.theme') || localStorage.getItem('freqent.theme');
+            const prefers = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'cinematic' : null;
+            const theme = saved || serverTheme || prefers || 'cinematic';
+            body.setAttribute('data-theme', theme);
+            document.addEventListener('DOMContentLoaded', function(){
+                const btn = document.getElementById('themeToggle');
+                if(!btn) return;
+                btn.addEventListener('click', () => {
+                    const cur = body.getAttribute('data-theme');
+                    const next = cur === 'techy' ? 'cinematic' : 'techy';
+                    body.setAttribute('data-theme', next);
+                    try { sessionStorage.setItem('freqent.theme', next); } catch(e){}
+                });
+            });
+        } catch(e){}
+    })();
+</script>
+<!-- app scripts (CSP nonce applied by server when needed) -->
+<script type="module" src="/js/theme-init.js" defer nonce="<%= cspNonce %>"></script>
+<script type="module" src="/js/videoPlayer.js" defer nonce="<%= cspNonce %>"></script>
+<script type="module" src="/js/main.js" defer nonce="<%= cspNonce %>"></script>
+
+<!-- small inline helpers: offline/loader toggles (no deps) -->
+<script nonce="<%= cspNonce %>" defer>
+    (function(){
+        const spinner = document.getElementById('loadingSpinner');
+        const offline = document.getElementById('offlineBanner');
+        window.ShowSpinner = () => spinner && spinner.classList.remove('d-none');
+        window.HideSpinner = () => spinner && spinner.classList.add('d-none');
+        window.ShowOffline = (msg) => {
+            if(!offline) return;
+            offline.textContent = msg || 'You appear offline.';
+            offline.classList.remove('d-none');
+        };
+        window.HideOffline = () => offline && offline.classList.add('d-none');
+        window.addEventListener('online', () => { HideOffline(); });
+        window.addEventListener('offline', () => { ShowOffline('You are offline.'); });
+    })();
+</script>
+<!-- 🔥 Universal AJAX Loader -->
+<div id="ajax-loading" class="ajax-loader hidden">
+    <div class="loader-content text-center">
+        <div class="loader-spinner"></div>
+        <p class="loader-text mt-3">Loading<span class="dots">...</span></p>
+    </div>
+</div>
+
+
+
+<script nonce="<%= cspNonce %>">
+    console.log("Secure inline script running safely!");
+</script>
+<script nonce="<%= cspNonce %>">
+    document.documentElement.setAttribute("data-theme", "blue");
+    document.body.classList.add("theme-blue");
+</script>
+<script src="/js/autoThemeAds.js" nonce="<%= cspNonce %>" defer></script>
+
+
+
+</html>

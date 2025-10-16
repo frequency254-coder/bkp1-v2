@@ -1,0 +1,14 @@
+<h1><%= category.charAt(0).toUpperCase() + category.slice(1) %></h1>
+<div class="products">
+    <% products.forEach(product => { %>
+        <div class="product-card">
+            <img src="<%= product.image %>" alt="<%= product.name %>" />
+            <h2><%= product.name %></h2>
+            <p><%= product.description %></p>
+            <p><strong>Price:</strong> <%= product.price %></p>
+            <% if (!product.inStock) { %>
+                <p style="color:red">Out of stock</p>
+            <% } %>
+        </div>
+    <% }) %>
+</div>

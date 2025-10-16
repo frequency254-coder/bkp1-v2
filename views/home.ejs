@@ -1,0 +1,84 @@
+<%- include('partials/_hero', {
+title: "Latest Releases - Frequency ENT",
+metaDescription: "Stream the newest movies and TV shows – fresh weekly releases curated by Frequency ENT.",
+metaKeywords: "latest movies, new tv shows, Frequency ENT, 2025 releases"
+}) %>
+
+<div class="container-fluid px-3 px-md-5 my-5" id="home-page">
+
+    <!-- 🌟 HERO / INTRO -->
+    <section class="text-center mb-5 fade-in-up">
+        <h1 class="display-5 fw-bold neon-text text-glow mb-2">Latest Releases</h1>
+        <p class="lead text-secondary mb-4">
+            Catch the newest <span class="text-accent fw-semibold">Movies</span> and <span class="text-accent fw-semibold">TV Shows</span> — updated weekly.
+        </p>
+        <hr class="mx-auto" style="width: 120px; border-top: 2px solid var(--accent);" />
+    </section>
+
+    <!-- 🎬 LATEST MOVIES -->
+    <section id="latestMoviesSection" class="mb-5 fade-in-up">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="fw-bold text-glow"><i class="bi bi-film"></i> Latest Movies</h3>
+            <a href="/movies" class="btn btn-neon btn-sm d-flex align-items-center gap-1">
+                View All <i class="bi bi-arrow-right-circle"></i>
+            </a>
+        </div>
+
+        <div id="latestMoviesGrid"
+             class="content-grid row g-4"
+             data-endpoint="/api/movies/latest"
+             aria-label="Latest Movies Grid">
+            <!-- JS will inject movie cards -->
+            <div class="text-center text-muted w-100 py-5">Loading movies...</div>
+        </div>
+    </section>
+
+    <!-- 📺 LATEST TV SHOWS -->
+    <section id="latestTvshowsSection" class="mb-5 fade-in-up">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="fw-bold text-glow"><i class="bi bi-tv"></i> Latest TV Shows</h3>
+            <a href="/tvshows" class="btn btn-neon btn-sm d-flex align-items-center gap-1">
+                View All <i class="bi bi-arrow-right-circle"></i>
+            </a>
+        </div>
+
+        <div id="latestTvshowsGrid"
+             class="content-grid row g-4"
+             data-endpoint="/api/tvshows/latest"
+             aria-label="Latest TV Shows Grid">
+            <!-- JS will inject tv show cards -->
+            <div class="text-center text-muted w-100 py-5">Loading TV shows...</div>
+        </div>
+    </section>
+
+    <!-- 📢 FEATURED AD or PROMO -->
+    <section id="featuredAd" class="my-5 fade-in-up">
+        <%- include('partials/_adBanner', { ad: featuredAd || null }) %>
+    </section>
+
+</div>
+
+
+
+<!-- 🧠 CLIENT SCRIPT HOOK -->
+<script nonce="<%= cspNonce %>" type="module">
+    import { hydrateLatestContent } from '/js/render.js';
+
+    document.addEventListener("DOMContentLoaded", () => {
+        hydrateLatestContent("#latestMoviesGrid");
+        hydrateLatestContent("#latestTvshowsGrid");
+    });
+</script>
+
+<script nonce="<%= cspNonce %>">
+    window.pageType = "home";
+</script>
+<script nonce="<%= cspNonce %>">
+    document.addEventListener("DOMContentLoaded", () => {
+        const theme = document.documentElement.getAttribute("data-theme") || "theme-blue";
+        const btns = document.querySelectorAll(".btn-outline-primary");
+        btns.forEach(btn => {
+            btn.classList.add(`btn-${theme.split('-')[1]}`); // e.g., btn-blue
+        });
+    });
+</script>

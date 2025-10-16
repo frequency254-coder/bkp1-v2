@@ -1,0 +1,8 @@
+<h2>Order Confirmed ✅</h2>
+<p>Thank you <%= order.customerName %>! Your order has been placed.</p>
+<p>We will deliver to: <%= order.address %></p>
+<p>Total: Ksh <%= order.total %></p>
+<p>Payment: Cash on Delivery</p>
+<a href="/invoice/<%= order._id %>" class="btn btn-success mt-3">
+    📄 Download Invoice (PDF)
+</a>

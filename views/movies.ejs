@@ -1,0 +1,120 @@
+<div class="container my-4">
+
+    <!-- Search -->
+    <form method="get" action="/movies" class="mb-3">
+        <input
+                type="text"
+                name="search"
+                value="<%= currentSearch || '' %>"
+                class="form-control"
+                placeholder="Search movies..."
+        />
+    </form>
+
+    <!-- Genre Links -->
+    <div class="genre-selector mb-3">
+        <% if (genres && genres.length) { %>
+            <% genres.forEach(g => { %>
+                <a href="/movies?page=1&genre=<%= encodeURIComponent(g) %><%= currentSearch ? '&search=' + encodeURIComponent(currentSearch) : '' %>"
+                   class="genre-pill <%= currentGenre === g ? 'active' : '' %>">
+                    <%= g %>
+                </a>
+            <% }) %>
+        <% } else { %>
+            <p class="text-muted">No genres available.</p>
+        <% } %>
+    </div>
+
+    <!-- Movies Grid -->
+    <main class="content-grid">
+        <% if (movies && movies.length) { %>
+            <% movies.forEach(item => { %>
+                <div class="content-card">
+                    <img src="<%= item.poster_path %>" alt="<%= item.title %>"
+                         onerror="this.onerror=null;this.src='/images/default.jpg';">
+                    <div class="card-body">
+                        <h5 class="movie-title"><%= item.title %></h5>
+                        <p class="movie-year"><%= item.releaseYear || (item.release_date ? item.release_date.split('-')[0] : 'Unknown') %></p>
+                        <p class="movie-overview">
+                            <%= item.overview ? item.overview.substring(0, 80) + '...' : 'No description' %>
+                        </p>
+                        <% if (item.trailer) { %>
+                            <button class="trailer-btn" data-bs-toggle="modal" data-bs-target="#trailerModal" data-trailer="<%= item.trailer %>">
+                                🎬 Trailer
+                            </button>
+                        <% } %>
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p class="text-center text-muted">No movies found.</p>
+        <% } %>
+    </main>
+
+    <!-- Pagination -->
+    <% if (totalPages > 1) { %>
+        <div id="moviePagination" class="d-flex justify-content-center mt-4">
+            <nav>
+                <ul class="pagination flex-wrap">
+                    <!-- Prev -->
+                    <li class="page-item <%= currentPage === 1 ? 'disabled' : '' %>">
+                        <a class="page-link" href="/movies?page=<%= currentPage - 1 %><%= currentGenre !== 'all' ? '&genre=' + encodeURIComponent(currentGenre) : '' %><%= currentSearch ? '&search=' + encodeURIComponent(currentSearch) : '' %>">Prev</a>
+                    </li>
+
+                    <%
+                        const maxPagesToShow = 10;
+                        let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow/2));
+                        let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
+                        if (endPage - startPage < maxPagesToShow - 1) {
+                            startPage = Math.max(1, endPage - maxPagesToShow + 1);
+                        }
+                    %>
+
+                    <% if (startPage > 1) { %>
+                        <li class="page-item"><a class="page-link" href="/movies?page=1<%= currentGenre !== 'all' ? '&genre=' + encodeURIComponent(currentGenre) : '' %><%= currentSearch ? '&search=' + encodeURIComponent(currentSearch) : '' %>">1</a></li>
+                        <% if (startPage > 2) { %>
+                            <li class="page-item disabled"><span class="page-link">...</span></li>
+                        <% } %>
+                    <% } %>
+
+                    <% for (let i = startPage; i <= endPage; i++) { %>
+                        <li class="page-item <%= currentPage === i ? 'active' : '' %>">
+                            <a class="page-link" href="/movies?page=<%= i %><%= currentGenre !== 'all' ? '&genre=' + encodeURIComponent(currentGenre) : '' %><%= currentSearch ? '&search=' + encodeURIComponent(currentSearch) : '' %>"><%= i %></a>
+                        </li>
+                    <% } %>
+
+                    <% if (endPage < totalPages) { %>
+                        <% if (endPage < totalPages - 1) { %>
+                            <li class="page-item disabled"><span class="page-link">...</span></li>
+                        <% } %>
+                        <li class="page-item"><a class="page-link" href="/movies?page=<%= totalPages %><%= currentGenre !== 'all' ? '&genre=' + encodeURIComponent(currentGenre) : '' %><%= currentSearch ? '&search=' + encodeURIComponent(currentSearch) : '' %>"><%= totalPages %></a></li>
+                    <% } %>
+
+                    <!-- Next -->
+                    <li class="page-item <%= currentPage === totalPages ? 'disabled' : '' %>">
+                        <a class="page-link" href="/movies?page=<%= currentPage + 1 %><%= currentGenre !== 'all' ? '&genre=' + encodeURIComponent(currentGenre) : '' %><%= currentSearch ? '&search=' + encodeURIComponent(currentSearch) : '' %>">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    <% } %>
+
+</div>
+
+<!-- Trailer Modal -->
+<div class="modal fade" id="trailerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Trailer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <iframe width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

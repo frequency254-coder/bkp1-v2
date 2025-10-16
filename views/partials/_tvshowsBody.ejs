@@ -1,0 +1,66 @@
+<!-- ============================================
+     TV SHOWS BODY PARTIAL — Cinematic Upgrade v2
+     ============================================ -->
+<div class="container-fluid py-4 px-3 content-zone" id="tvBody">
+
+    <!-- GENRE FILTERS -->
+    <% if (genres && genres.length) { %>
+        <div id="genreLinks" class="d-flex flex-wrap justify-content-center gap-3 mb-4 genre-zone">
+            <button
+                    class="genre-pill btn-sm <%= currentGenre === 'all' ? 'active' : '' %>"
+                    data-genres="all"
+                    aria-pressed="<%= currentGenre === 'all' %>"
+            >
+                <i class="fa-solid fa-tv me-1"></i> All
+            </button>
+
+            <% genres.forEach(g => { %>
+                <button
+                        class="genre-pill btn-sm <%= currentGenre === g ? 'active' : '' %>"
+                        data-genres="<%= g %>"
+                        aria-pressed="<%= currentGenre === g %>"
+                >
+                    <i class="fa-solid fa-tag me-1"></i>
+                    <%= g.charAt(0).toUpperCase() + g.slice(1) %>
+                </button>
+            <% }) %>
+        </div>
+    <% } else { %>
+        <div class="text-center text-muted fst-italic mb-4">
+            No TV genres found
+        </div>
+    <% } %>
+
+    <!-- TV SHOWS GRID -->
+    <div id="tvshowsContainer" class="row g-4 justify-content-center fade-grid">
+        <% if (tvshows && tvshows.length) { %>
+            <% tvshows.forEach(item => { %>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-in-card">
+                    <%- include('partials/_contentcard', { item }) %>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <div class="col-12 text-center py-5">
+                <p class="text-muted fs-5">📺 No TV shows found for this genre.</p>
+            </div>
+        <% } %>
+    </div>
+
+    <!-- PAGINATION -->
+    <% if (totalPages && totalPages > 1) { %>
+        <div class="d-flex justify-content-center align-items-center mt-5 pagination-zone">
+            <button id="prevPage" class="btn btn-outline-secondary me-3" <%= currentPage <= 1 ? 'disabled' : '' %>>
+                <i class="fa-solid fa-arrow-left me-1"></i> Prev
+            </button>
+
+            <span id="paginationInfo" class="mx-2 fw-semibold text-accent">
+        Page <%= currentPage %> of <%= totalPages %>
+      </span>
+
+            <button id="nextPage" class="btn btn-outline-secondary ms-3" <%= currentPage >= totalPages ? 'disabled' : '' %>>
+                Next <i class="fa-solid fa-arrow-right ms-1"></i>
+            </button>
+        </div>
+    <% } %>
+
+</div>

@@ -1,0 +1,66 @@
+<!-- ==========================
+     _navbar.ejs
+     Frequency ENT — Neon Navbar with Glow Line
+     ========================== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-neon shadow-sm sticky-top position-relative" role="navigation" aria-label="Main navigation">
+    <div class="container-fluid px-3 px-md-4">
+
+        <!-- BRAND -->
+        <a class="navbar-brand d-flex align-items-center fw-bold text-neon" href="/">
+            <i class="bi bi-lightning-charge-fill me-2 text-warning"></i>
+            Frequency <span class="text-warning ms-1">ENT</span>
+        </a>
+
+        <!-- TOGGLER -->
+        <button
+                class="navbar-toggler border-0 text-neon"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- COLLAPSE MENU -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav align-items-center gap-lg-3">
+
+                <% const navLinks = [
+                    { href: "/shop", label: "Shop", key: "shop" },
+                    { href: "/movies", label: "Movies", key: "movies" },
+                    { href: "/tvshows", label: "TV Shows", key: "tvshows" },
+                    { href: "/contact", label: "Contact", key: "contact" }
+                ]; %>
+
+                <% navLinks.forEach(link => { %>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 rounded-2 transition-fast
+              <%= activePage === link.key ? 'active text-warning fw-semibold neon-glow' : 'text-light' %>"
+                           href="<%= link.href %>">
+                            <%= link.label %>
+                        </a>
+                    </li>
+                <% }); %>
+
+                <% if (activePage === 'shop' || activePage === 'cart') { %>
+                    <li class="nav-item position-relative">
+                        <a class="nav-link text-light" href="/cart" aria-label="Shopping cart">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <% if (cartCount > 0) { %>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-neon text-dark border border-dark">
+                  <%= cartCount %>
+                </span>
+                            <% } %>
+                        </a>
+                    </li>
+                <% } %>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- 🌈 Infinite Neon Underline -->
+    <div class="neon-underline"></div>
+</nav>

@@ -1,0 +1,188 @@
+<div class="container shop-container py-5 text-light">
+
+    <!-- 🔍 Search + Filters -->
+    <section class="mb-5">
+        <div class="card bg-dark border-0 shadow-lg neon-glow">
+            <div class="card-body">
+                <div class="row g-3 align-items-center">
+                    <!-- Search Bar -->
+                    <!-- 🔍 Enhanced Search Bar -->
+                    <div class="col-md-6">
+                        <form method="get" action="/shop" class="d-flex align-items-center search-form w-100">
+    <span class="me-2 text-neon fs-5">
+      <i class="bi bi-search"></i>
+    </span>
+                            <input
+                                    type="text"
+                                    name="search"
+                                    value="<%= currentSearch || '' %>"
+                                    class="form-control search-input flex-grow-1"
+                                    placeholder="Search movies, gadgets, or games..."
+                                    autocomplete="off"
+                                    aria-label="Search shop items"
+                            />
+                            <button type="submit" class="btn btn-neon ms-2">
+                                Search
+                            </button>
+                            <% if (currentSearch) { %>
+                                <a href="/shop" class="btn btn-outline-danger ms-2">
+                                    <i class="bi bi-x-lg"></i>
+                                </a>
+                            <% } %>
+                        </form>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="col-md-6 text-md-end">
+                        <div class="btn-group flex-wrap" role="group">
+                            <!-- All -->
+                            <a href="/shop?page=1<%= currentSearch ? '&search=' + encodeURIComponent(currentSearch) : '' %>"
+                               class="btn btn-outline-neon btn-sm category-pill px-3 py-2 <%= currentCategory === 'all' ? 'active btn-neon-active glow' : '' %>">
+                                All
+                            </a>
+
+                            <% if (categories && categories.length) { %>
+                                <% categories.forEach(c => { %>
+                                    <% if (c.count > 0) { %>
+                                        <a href="/shop/category/<%= c.slug %>?page=1<%= currentSearch ? '&search=' + encodeURIComponent(currentSearch) : '' %>"
+                                           class="btn btn-outline-neon btn-sm category-pill position-relative px-3 py-2 <%= currentCategory === c.slug ? 'active btn-neon-active glow' : '' %>">
+                                            <%= c.name %>
+                                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              <%= c.count %>
+            </span>
+                                        </a>
+                                    <% } %>
+                                <% }) %>
+                            <% } else { %>
+                                <span class="text-muted small">No categories</span>
+                            <% } %>
+                        </div>
+                    </div>
+
+
+                    <!-- 🎬 Product Grid -->
+    <main class="row g-4 justify-content-center">
+        <% if (products && products.length) { %>
+            <% products.forEach(item => {
+                const img = getResponsivePaths(item.image, { fallback: "/images/default.jpg" });
+            %>
+            <div class="col-6 col-md-4 col-lg-2 fade-in-up">
+                <div class="card border-0 bg-dark-subtle neon-hover shadow-lg h-100 position-relative overflow-hidden">
+                    <%- include('partials/_responsiveImage', {
+                    srcLarge: img.srcLarge,
+                    srcMedium: img.srcMedium,
+                    srcFallback: img.srcFallback,
+                    imageWebp: img.imageWebp,
+                    alt: item.name,
+                    className: 'card-img-top rounded-top'
+                    }) %>
+
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <h5 class="fw-bold text-light mb-1 text-truncate"><%= item.name %></h5>
+                            <p class="text-neon fw-semibold mb-2">Ksh <%= item.price.toLocaleString() %></p>
+                            <p class="small text-muted mb-0"><%= item.description ? item.description.substring(0, 80) + '…' : 'No description available.' %></p>
+                        </div>
+
+                        <div class="mt-3 d-flex gap-2">
+                            <a href="/coming-soon/<%= item.slug %>" class="btn btn-sm btn-outline-light flex-fill">
+                                <i class="bi bi-eye"></i> View
+                            </a>
+                            <form action="/cart/add/<%= item._id %>" method="post" class="flex-fill">
+                                <button type="submit" class="btn btn-sm btn-neon flex-fill d-flex align-items-center justify-content-center gap-1">
+                                    <i class="bi bi-cart"></i>
+                                    <span>Add</span>
+                                    <i class="bi bi-plus-lg ms-1"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        <% } else { %>
+            <div class="text-center py-5 text-muted">
+                <i class="bi bi-emoji-frown display-4 d-block mb-3"></i>
+                <p>No products found. Try another search or category.</p>
+                <a href="/shop" class="btn btn-outline-neon mt-3">
+                    Reset Filters
+                </a>
+            </div>
+        <% } %>
+    </main>
+
+    <!-- 🔢 Pagination -->
+    <% if (totalPages && totalPages > 1) { %>
+        <nav aria-label="Shop pagination" class="mt-5">
+            <ul class="pagination justify-content-center flex-wrap gap-2">
+                <% const baseUrl = currentCategory && currentCategory !== 'all'
+                        ? `/shop/category/${currentCategory}`
+                        : '/shop'; %>
+
+                <!-- Prev -->
+                <li class="page-item <%= currentPage === 1 ? 'disabled' : '' %>">
+                    <a class="page-link text-neon" href="<%= baseUrl %>?page=<%= currentPage - 1 %><%= currentSearch ? '&search=' + encodeURIComponent(currentSearch) : '' %>">
+                        ‹
+                    </a>
+                </li>
+
+                <% const maxPages = 7;
+                    let start = Math.max(1, currentPage - Math.floor(maxPages/2));
+                    let end = Math.min(totalPages, start + maxPages - 1);
+                    if (end - start < maxPages - 1) start = Math.max(1, end - maxPages + 1);
+                %>
+
+                <% if (start > 1) { %>
+                    <li class="page-item">
+                        <a class="page-link text-neon" href="<%= baseUrl %>?page=1">1</a>
+                    </li>
+                    <% if (start > 2) { %>
+                        <li class="page-item disabled"><span class="page-link">…</span></li>
+                    <% } %>
+                <% } %>
+
+                <% for (let i = start; i <= end; i++) { %>
+                    <li class="page-item <%= currentPage === i ? 'active' : '' %>">
+                        <a class="page-link <%= currentPage === i ? 'bg-neon text-dark fw-bold glow' : 'text-neon' %>"
+                           href="<%= baseUrl %>?page=<%= i %><%= currentSearch ? '&search=' + encodeURIComponent(currentSearch) : '' %>">
+                            <%= i %>
+                        </a>
+                    </li>
+                <% } %>
+
+                <% if (end < totalPages) { %>
+                    <% if (end < totalPages - 1) { %>
+                        <li class="page-item disabled"><span class="page-link">…</span></li>
+                    <% } %>
+                    <li class="page-item">
+                        <a class="page-link text-neon" href="<%= baseUrl %>?page=<%= totalPages %>">
+                            <%= totalPages %>
+                        </a>
+                    </li>
+                <% } %>
+
+                <!-- Next -->
+                <li class="page-item <%= currentPage === totalPages ? 'disabled' : '' %>">
+                    <a class="page-link text-neon" href="<%= baseUrl %>?page=<%= currentPage + 1 %><%= currentSearch ? '&search=' + encodeURIComponent(currentSearch) : '' %>">
+                        ›
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    <% } %>
+
+</div>
+
+<!-- 🧠 Initial Data -->
+<script id="initial-data" type="application/json">
+  <%- JSON.stringify({
+        pageType: "shop",
+        products: products || [],
+        page: currentPage || 1,
+        totalPages: totalPages || 1,
+        currentCategory: currentCategory || "all",
+        currentSearch: currentSearch || "",
+        cart: cart || [],
+        total: typeof total !== "undefined" ? total : 0
+    }) %>
+</script>

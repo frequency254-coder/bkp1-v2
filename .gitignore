@@ -1,0 +1,11 @@
+node.modules/
+*.libs/
+# Ignore all images
+images/
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.bmp
+*.tiff

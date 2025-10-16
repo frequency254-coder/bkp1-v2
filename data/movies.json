@@ -1,0 +1,141 @@
+[
+  {
+    "name" : " ballard",
+    "seasons" : 2,
+    "episodes" : 26,
+    "releaseYear" : 2025,
+    "genre" : [
+      "investigatave",
+      "detective",
+      "chrime",
+      "thriller"
+    ],
+    "duration" : 42,
+    "ratings" : 6.8,
+    "totalRatings" : 560,
+    "coverImage" : "jkllllj.png"
+  },
+  {
+    "name" : "You",
+    "seasons" : 5,
+    "episodes" : 12,
+    "releaseYear" : 2017,
+    "genre" : [
+      "romance",
+      "drama",
+      "fantasy"
+    ],
+    "duration" : 32,
+    "totalRatings" : 300,
+    "ratings" : 5.3,
+    "coverImage" : "hjklfgf.png"
+  },
+  {
+    "name" : "shooter",
+    "seasons" : 3,
+    "episodes" : 13,
+    "releaseYear" : 2017,
+    "genre" : [
+      "action",
+      "drama",
+      "war"
+    ],
+    "totalRatings" : 5000,
+    "ratings" : 5.3,
+    "duration" : 56,
+    "coverImage" :  "hjklfgf.png"
+  },
+  {
+    "name" : "jack ryan ",
+    "seasons" : 4,
+    "episodes" : 8,
+    "releaseYear" : 2019,
+    "genre" : [
+      "action",
+      "drama",
+      "fantasy"
+    ],
+    "totalRatings" : 7000,
+    "ratings" : 6.3,
+    "duration" : 45,
+    "coverImage" :  "hjklfgf.png"
+  },
+  {
+    "name" : "Night Agent",
+    "seasons" : 2,
+    "episodes" : 13,
+    " duration" : 52,
+    "releaseYear" : 2023,
+    "genre" : [
+      "action",
+      "drama",
+      "conspiracy"
+    ],
+    "totalRatings" : 300,
+    "ratings" : 5.3,
+    "coverImage" :  "hjklfgf.png"
+  },
+  {
+    "name" : "Vikings",
+    "seasons" : 6,
+    "episodes" : 22,
+    "releaseYear" : 2011,
+    "genre" : [
+      "WAR",
+      "drama",
+      "fantasy",
+      "History"
+    ],
+    "totalRatings" : 3000,
+    "ratings" : 8.3,
+    "duration" : 39,
+    "coverImage" :  "hjklfgf.png"
+  },
+  {
+    "name" : "One piece",
+    "seasons" : 1,
+    "episodes" : 102,
+    "releaseYear" : 2002,
+    "genre" : [
+      "anime",
+      "drama",
+      "fantasy",
+      "action"
+    ],
+    "totalRatings" : 300,
+    "ratings" : 7.3,
+    "duration" : 54,
+    "coverImage" :  "hjklfgf.png"
+  },
+  {
+    "name" : "Dragon The Nine Realms",
+    "seasons" : 6,
+    "episodes" : 12,
+    "releaseYear" : 2019,
+    "genre" : [
+      "animation",
+      "drama",
+      "fantasy",
+      "action"
+    ],
+    "totalRatings" : 600,
+    "ratings" : 5.3,
+    "duration" : 45,
+    "coverImage" :  "hjklfgf.png"
+  },
+  {
+    "name" : "Seal Team",
+    "seasons" : 7,
+    "episodes" : 22,
+    "duration" : 32,
+    "releaseYear" : 2016,
+    "genre" : [
+      "action",
+      "drama",
+      "war"
+    ],
+    "totalRatings" : 300,
+    "ratings" : 6.3,
+    "coverImage" :  "hjklfgf.png"
+  }
+]

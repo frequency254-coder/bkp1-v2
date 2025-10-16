@@ -1,0 +1,58 @@
+<% if (trailers && trailers.length) { %>
+    <div class="row g-4 trailer-grid">
+        <% trailers.forEach(trailer => {
+            const { title, videoSrc } = trailer;
+            let ytId = "";
+            if (videoSrc.includes("youtu.be/")) {
+                ytId = videoSrc.split("youtu.be/")[1].split("?")[0];
+            } else if (videoSrc.includes("v=")) {
+                ytId = videoSrc.split("v=")[1].split("&")[0];
+            }
+            const thumbnail = ytId
+                    ? `https://img.youtube.com/vi/${ytId}/hqdefault.jpg`
+                    : "/img/placeholder-trailer.jpg";
+        %>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="trailer-card bg-dark-subtle rounded-3 overflow-hidden position-relative">
+                <div class="trailer-preview">
+                    <img src="<%= thumbnail %>" alt="<%= title %>"
+                         class="trailer-thumbnail img-fluid" loading="lazy">
+
+                    <button class="trailer-play-btn"
+                            data-src="<%= videoSrc %>"
+                            data-title="<%= title %>"
+                            aria-label="Play Trailer">
+                        <i class="bi bi-play-fill"></i>
+                    </button>
+                </div>
+
+                <div class="p-2 text-center">
+                    <h6 class="trailer-title mb-1 text-truncate"><%= title %></h6>
+                    <small class="text-secondary">Trailer</small>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+<% } else { %>
+    <div class="alert alert-secondary text-center mt-4">
+        <i class="bi bi-camera-reels me-2"></i> No trailers available at the moment.
+    </div>
+<% } %>
+
+<!-- Modal -->
+<div class="modal fade trailer-modal" id="trailerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content bg-transparent border-0">
+            <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+                    data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg">
+                <iframe id="trailerFrame" src="" allowfullscreen
+                        allow="autoplay; encrypted-media"></iframe>
+            </div>
+            <h5 class="modal-title text-center text-light mt-3" id="trailerTitle"></h5>
+        </div>
+    </div>
+</div>
+

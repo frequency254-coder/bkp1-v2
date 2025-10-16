@@ -1,0 +1,124 @@
+<%
+const {
+    theme = "blue", // fallback theme
+    label,
+    title,
+    subtitle,
+    buttonText,
+    buttonLink,
+    linkText,
+    linkHref,
+    imageSrc,
+    imageAlt,
+    videoSrc,
+    videoPoster,
+    videoAlt,
+    meta = {}
+} = ad || {};
+%>
+
+<div
+        class="ad-card <%= theme %> position-relative rounded-3 overflow-hidden shadow-lg mb-4 neon-border"
+        role="complementary"
+        aria-label="<%= title || 'Advertisement' %>"
+        data-ad-id="<%= meta.id || meta.name || imageSrc || videoSrc || 'ad-' + Date.now() %>"
+>
+    <!-- 🔹 Media Section -->
+    <div class="ad-media position-relative overflow-hidden">
+        <% if (videoSrc) { %>
+            <video
+                    class="ad-video w-100"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    poster="<%= videoPoster || '' %>"
+                    aria-label="<%= videoAlt || title || 'Advertisement video' %>"
+            >
+                <source src="<%= videoSrc %>" type="<%= meta.mime || 'video/mp4' %>">
+                Your browser does not support this video format.
+            </video>
+
+            <!-- 🔊 Sound Toggle -->
+            <button
+                    class="ad-sound-toggle btn btn-sm btn-dark rounded-circle position-absolute bottom-0 end-0 m-2"
+                    type="button"
+                    aria-label="Toggle sound"
+                    data-muted="true"
+            >
+                🔇
+            </button>
+        <% } else if (imageSrc) { %>
+            <picture>
+                <source srcset="<%= imageSrc.replace(/\.\w+$/, '.avif') %>" type="image/avif">
+                <source srcset="<%= imageSrc.replace(/\.\w+$/, '.webp') %>" type="image/webp">
+                <img
+                        src="<%= imageSrc %>"
+                        alt="<%= imageAlt || title || 'Advertisement' %>"
+                        class="ad-img w-100"
+                        loading="lazy"
+                        decoding="async"
+                        width="<%= meta.width || 600 %>"
+                        height="<%= meta.height || 400 %>"
+                />
+            </picture>
+        <% } else { %>
+            <div class="ad-fallback bg-dark text-light text-center p-5">
+                <small>No media available</small>
+            </div>
+        <% } %>
+    </div>
+
+    <!-- 🔹 Overlay Text -->
+    <div class="ad-overlay position-absolute bottom-0 start-0 w-100 p-3 text-center bg-gradient-dark">
+        <% if (label) { %>
+            <span class="badge bg-warning text-dark mb-2 px-3 py-1"><%= label %></span>
+        <% } %>
+
+        <% if (title) { %>
+            <h5 class="fw-bold text-light mb-1 text-shadow-lg"><%= title %></h5>
+        <% } %>
+
+        <% if (subtitle) { %>
+            <p class="small text-light opacity-75 mb-2"><%= subtitle %></p>
+        <% } %>
+
+        <% if (buttonText && buttonLink) { %>
+            <a
+                    href="<%= buttonLink %>"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-sm btn-neon ad-cta fw-bold px-3 py-1"
+                    data-ad-event="click"
+            >
+                <%= buttonText %>
+            </a>
+        <% } else if (linkText && linkHref) { %>
+            <a
+                    href="<%= linkHref %>"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-light fw-bold small d-block mt-2 ad-cta"
+                    data-ad-event="click"
+            >
+                <%= linkText %>
+            </a>
+        <% } %>
+
+        <% if (meta.size) { %>
+            <small class="text-muted d-block mt-2">(File: <%= (meta.size / 1024).toFixed(1) %> KB)</small>
+        <% } %>
+    </div>
+</div>
+
+<script nonce="<%= cspNonce || '' %>">
+    document.querySelectorAll('.ad-sound-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const video = btn.closest('.ad-card').querySelector('video');
+            if (!video) return;
+            const muted = video.muted = !video.muted;
+            btn.textContent = muted ? '🔇' : '🔊';
+        });
+    });
+</script>

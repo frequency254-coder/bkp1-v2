@@ -1,0 +1,799 @@
+<!--&lt;!&ndash;my app js&ndash;&gt;-->
+
+<!--&lt;!&ndash;const express = require('express');&ndash;&gt;-->
+<!--&lt;!&ndash;const morgan = require('morgan');&ndash;&gt;-->
+<!--&lt;!&ndash;const helmet = require('helmet');&ndash;&gt;-->
+<!--&lt;!&ndash;const path = require('path');&ndash;&gt;-->
+<!--&lt;!&ndash;const hpp = require('hpp');&ndash;&gt;-->
+<!--&lt;!&ndash;const rateLimit = require('express-rate-limit');&ndash;&gt;-->
+<!--&lt;!&ndash;const cors = require('cors');&ndash;&gt;-->
+<!--&lt;!&ndash;const expressLayouts = require("express-ejs-layouts");&ndash;&gt;-->
+<!--&lt;!&ndash;const session = require("express-session");&ndash;&gt;-->
+<!--&lt;!&ndash;const crypto = require('crypto');&ndash;&gt;-->
+
+<!--&lt;!&ndash;const checkDB = require('./middleware/checkDB');&ndash;&gt;-->
+<!--&lt;!&ndash;const moviesRouter = require('./routes/moviesRouter');&ndash;&gt;-->
+<!--&lt;!&ndash;const authRouter = require('./routes/authRouter');&ndash;&gt;-->
+<!--&lt;!&ndash;const userRouter = require('./routes/userRouter');&ndash;&gt;-->
+<!--&lt;!&ndash;const viewRouter = require('./routes/viewRoutes');&ndash;&gt;-->
+<!--&lt;!&ndash;const productRoutes = require("./routes/productRoutes");&ndash;&gt;-->
+<!--&lt;!&ndash;const categoryRoutes = require("./routes/categoryRoutes");&ndash;&gt;-->
+<!--&lt;!&ndash;const tvshowRouter = require("./routes/tvshowRoutes");&ndash;&gt;-->
+<!--&lt;!&ndash;const authController = require("./controllers/authController");&ndash;&gt;-->
+<!--&lt;!&ndash;const shopViewRoutes = require("./routes/shopViewRoutes");&ndash;&gt;-->
+<!--&lt;!&ndash;const adminOrderRoutes = require("./routes/adminOrderRoutes");&ndash;&gt;-->
+<!--&lt;!&ndash;const checkoutRoutes = require("./routes/checkoutRoutes");&ndash;&gt;-->
+<!--&lt;!&ndash;const cartRoutes = require("./routes/cartRoutes");&ndash;&gt;-->
+<!--&lt;!&ndash;const invoiceRoutes = require("./routes/invoiceRoutes");&ndash;&gt;-->
+
+<!--&lt;!&ndash;const CustomError = require('./utils/CustomError');&ndash;&gt;-->
+<!--&lt;!&ndash;const globalErrorHandler = require('./controllers/errorController');&ndash;&gt;-->
+
+<!--&lt;!&ndash;const { createAdProvider, expressAdMiddleware } = require("./utils/getRandomAd");&ndash;&gt;-->
+<!--&lt;!&ndash;const adProvider = createAdProvider({&ndash;&gt;-->
+<!--&lt;!&ndash;adsDir: path.join(__dirname, "public", "ads"),&ndash;&gt;-->
+<!--&lt;!&ndash;publicPrefix: "/ads",&ndash;&gt;-->
+<!--&lt;!&ndash;renameUnsafe: false, // or true if you want filenames changed on disk&ndash;&gt;-->
+<!--&lt;!&ndash;watch: true&ndash;&gt;-->
+<!--&lt;!&ndash;});&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;const fs = require("fs");&ndash;&gt;-->
+<!--&lt;!&ndash;const mime = require("mime");&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;const app = express();&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;// Detect if we are in production&ndash;&gt;-->
+<!--&lt;!&ndash;const isProd = process.env.NODE_ENV === "production";&ndash;&gt;-->
+
+<!--&lt;!&ndash;// In production, load Vite manifest.json (maps entry -> hashed file)&ndash;&gt;-->
+<!--&lt;!&ndash;let manifest = {};&ndash;&gt;-->
+<!--&lt;!&ndash;if (isProd) {&ndash;&gt;-->
+<!--&lt;!&ndash;const manifestPath = path.resolve("public/dist/manifest.json");&ndash;&gt;-->
+<!--&lt;!&ndash;manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;// Middleware to inject asset paths into EJS&ndash;&gt;-->
+<!--&lt;!&ndash;app.use((req, res, next) => {&ndash;&gt;-->
+<!--&lt;!&ndash;res.locals.isProd = isProd;&ndash;&gt;-->
+<!--&lt;!&ndash;res.locals.vite = {&ndash;&gt;-->
+<!--&lt;!&ndash;css: isProd&ndash;&gt;-->
+<!--&lt;!&ndash;? `/dist/${manifest["frontend/css/style.css"].file}`&ndash;&gt;-->
+<!--&lt;!&ndash;: "http://localhost:5173/frontend/css/style.css",&ndash;&gt;-->
+<!--&lt;!&ndash;js: isProd&ndash;&gt;-->
+<!--&lt;!&ndash;? `/dist/${manifest["frontend/js/main.js"].file}`&ndash;&gt;-->
+<!--&lt;!&ndash;: "http://localhost:5173/frontend/js/main.js",&ndash;&gt;-->
+
+<!--&lt;!&ndash;};&ndash;&gt;-->
+<!--&lt;!&ndash;next();&ndash;&gt;-->
+<!--&lt;!&ndash;});&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;// ============================&ndash;&gt;-->
+<!--&lt;!&ndash;// View Engine & Layouts&ndash;&gt;-->
+<!--&lt;!&ndash;// ============================&ndash;&gt;-->
+<!--&lt;!&ndash;app.set('view engine', 'ejs');&ndash;&gt;-->
+<!--&lt;!&ndash;app.use(express.static(path.join(__dirname, 'public')));&ndash;&gt;-->
+
+<!--&lt;!&ndash;app.use(expressLayouts);&ndash;&gt;-->
+<!--&lt;!&ndash;app.set("layout", "layout" ); // default layout.ejs in /views&ndash;&gt;-->
+
+<!--&lt;!&ndash;app.use(session({&ndash;&gt;-->
+<!--&lt;!&ndash;secret: "supersecret",&ndash;&gt;-->
+<!--&lt;!&ndash;resave: false,&ndash;&gt;-->
+<!--&lt;!&ndash;saveUninitialized: true,&ndash;&gt;-->
+<!--&lt;!&ndash;cookie: { maxAge: 1000 * 60 * 60 } // 1 hour&ndash;&gt;-->
+<!--&lt;!&ndash;}));&ndash;&gt;-->
+
+<!--&lt;!&ndash;// ============================&ndash;&gt;-->
+<!--&lt;!&ndash;// Logging&ndash;&gt;-->
+<!--&lt;!&ndash;// ============================&ndash;&gt;-->
+<!--&lt;!&ndash;if (process.env.NODE_ENV === 'development') {&ndash;&gt;-->
+<!--&lt;!&ndash;app.use(morgan('dev'));&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;// ============================&ndash;&gt;-->
+<!--&lt;!&ndash;// Static Files&ndash;&gt;-->
+<!--&lt;!&ndash;// ============================&ndash;&gt;-->
+
+<!--&lt;!&ndash;app.use("/images/products",express.static(path.join(__dirname, 'public')));&ndash;&gt;-->
+
+<!--&lt;!&ndash;// Then a fallback handler for product images&ndash;&gt;-->
+<!--&lt;!&ndash;app.use("/images/products/:imgName", (req, res, next) => {&ndash;&gt;-->
+<!--&lt;!&ndash;// If we are here, the static server didn't find the file&ndash;&gt;-->
+<!--&lt;!&ndash;const fallback = path.join(__dirname, "public", "images", "default.jpg");&ndash;&gt;-->
+<!--&lt;!&ndash;res.sendFile(fallback);&ndash;&gt;-->
+<!--&lt;!&ndash;});&ndash;&gt;-->
+
+<!--&lt;!&ndash;app.use(expressAdMiddleware(adProvider, "ad"));&ndash;&gt;-->
+
+<!--&lt;!&ndash;// ============================&ndash;&gt;-->
+<!--&lt;!&ndash;// Security Headers (Optional)&ndash;&gt;-->
+<!--&lt;!&ndash;// ============================&ndash;&gt;-->
+<!--&lt;!&ndash;app.use(&ndash;&gt;-->
+<!--&lt;!&ndash;helmet.contentSecurityPolicy({&ndash;&gt;-->
+<!--&lt;!&ndash;directives: {&ndash;&gt;-->
+<!--&lt;!&ndash;defaultSrc: ["'self'"],&ndash;&gt;-->
+
+<!--&lt;!&ndash;scriptSrc: [&ndash;&gt;-->
+<!--&lt;!&ndash;"'self'",&ndash;&gt;-->
+<!--&lt;!&ndash;// "'nonce-<random>'"  // consider nonces for inline <script>&ndash;&gt;-->
+<!--&lt;!&ndash;    // "https://cdn.jsdelivr.net", "https://cdnjs.cloudflare.com" // if you need CDNs&ndash;&gt;-->
+<!--&lt;!&ndash;    ],&ndash;&gt;-->
+
+<!--&lt;!&ndash;    styleSrc: [&ndash;&gt;-->
+<!--&lt;!&ndash;        "'self'",&ndash;&gt;-->
+<!--&lt;!&ndash;        // "'unsafe-inline'", // try to remove, fallback only if you rely on inline styles&ndash;&gt;-->
+<!--&lt;!&ndash;        "https://fonts.googleapis.com"&ndash;&gt;-->
+<!--&lt;!&ndash;    ],&ndash;&gt;-->
+
+<!--&lt;!&ndash;        imgSrc: [&ndash;&gt;-->
+<!--&lt;!&ndash;        "'self'",&ndash;&gt;-->
+<!--&lt;!&ndash;        "data:",&ndash;&gt;-->
+<!--&lt;!&ndash;        "blob:",&ndash;&gt;-->
+<!--&lt;!&ndash;        "https://i.ytimg.com" // YouTube thumbnails&ndash;&gt;-->
+<!--&lt;!&ndash;    ],&ndash;&gt;-->
+
+<!--&lt;!&ndash;        mediaSrc: [&ndash;&gt;-->
+<!--&lt;!&ndash;        "'self'",&ndash;&gt;-->
+<!--&lt;!&ndash;        "blob:"&ndash;&gt;-->
+<!--&lt;!&ndash;        // add CDN if you host videos externally&ndash;&gt;-->
+<!--&lt;!&ndash;    ],&ndash;&gt;-->
+
+<!--&lt;!&ndash;        fontSrc: [&ndash;&gt;-->
+<!--&lt;!&ndash;        "'self'",&ndash;&gt;-->
+<!--&lt;!&ndash;        "https://fonts.gstatic.com"&ndash;&gt;-->
+<!--&lt;!&ndash;    ],&ndash;&gt;-->
+
+<!--&lt;!&ndash;        frameSrc: [&ndash;&gt;-->
+<!--&lt;!&ndash;        "'self'",&ndash;&gt;-->
+<!--&lt;!&ndash;        "https://www.youtube.com",&ndash;&gt;-->
+<!--&lt;!&ndash;        "https://www.youtube-nocookie.com"&ndash;&gt;-->
+<!--&lt;!&ndash;        // add Vimeo or others only if used&ndash;&gt;-->
+<!--&lt;!&ndash;    ],&ndash;&gt;-->
+
+<!--&lt;!&ndash;        connectSrc: [&ndash;&gt;-->
+<!--&lt;!&ndash;        "'self'",&ndash;&gt;-->
+<!--&lt;!&ndash;        // "https://api.themoviedb.org", // if you call TMDB from browser&ndash;&gt;-->
+<!--&lt;!&ndash;        // "https://your-api.example.com" // adjust to your own API&ndash;&gt;-->
+<!--&lt;!&ndash;    ],&ndash;&gt;-->
+
+<!--&lt;!&ndash;        baseUri: ["'self'"],&ndash;&gt;-->
+<!--&lt;!&ndash;        formAction: ["'self'"],&ndash;&gt;-->
+<!--&lt;!&ndash;        objectSrc: ["'none'"],&ndash;&gt;-->
+<!--&lt;!&ndash;        upgradeInsecureRequests: []&ndash;&gt;-->
+<!--&lt;!&ndash;    },&ndash;&gt;-->
+<!--&lt;!&ndash;    })&ndash;&gt;-->
+<!--&lt;!&ndash;    );&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;    //================================&ndash;&gt;-->
+<!--&lt;!&ndash;    //CSP&ndash;&gt;-->
+<!--&lt;!&ndash;    //================================&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;    app.use((req, res, next) => {&ndash;&gt;-->
+<!--&lt;!&ndash;        res.locals.cspNonce = crypto.randomBytes(16).toString("base64");&ndash;&gt;-->
+
+<!--&lt;!&ndash;        const csp = `&ndash;&gt;-->
+<!--&lt;!&ndash;        default-src 'self';&ndash;&gt;-->
+<!--&lt;!&ndash;        script-src 'self' 'nonce-${res.locals.cspNonce}';&ndash;&gt;-->
+<!--&lt;!&ndash;        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;&ndash;&gt;-->
+<!--&lt;!&ndash;        img-src 'self' data: blob: https://i.ytimg.com https://image.tmdb.org;&ndash;&gt;-->
+<!--&lt;!&ndash;        font-src 'self' data: https://fonts.gstatic.com;&ndash;&gt;-->
+<!--&lt;!&ndash;        media-src 'self' blob:;&ndash;&gt;-->
+<!--&lt;!&ndash;        frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;&ndash;&gt;-->
+<!--&lt;!&ndash;        connect-src 'self' https://api.themoviedb.org;&ndash;&gt;-->
+<!--&lt;!&ndash;        object-src 'none';&ndash;&gt;-->
+<!--&lt;!&ndash;        base-uri 'self';&ndash;&gt;-->
+<!--&lt;!&ndash;        frame-ancestors 'self';&ndash;&gt;-->
+<!--&lt;!&ndash;    `.replace(/\s{2,}/g, " ").trim();&ndash;&gt;-->
+
+<!--&lt;!&ndash;        res.setHeader("Content-Security-Policy", csp);&ndash;&gt;-->
+
+<!--&lt;!&ndash;        next();&ndash;&gt;-->
+<!--&lt;!&ndash;    });&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;    // ============================&ndash;&gt;-->
+<!--&lt;!&ndash;    // CORS&ndash;&gt;-->
+<!--&lt;!&ndash;    // ============================&ndash;&gt;-->
+<!--&lt;!&ndash;    app.use(&ndash;&gt;-->
+<!--&lt;!&ndash;        cors({&ndash;&gt;-->
+<!--&lt;!&ndash;            origin: [&ndash;&gt;-->
+<!--&lt;!&ndash;                process.env.FRONTEND_URL || 'http://localhost:4000',&ndash;&gt;-->
+<!--&lt;!&ndash;                'http://127.0.0.1:4000',&ndash;&gt;-->
+<!--&lt;!&ndash;            ],&ndash;&gt;-->
+<!--&lt;!&ndash;            methods: ['GET', 'POST', 'PATCH', 'DELETE'],&ndash;&gt;-->
+<!--&lt;!&ndash;            credentials: true,&ndash;&gt;-->
+<!--&lt;!&ndash;        })&ndash;&gt;-->
+<!--&lt;!&ndash;    );&ndash;&gt;-->
+
+<!--&lt;!&ndash;    // ============================&ndash;&gt;-->
+<!--&lt;!&ndash;    // Rate Limiting (Production)&ndash;&gt;-->
+<!--&lt;!&ndash;    // ============================&ndash;&gt;-->
+<!--&lt;!&ndash;    if (process.env.NODE_ENV === 'production') {&ndash;&gt;-->
+<!--&lt;!&ndash;        const limiter = rateLimit({&ndash;&gt;-->
+<!--&lt;!&ndash;            max: 100,&ndash;&gt;-->
+<!--&lt;!&ndash;            windowMs: 60 * 60 * 1000,&ndash;&gt;-->
+<!--&lt;!&ndash;            message: 'Too many requests from this IP, please try again in an hour!',&ndash;&gt;-->
+<!--&lt;!&ndash;        });&ndash;&gt;-->
+<!--&lt;!&ndash;        app.use('/api', limiter);&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    // ============================&ndash;&gt;-->
+<!--&lt;!&ndash;    // Body Parser&ndash;&gt;-->
+<!--&lt;!&ndash;    // ============================&ndash;&gt;-->
+<!--&lt;!&ndash;    app.use(express.json({ limit: '10kb' }));&ndash;&gt;-->
+
+<!--&lt;!&ndash;    // ============================&ndash;&gt;-->
+<!--&lt;!&ndash;    // Parameter Pollution&ndash;&gt;-->
+<!--&lt;!&ndash;    // ============================&ndash;&gt;-->
+<!--&lt;!&ndash;    app.use(hpp({&ndash;&gt;-->
+<!--&lt;!&ndash;        whitelist: ['duration', 'ratings', 'genres', 'releaseYear', 'releaseDate'],&ndash;&gt;-->
+<!--&lt;!&ndash;    }));&ndash;&gt;-->
+
+<!--&lt;!&ndash;    // ============================&ndash;&gt;-->
+<!--&lt;!&ndash;    // Database Check & Auth Protection&ndash;&gt;-->
+<!--&lt;!&ndash;    // ============================&ndash;&gt;-->
+<!--&lt;!&ndash;    app.use(checkDB);&ndash;&gt;-->
+<!--&lt;!&ndash;    // app.use((req, res, next) => {&ndash;&gt;-->
+<!--&lt;!&ndash;    //     if (req.method === 'GET') return next();      // allow public GETs&ndash;&gt;-->
+<!--&lt;!&ndash;    //     return authController.protect(req, res, next); // protect everything else&ndash;&gt;-->
+<!--&lt;!&ndash;    // });&ndash;&gt;-->
+
+<!--&lt;!&ndash;    //============================&ndash;&gt;-->
+<!--&lt;!&ndash;    // GLOBAL DEFAULTS&ndash;&gt;-->
+<!--&lt;!&ndash;    //============================&ndash;&gt;-->
+<!--&lt;!&ndash;    app.locals.getResponsivePaths = require('./utils/getResponsivePaths');&ndash;&gt;-->
+<!--&lt;!&ndash;    app.use((req, res, next) => {&ndash;&gt;-->
+<!--&lt;!&ndash;        res.locals.bodyClass       = res.locals.bodyClass || "";&ndash;&gt;-->
+<!--&lt;!&ndash;        res.locals.activePage      = res.locals.activePage || "";&ndash;&gt;-->
+<!--&lt;!&ndash;        res.locals.cart            = req.session?.cart || [];&ndash;&gt;-->
+<!--&lt;!&ndash;        res.locals.cartCount       = (res.locals.cart || []).length;&ndash;&gt;-->
+<!--&lt;!&ndash;        res.locals.user            = req.user || null;&ndash;&gt;-->
+<!--&lt;!&ndash;        res.locals.ad              = res.locals.ad || null;&ndash;&gt;-->
+<!--&lt;!&ndash;        res.locals.heroImage       = res.locals.heroImage || null;&ndash;&gt;-->
+<!--&lt;!&ndash;        res.locals.pageTitle       = res.locals.pageTitle || "";&ndash;&gt;-->
+<!--&lt;!&ndash;        res.locals.pageSubtitle    = res.locals.pageSubtitle || "";&ndash;&gt;-->
+<!--&lt;!&ndash;        res.locals.metaTitle       = res.locals.metaTitle || res.locals.pageTitle;&ndash;&gt;-->
+<!--&lt;!&ndash;        res.locals.metaDescription = res.locals.metaDescription || "Your hub for entertainment, gadgets, movies & PlayStation gaming in Thika.";&ndash;&gt;-->
+<!--&lt;!&ndash;        res.locals.metaKeywords    = res.locals.metaKeywords || "movies, tv shows, playstation, gadgets, shop, Thika, Frequency ENT";&ndash;&gt;-->
+<!--&lt;!&ndash;        res.locals.ogImage         = res.locals.ogImage || "/images/default-og.jpg";&ndash;&gt;-->
+<!--&lt;!&ndash;        res.locals.ogUrl           = req.originalUrl;&ndash;&gt;-->
+<!--&lt;!&ndash;        res.locals.cspNonce        = crypto.randomBytes(16).toString('base64'); // for inline scripts&ndash;&gt;-->
+
+<!--&lt;!&ndash;        next();&ndash;&gt;-->
+<!--&lt;!&ndash;    });&ndash;&gt;-->
+
+
+
+
+<!--&lt;!&ndash;    // ============================&ndash;&gt;-->
+<!--&lt;!&ndash;    // Routes&ndash;&gt;-->
+<!--&lt;!&ndash;    // ============================&ndash;&gt;-->
+<!--&lt;!&ndash;    app.use("/cart", cartRoutes);&ndash;&gt;-->
+<!--&lt;!&ndash;    app.use("/checkout", checkoutRoutes);&ndash;&gt;-->
+<!--&lt;!&ndash;    app.use("/invoice", invoiceRoutes);&ndash;&gt;-->
+<!--&lt;!&ndash;    app.use("/shop", shopViewRoutes);&ndash;&gt;-->
+<!--&lt;!&ndash;    app.use('/', viewRouter);&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;    app.use("/admin/orders", authController.protect,adminOrderRoutes);&ndash;&gt;-->
+<!--&lt;!&ndash;    app.use('/api/v1/user', authController.protect,userRouter);&ndash;&gt;-->
+
+<!--    app.use('/api/v1/movies', moviesRouter);-->
+<!--    app.use("/api/v1/tvshows", tvshowRouter);-->
+<!--    app.use('/api/v1/auth', authRouter);-->
+<!--    app.use("/api/v1/products", productRoutes);-->
+<!--    app.use("/api/v1/categories", categoryRoutes);-->
+
+<!--&lt;!&ndash;    // Coming Soon route&ndash;&gt;-->
+<!--&lt;!&ndash;    app.get("/coming-soon", (req, res) => {&ndash;&gt;-->
+<!--&lt;!&ndash;        res.render("comingSoon", {&ndash;&gt;-->
+<!--&lt;!&ndash;            layout: "layout",&ndash;&gt;-->
+<!--&lt;!&ndash;            title: "Coming Soon - Frequency ENT",&ndash;&gt;-->
+<!--&lt;!&ndash;            message: "🚧 This feature is under development. Check back soon!"&ndash;&gt;-->
+<!--&lt;!&ndash;        });&ndash;&gt;-->
+<!--&lt;!&ndash;    });&ndash;&gt;-->
+
+<!--&lt;!&ndash;    app.get("/coming-soon/:slug", (req, res) => {&ndash;&gt;-->
+<!--&lt;!&ndash;        const { slug } = req.params;&ndash;&gt;-->
+<!--&lt;!&ndash;        res.render("comingSoon", {&ndash;&gt;-->
+<!--&lt;!&ndash;            layout: "layout",&ndash;&gt;-->
+<!--&lt;!&ndash;            title: "Coming Soon - Frequency ENT",&ndash;&gt;-->
+<!--&lt;!&ndash;            message: `🚧 The product "${slug}" is under development. Check back soon!`&ndash;&gt;-->
+<!--&lt;!&ndash;        });&ndash;&gt;-->
+<!--&lt;!&ndash;    });&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;    // Video streaming route&ndash;&gt;-->
+<!--&lt;!&ndash;    app.get("/ads/:filename", (req, res) => {&ndash;&gt;-->
+<!--&lt;!&ndash;        const videoPath = path.join(__dirname, "public", "ads", req.params.filename);&ndash;&gt;-->
+
+<!--&lt;!&ndash;        if (!fs.existsSync(videoPath)) {&ndash;&gt;-->
+<!--&lt;!&ndash;            return res.status(404).send("Video not found");&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+
+<!--&lt;!&ndash;        const stat = fs.statSync(videoPath);&ndash;&gt;-->
+<!--&lt;!&ndash;        const fileSize = stat.size;&ndash;&gt;-->
+<!--&lt;!&ndash;        const range = req.headers.range;&ndash;&gt;-->
+
+<!--&lt;!&ndash;        if (range) {&ndash;&gt;-->
+<!--&lt;!&ndash;            // Handle browser range request&ndash;&gt;-->
+<!--&lt;!&ndash;            const parts = range.replace(/bytes=/, "").split("-");&ndash;&gt;-->
+<!--&lt;!&ndash;            const start = parseInt(parts[0], 10);&ndash;&gt;-->
+<!--&lt;!&ndash;            const end = parts[1] ? parseInt(parts[1], 10) : fileSize - 1;&ndash;&gt;-->
+
+<!--&lt;!&ndash;            if (start >= fileSize || end >= fileSize) {&ndash;&gt;-->
+<!--&lt;!&ndash;                res.status(416).setHeader("Content-Range", `bytes */${fileSize}`);&ndash;&gt;-->
+<!--&lt;!&ndash;                return res.end();&ndash;&gt;-->
+<!--&lt;!&ndash;            }&ndash;&gt;-->
+
+<!--&lt;!&ndash;            const chunkSize = (end - start) + 1;&ndash;&gt;-->
+<!--&lt;!&ndash;            const file = fs.createReadStream(videoPath, { start, end });&ndash;&gt;-->
+<!--&lt;!&ndash;            const head = {&ndash;&gt;-->
+<!--&lt;!&ndash;                "Content-Range": `bytes ${start}-${end}/${fileSize}`,&ndash;&gt;-->
+<!--&lt;!&ndash;                "Accept-Ranges": "bytes",&ndash;&gt;-->
+<!--&lt;!&ndash;                "Content-Length": chunkSize,&ndash;&gt;-->
+<!--&lt;!&ndash;                "Content-Type": mime.getType(videoPath) || "video/mp4"&ndash;&gt;-->
+<!--&lt;!&ndash;            };&ndash;&gt;-->
+
+<!--&lt;!&ndash;            res.writeHead(206, head);&ndash;&gt;-->
+<!--&lt;!&ndash;            file.pipe(res);&ndash;&gt;-->
+
+<!--&lt;!&ndash;        } else {&ndash;&gt;-->
+<!--&lt;!&ndash;            // ✅ Force streaming mode by always sending partial content&ndash;&gt;-->
+<!--&lt;!&ndash;            const start = 0;&ndash;&gt;-->
+<!--&lt;!&ndash;            const end = fileSize - 1;&ndash;&gt;-->
+<!--&lt;!&ndash;            const chunkSize = fileSize;&ndash;&gt;-->
+<!--&lt;!&ndash;            const file = fs.createReadStream(videoPath);&ndash;&gt;-->
+
+<!--&lt;!&ndash;            const head = {&ndash;&gt;-->
+<!--&lt;!&ndash;                "Content-Range": `bytes ${start}-${end}/${fileSize}`,&ndash;&gt;-->
+<!--&lt;!&ndash;                "Accept-Ranges": "bytes",&ndash;&gt;-->
+<!--&lt;!&ndash;                "Content-Length": chunkSize,&ndash;&gt;-->
+<!--&lt;!&ndash;                "Content-Type": mime.getType(videoPath) || "video/mp4"&ndash;&gt;-->
+<!--&lt;!&ndash;            };&ndash;&gt;-->
+
+<!--&lt;!&ndash;            res.writeHead(206, head); // <&#45;&#45; always 206, not 200&ndash;&gt;-->
+<!--&lt;!&ndash;            file.pipe(res);&ndash;&gt;-->
+<!--&lt;!&ndash;        }&ndash;&gt;-->
+<!--&lt;!&ndash;    });&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;    // ============================&ndash;&gt;-->
+<!--&lt;!&ndash;    // 404 Handler&ndash;&gt;-->
+<!--&lt;!&ndash;    // ============================&ndash;&gt;-->
+<!--&lt;!&ndash;    app.use((req, res, next) => {&ndash;&gt;-->
+<!--&lt;!&ndash;        next(new CustomError(`Can't find ${req.originalUrl} on this server`, 404));&ndash;&gt;-->
+<!--&lt;!&ndash;    });&ndash;&gt;-->
+
+<!--&lt;!&ndash;    // ============================&ndash;&gt;-->
+<!--&lt;!&ndash;    // Global Error Handler&ndash;&gt;-->
+<!--&lt;!&ndash;    // ============================&ndash;&gt;-->
+<!--&lt;!&ndash;    app.use(globalErrorHandler);&ndash;&gt;-->
+
+<!--&lt;!&ndash;    module.exports = app;&ndash;&gt;-->
+
+<!--&lt;!&ndash;    // ============================================================================&ndash;&gt;-->
+<!--&lt;!&ndash;    // ======================= COMMENTED LEGACY / NOTES ==========================&ndash;&gt;-->
+<!--&lt;!&ndash;    // ============================================================================&ndash;&gt;-->
+
+<!--&lt;!&ndash;    // const express = require('express');&ndash;&gt;-->
+<!--&lt;!&ndash;    // const morgan = require('morgan');&ndash;&gt;-->
+<!--&lt;!&ndash;    // const helmet = require('helmet');&ndash;&gt;-->
+<!--&lt;!&ndash;    // const path = require('path');&ndash;&gt;-->
+<!--&lt;!&ndash;    // // const mongoSanitize = require('express-mongo-sanitize');&ndash;&gt;-->
+<!--&lt;!&ndash;    // // const xss = require('xss-clean');&ndash;&gt;-->
+<!--&lt;!&ndash;    // const hpp = require('hpp');&ndash;&gt;-->
+<!--&lt;!&ndash;    // const rateLimit = require('express-rate-limit');&ndash;&gt;-->
+<!--&lt;!&ndash;    // const cors = require('cors');&ndash;&gt;-->
+<!--&lt;!&ndash;    // ...&ndash;&gt;-->
+<!--&lt;!&ndash;    // (All your commented legacy code stays exactly as-is)&ndash;&gt;-->
+<!--&lt;!&ndash;    // ============================================================================&ndash;&gt;-->
+
+
+
+/* ----------------- Global ----------------- */
+body {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+font-family: 'Segoe UI', Roboto, sans-serif;
+background: linear-gradient(135deg, #1a2738, #24364d);
+color: #fff;
+margin: 0;
+padding: 0;
+transition: background 0.3s ease;
+overflow-x: hidden;
+}
+
+/* ----------------- Grid ----------------- */
+main.content-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+gap: 18px;
+width: 100%;
+margin: 0 auto;
+padding: 0;
+box-sizing: border-box;
+}
+
+.content-card {
+position: relative;
+display: flex;
+flex-direction: column;
+background-color: rgba(36, 54, 77, 0.9);
+border-radius: 12px;
+overflow: hidden;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+.content-card:hover {
+transform: translateY(-5px) scale(1.02);
+box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+}
+.content-card img {
+width: 100%;
+height: 300px;
+object-fit: cover;
+}
+
+/* ----------------- Navbar ----------------- */
+.navbar {
+padding: 15px 0;
+transition: all 0.3s ease;
+background: linear-gradient(135deg, #0d1b2a, #1b263b);
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.navbar-brand {
+font-weight: 700;
+color: #ffc107;
+font-size: 26px;
+}
+.nav-tabs span {
+margin-left: 15px;
+cursor: pointer;
+padding: 6px 12px;
+border-radius: 20px;
+transition: all 0.25s;
+font-weight: 500;
+}
+.nav-tabs span.active {
+background-color: #ffc107;
+color: #0d1b2a;
+}
+
+/* ----------------- Genre Selector ----------------- */
+.genre-selector {
+background-color: rgba(36, 54, 77, 0.9);
+padding: 15px 0;
+border-radius: 12px;
+margin-bottom: 20px;
+text-align: center;
+}
+.genre-pill {
+cursor: pointer;
+margin: 6px;
+padding: 8px 18px;
+border-radius: 25px;
+font-weight: 500;
+font-size: 0.95rem;
+border: 1px solid #ffc107;
+background-color: #1b263b;
+color: #ffc107;
+display: inline-block;
+transition: all 0.25s;
+}
+.genre-pill.active {
+background-color: #ff9800;
+color: #fff;
+transform: scale(1.1);
+}
+
+/* ----------------- Card Body ----------------- */
+.card-body {
+padding: 10px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+font-size: 0.85rem;
+}
+.movie-title {
+font-weight: 600;
+font-size: 1.1rem;
+margin-bottom: 3px;
+}
+.movie-year {
+font-size: 0.8rem;
+color: #ccc;
+margin-bottom: 5px;
+}
+.movie-overview {
+font-size: 0.78rem;
+color: #f1f1f1;
+height: 38px;
+overflow: hidden;
+text-overflow: ellipsis;
+margin-bottom: 5px;
+}
+.movie-genres .badge {
+font-size: 0.7rem;
+margin-right: 3px;
+background-color: #ffc107;
+color: #0d1b2a;
+border-radius: 4px;
+padding: 2px 6px;
+}
+.trailer-btn {
+text-decoration: none;
+background-color: #ff5722;
+color: #fff;
+padding: 5px 12px;
+border-radius: 20px;
+font-size: 0.8rem;
+text-align: center;
+margin-top: 5px;
+transition: all 0.25s;
+}
+.trailer-btn:hover { background-color: #ff7043; }
+.trailer-badge {
+position: absolute;
+top: 8px;
+left: 8px;
+background: rgba(255, 0, 0, 0.85);
+color: #fff;
+padding: 4px 8px;
+font-size: 0.8rem;
+border-radius: 4px;
+z-index: 10;
+}
+
+/* ----------------- Back to Top Button ----------------- */
+#backToTop { font-size: 16px; }
+
+/* ----------------- Footer ----------------- */
+.footer {
+background: linear-gradient(135deg, #0d1b2a, #1b263b);
+color: #fff;
+padding: 40px 0;
+font-size: 14px;
+text-align: center;
+}
+
+/* ----------------- Responsive ----------------- */
+@media (max-width: 991px) {
+.content-card img { height: 240px; }
+}
+@media (max-width: 767px) {
+.content-card img { height: 200px; }
+.movie-overview { display: none; }
+}
+
+/* ----------------- Spinner ----------------- */
+.spinner {
+border: 6px solid rgba(255, 193, 7, 0.3);
+border-top: 6px solid #ffc107;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+animation: spin 1s linear infinite;
+margin: 0 auto;
+}
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+/* ----------------- Pagination ----------------- */
+.pagination {
+display: flex;
+flex-wrap: wrap;
+list-style: none;
+padding-left: 0;
+margin: 0;
+}
+.pagination .page-item { margin: 3px; }
+.pagination .page-link {
+color: #ffc107;
+background-color: #1b263b;
+border: 1px solid #ffc107;
+padding: 6px 12px;
+border-radius: 6px;
+transition: all 0.25s;
+text-decoration: none;
+}
+.pagination .page-item.active .page-link {
+background-color: #ff9800;
+color: #0d1b2a;
+border-color: #ff9800;
+font-weight: 600;
+}
+.pagination .page-item.disabled .page-link {
+background-color: #1b263b;
+color: #555;
+border-color: #555;
+cursor: not-allowed;
+}
+.pagination .page-link:hover:not(.disabled) {
+background-color: #ffc107;
+color: #0d1b2a;
+transform: scale(1.05);
+}
+
+/* ============================
+Hero Background
+============================ */
+.hero-background {
+position: relative;
+width: 100%;
+min-height: 250px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+background: no-repeat center center/cover;
+color: #fff;
+}
+.hero-background::before {
+content: "";
+position: absolute;
+inset: 0;
+background: rgba(0, 0, 0, 0.55);
+z-index: 1;
+}
+.hero-background .hero-content {
+position: relative;
+z-index: 2;
+padding: 2rem;
+}
+.hero-background.large, .hero-lg { min-height: 400px; }
+.hero-background.medium, .hero-md { min-height: 250px; }
+.hero-background.small, .hero-sm { min-height: 150px; }
+@media (max-width: 992px) {
+.hero-background.large, .hero-lg { min-height: 300px; }
+.hero-background.medium, .hero-md { min-height: 200px; }
+.hero-background.small, .hero-sm { min-height: 120px; }
+}
+@media (max-width: 576px) {
+.hero-background.large, .hero-lg { min-height: 220px; }
+.hero-background.medium, .hero-md { min-height: 150px; }
+.hero-background.small, .hero-sm { min-height: 100px; }
+.hero-background .hero-content h1 { font-size: 1.6rem; }
+.hero-background .hero-content p { font-size: 0.9rem; }
+}
+
+/* ============================
+Ad Styles
+============================ */
+.theme-gold { --glow-color: #ffc107; }
+.theme-blue { --glow-color: #2196f3; }
+.theme-green { --glow-color: #4caf50; }
+.theme-purple { --glow-color: #9c27b0; }
+.theme-red { --glow-color: #f44336; }
+
+/* Generic ad card */
+.ad-card {
+background: linear-gradient(135deg, #d97706, #facc15);
+
+
+
+color: #0d1b2a;
+border-radius: 12px;
+margin: 15px auto;
+max-width: 850px;
+border: 2px solid #ffeb3b;
+overflow: hidden;
+position: relative;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Video */
+.ad-video {
+width: 100%;
+max-height: 350px;
+object-fit: cover;
+display: block;
+border-radius: 12px;
+}
+
+/* Image */
+.ad-img {
+width: 100%;
+max-height: 200px;
+object-fit: contain;
+background: #fff;
+}
+
+/* Overlay (video/image) */
+.ad-overlay {
+position: absolute;
+top: 10px;
+left: 50%;
+transform: translateX(-50%);
+background: rgba(0,0,0,0.55);
+color: #fff;
+padding: 10px 14px;
+border-radius: 8px;
+max-width: 90%;
+display: inline-block;
+text-align: center;
+}
+
+/* Text-only ads fallback */
+.ad-card:not(:has(video)):not(:has(img)) .ad-overlay {
+position: relative;
+top: auto;
+left: auto;
+transform: none;
+background: transparent;
+color: inherit;
+text-align: center;
+}
+
+/* Glow Animation */
+.pulse-glow { animation: pulseGlow 2s infinite alternate; }
+@keyframes pulseGlow {
+0% { box-shadow: 0 0 6px rgba(0,0,0,0.2),
+0 0 10px var(--glow-color, #ffc107),
+0 0 20px var(--glow-color, #ffc107); }
+100% { box-shadow: 0 0 8px rgba(0,0,0,0.25),
+0 0 25px var(--glow-color, #ffc107),
+0 0 50px var(--glow-color, #ffc107); }
+}
+
+/* Hover → clickable feel */
+.ad-card:hover {
+transform: scale(1.02);
+cursor: pointer;
+box-shadow: 0 0 8px rgba(0,0,0,0.25),
+0 0 22px var(--glow-color, #ffc107);
+}
+
+/* Titles */
+.ad-card h5 { font-size: 1.1rem; font-weight: 700; margin-bottom: 5px; }
+.ad-card p { font-size: 0.85rem; margin: 0; }
+
+/* Buttons */
+.ad-card .btn {
+font-size: 0.85rem;
+padding: 4px 14px;
+border-radius: 20px;
+font-weight: 600;
+}
+
+/* Badge */
+.ad-label, .ad-card .badge {
+background: #000;
+color: #ffc107;
+font-size: 0.7rem;
+padding: 3px 8px;
+border-radius: 6px;
+font-weight: 600;
+text-transform: uppercase;
+}
+
+/* Responsive adjustments for ads */
+@media (max-width: 768px) {
+.ad-card h5 { font-size: 0.95rem; }
+.ad-card p { font-size: 0.75rem; }
+.ad-overlay { padding: 6px 10px; }
+.ad-card .btn { font-size: 0.75rem; padding: 3px 10px; }
+}
+
+.loading-spinner {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 1055;
+}
+

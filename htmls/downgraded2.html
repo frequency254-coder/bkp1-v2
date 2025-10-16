@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Packages</title>
+    <style>
+        :root {
+            --primary-green: #6DBE45;
+            --dark-green: #2E7D32;
+            --soft-yellow: #F2E394;
+            --light-green: #C8E6C9;
+            --neutral-bg: #FAFAF0;
+            --text-gray: #555555;
+        }
+
+        body {
+            background-color: var(--neutral-bg);
+            color: var(--text-gray);
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: orangered;
+            text-align: center;
+        }
+        h4 {
+            background:#F2E394;
+            color:black;
+            border: 1px solid var(--light-green);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem;
+            text-align: center;
+        }
+        h6 {
+            color:red;
+            font-weight: bold;
+        }
+
+        #phoneInput {
+            opacity: 1;
+            background:white;
+            border-color: #2E7D32;
+            box-shadow: 0 0 4px rgba(109,190,69,0.4);
+            padding: 0.5rem;
+            border-radius: 6px;
+        }
+
+        /* Container for package cards */
+        #packageList {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            padding: 1rem;
+        }
+
+        /* Each package card */
+        .package-card {
+            background:#111;
+            color: white;
+            border: 1px solid #cce3b2;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            padding: 1.5rem;
+            width: 220px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+
+        .package-card .package-header {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--soft-yellow);
+        }
+
+        .package-card .package-price {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .package-card .btn {
+            background: var(--primary-green);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .package-card .btn:hover {
+            background: #579d39;
+        }
+
+        #wired {
+            background-color: lavender;
+            text-align: center;
+            border:groove;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem auto;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<h1>Select Your Package</h1>
+
+<div id="wired">
+    <h4>Enter Your Phone Number</h4>
+    <input type="text" id="phoneInput" placeholder="e.g. 0712345678" />
+</div>
+
+<div id="packageList"></div>
+
+<script type="text/javascript">
+    // Packages data
+    var packages = [
+        { name: "Basic", price: "100 KES" },
+        { name: "Premium", price: "250 KES" },
+        { name: "Gold", price: "500 KES" }
+    ];
+
+    // Render packages
+    function renderPackages() {
+        var container = document.getElementById("packageList");
+        container.innerHTML = "";
+
+        for (var i = 0; i < packages.length; i++) {
+            var pkg = packages[i];
+
+            var card = document.createElement("div");
+            card.className = "package-card";
+
+            var header = document.createElement("div");
+            header.className = "package-header";
+            header.innerHTML = pkg.name;
+
+            var price = document.createElement("div");
+            price.className = "package-price";
+            price.innerHTML = pkg.price;
+
+            var btn = document.createElement("button");
+            btn.className = "btn";
+            btn.innerHTML = "Pay Now";
+
+            // attach event in ES3/4 safe way
+            btn.onclick = (function(packageName, priceValue) {
+                return function() {
+                    confirmPayment(packageName, priceValue);
+                };
+            })(pkg.name, pkg.price);
+
+            card.appendChild(header);
+            card.appendChild(price);
+            card.appendChild(btn);
+
+            container.appendChild(card);
+        }
+    }
+
+    // Payment confirmation
+    function confirmPayment(packageName, priceValue) {
+        var phone = document.getElementById("phoneInput").value;
+        if (phone === "") {
+            alert("Please enter your phone number.");
+            return;
+        }
+        alert("Confirming payment for " + packageName + " (" + priceValue + ") with phone " + phone);
+    }
+
+    // Run on load
+    if (window.attachEvent) {
+        window.attachEvent("onload", renderPackages);
+    } else {
+        window.onload = renderPackages;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+# Node modules & logs
+node_modules
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Build outputs / cache
+dist
+build
+.cache
+.next
+coverage
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Env files (don’t bake secrets into images!)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+config.env
+
+# IDE / editor junk
+.vscode
+.idea
+*.swp
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Docker itself
+Dockerfile
+.dockerignore
+
+# Misc
+*.log
+*.tgz
+*.bak
+*.tmp

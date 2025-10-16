@@ -1,0 +1,61 @@
+<!-- ============================= -->
+<!-- 🔥 Responsive Content Grid -->
+<!-- ============================= -->
+<section
+        id="<%= id %>"
+        class="content-grid row gx-4 gy-4 justify-content-center align-items-stretch fade-in-section"
+        role="region"
+        aria-label="Content Section"
+>
+    <% if (items && items.length) { %>
+        <% items.forEach(item => { %>
+            <div
+                    class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4 content-item"
+                    data-id="<%= item._id || item.id %>"
+            >
+                <article
+                        class="card h-100 shadow-sm neon-border hover-glow"
+                        tabindex="0"
+                        aria-label="<%= item.title || item.name %>"
+                >
+                    <% if (item.image || item.poster) { %>
+                        <img
+                                src="<%= item.image || item.poster %>"
+                                alt="<%= item.title || item.name %>"
+                                class="card-img-top img-fluid rounded-top"
+                                loading="lazy"
+                        >
+                    <% } else { %>
+                        <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center text-light py-5">
+                            <i class="bi bi-image fs-2 opacity-75"></i>
+                        </div>
+                    <% } %>
+
+                    <div class="card-body text-center p-3">
+                        <h6 class="card-title mb-2 text-truncate text-light fw-semibold">
+                            <%= item.title || item.name %>
+                        </h6>
+                        <% if (item.category || item.genre) { %>
+                            <span class="badge bg-gradient-dark text-uppercase small px-2 py-1">
+                <%= item.category || item.genre %>
+              </span>
+                        <% } %>
+                    </div>
+
+                    <div class="card-footer border-0 bg-transparent text-center">
+                        <a href="<%= item.link || `/details/${item._id}` %>"
+                           class="btn btn-sm btn-neon px-3 py-1 fw-semibold"
+                           aria-label="View details for <%= item.title || item.name %>">
+                            View
+                        </a>
+                    </div>
+                </article>
+            </div>
+        <% }) %>
+    <% } else { %>
+        <div class="col-12 text-center py-5">
+            <p class="text-muted fs-5">No content available yet.</p>
+        </div>
+    <% } %>
+</section>
+

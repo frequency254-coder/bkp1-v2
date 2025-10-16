@@ -1,0 +1,94 @@
+<!-- views/coming-soon.ejs -->
+<div class="d-flex flex-column justify-content-center align-items-center vh-100 position-relative overflow-hidden bg-dark text-light">
+
+    <!-- 🎬 Animated Neon Background -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient"
+         style="background: radial-gradient(circle at 20% 20%, rgba(0,255,204,0.1), transparent 60%),
+                radial-gradient(circle at 80% 80%, rgba(255,0,204,0.1), transparent 60%);
+                filter: blur(40px); animation: floatGlow 8s ease-in-out infinite alternate;">
+    </div>
+
+    <!-- ⚡ Card Content -->
+    <div class="card bg-black bg-opacity-75 border-0 shadow-neon text-center p-5 rounded-4" style="max-width: 480px; z-index: 5;">
+        <h1 class="display-5 fw-bold text-neon mb-3 animate-flicker">
+            🚀 Coming Soon
+        </h1>
+        <p class="lead text-light opacity-75 mb-4">
+            <%= message || "This feature is under construction — something epic is on the way!" %>
+        </p>
+
+        <div class="spinner-border text-neon mb-3" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+
+        <div class="mt-4">
+            <a href="/" class="btn btn-neon btn-lg px-4">
+                <i class="bi bi-house-door-fill me-2"></i> Back to Home
+            </a>
+        </div>
+    </div>
+
+    <!-- 🌌 Floating Particles -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 pointer-events-none">
+        <% for (let i = 0; i < 12; i++) { %>
+            <div class="particle" style="--x:<%= Math.random() * 100 %>%; --y:<%= Math.random() * 100 %>%; --d:<%= 4 + Math.random() * 8 %>s;"></div>
+        <% } %>
+    </div>
+</div>
+
+<!-- 🎨 Embedded Styles -->
+<style>
+    .text-neon {
+        color: #0ff;
+        text-shadow: 0 0 10px #0ff, 0 0 30px #0ff;
+    }
+    .btn-neon {
+        background: linear-gradient(90deg, #00ffff, #ff00ff);
+        color: #fff;
+        border: none;
+        transition: 0.3s;
+    }
+    .btn-neon:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+    }
+    .shadow-neon {
+        box-shadow: 0 0 30px rgba(0,255,255,0.2), 0 0 60px rgba(255,0,255,0.1);
+    }
+    .bg-gradient {
+        animation: bgPulse 10s linear infinite alternate;
+    }
+    .particle {
+        position: absolute;
+        top: var(--y);
+        left: var(--x);
+        width: 6px;
+        height: 6px;
+        background: rgba(0,255,255,0.8);
+        border-radius: 50%;
+        animation: floatParticle var(--d) ease-in-out infinite alternate;
+    }
+    @keyframes bgPulse {
+        0% { background-position: 0 0; }
+        100% { background-position: 100% 100%; }
+    }
+    @keyframes floatGlow {
+        from { opacity: 0.7; transform: scale(1); }
+        to { opacity: 1; transform: scale(1.1); }
+    }
+    @keyframes floatParticle {
+        0% { transform: translateY(0) scale(1); opacity: 0.9; }
+        100% { transform: translateY(-20px) scale(1.3); opacity: 0.5; }
+    }
+    .animate-flicker {
+        animation: flicker 1.8s infinite alternate;
+    }
+    @keyframes flicker {
+        0%, 18%, 22%, 25%, 53%, 57%, 100% {
+            opacity: 1;
+        }
+        20%, 24%, 55% {
+            opacity: 0.3;
+        }
+    }
+</style>

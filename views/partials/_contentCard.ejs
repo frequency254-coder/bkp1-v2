@@ -1,0 +1,21 @@
+<div class="col-md-3 mb-4">
+    <div class="card h-100 shadow-sm">
+        <img
+                src="<%= item.poster_path || '/images/placeholder.jpg' %>"
+                class="card-img-top"
+                alt="<%= item.title || item.name %>"
+                onerror="this.onerror=null;this.src='/images/placeholder.jpg';"
+        >
+        <div class="card-body">
+            <h5 class="card-title text-truncate">
+                <%= item.title || item.name %>
+            </h5>
+            <p class="card-text">
+                <%= item.overview ? item.overview.substring(0, 80) + '...' : 'No description' %>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+

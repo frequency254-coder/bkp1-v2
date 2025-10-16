@@ -1,0 +1,136 @@
+/*!* neon-bootstrap.css*/
+/*   Core Bootstrap overrides + two theme roots:*/
+/*   - cinematic (movies, tv): dark neon*/
+/*   - techy     (shop): glass + tech neon*/
+/**!*/
+
+/*!* ---------- Design tokens (shared) ---------- *!*/
+/*:root{*/
+/*    --bg: #07070b;*/
+/*    --surface: rgba(255,255,255,0.03);*/
+/*    --text: #e6eef6;*/
+/*    --muted: #9aa6b2;*/
+/*    --accent: #00ffff;*/
+/*    --accent-2: #7c4dff;*/
+/*    --glow: 0 8px 30px rgba(0,255,255,0.12);*/
+/*    --radius: 12px;*/
+/*    --glass: rgba(255,255,255,0.04);*/
+/*    --glass-blur: 8px;*/
+/*}*/
+
+/*!* ---------- Theme roots ---------- *!*/
+/*body[data-theme="cinematic"]{*/
+/*    --bg: #04050a;*/
+/*    --surface: linear-gradient(180deg,#0b0c12 0%, #0f1117 100%);*/
+/*    --text: #e9f8ff;*/
+/*    --muted: #9fb7c7;*/
+/*    --accent: #00e6ff;*/
+/*    --accent-2: #ff2d99;*/
+/*    --glow: 0 12px 36px rgba(0,230,255,0.12), 0 0 40px rgba(255,45,153,0.06);*/
+/*    --btn-bg: linear-gradient(90deg,var(--accent),var(--accent-2));*/
+/*    --card-bg: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.35));*/
+/*}*/
+
+/*body[data-theme="techy"]{*/
+/*    --bg: linear-gradient(135deg, rgba(10,14,20,0.95), rgba(18,24,30,0.95));*/
+/*    --surface: rgba(18,24,30,0.6);*/
+/*    --text: #eef7fb;*/
+/*    --muted: #b8c7d4;*/
+/*    --accent: #38bdf8;*/
+/*    --accent-2: #8b5cf6;*/
+/*    --glow: 0 12px 36px rgba(56,189,248,0.12), 0 0 30px rgba(139,92,246,0.06);*/
+/*    --btn-bg: linear-gradient(90deg,var(--accent),var(--accent-2));*/
+/*    --card-bg: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(20,26,32,0.5));*/
+/*}*/
+
+/*!* ---------- Base helpers ---------- *!*/
+/*html,body{height:100%;}*/
+/*body{*/
+/*    background: var(--bg);*/
+/*    color:var(--text);*/
+/*    font-family: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;*/
+/*    -webkit-font-smoothing:antialiased;*/
+/*    -moz-osx-font-smoothing:grayscale;*/
+/*}*/
+
+/*!* Bootstrap: ensure container spans and gutters play well *!*/
+/*.container-fluid{ max-width: 1280px; margin: 0 auto; padding: 1rem; }*/
+
+/*!* ---------- Buttons (neon) ---------- *!*/
+/*.btn {*/
+/*    border-radius: 28px !important;*/
+/*    font-weight: 700;*/
+/*    letter-spacing: .2px;*/
+/*    padding: .45rem .9rem;*/
+/*    box-shadow: var(--glow);*/
+/*    border: 1px solid rgba(255,255,255,0.04) !important;*/
+/*    background: var(--btn-bg);*/
+/*    color: #041017 !important;*/
+/*    transition: transform .18s ease, box-shadow .18s ease;*/
+/*}*/
+/*.btn:focus{ box-shadow: 0 0 18px rgba(255,255,255,0.06), var(--glow) !important; outline:none; }*/
+/*.btn:hover{ transform: translateY(-2px); box-shadow: 0 18px 46px rgba(0,0,0,0.45), var(--glow); }*/
+
+/*!* Outline / ghost CTA variant *!*/
+/*.btn-outline-neon{*/
+/*    background: transparent !important;*/
+/*    color: var(--accent) !important;*/
+/*    border: 1px dashed rgba(255,255,255,0.06) !important;*/
+/*    box-shadow: none;*/
+/*}*/
+/*.btn-outline-neon:hover{*/
+/*    background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.03));*/
+/*    color: var(--text) !important;*/
+/*    box-shadow: 0 8px 40px var(--glow);*/
+/*}*/
+
+/*!* ---------- Cards ---------- *!*/
+/*.card {*/
+/*    background: var(--card-bg) !important;*/
+/*    border-radius: var(--radius) !important;*/
+/*    border: 1px solid rgba(255,255,255,0.04) !important;*/
+/*    overflow: hidden;*/
+/*    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;*/
+/*}*/
+/*.card:hover{ transform: translateY(-6px); box-shadow: var(--glow); border-color: rgba(255,255,255,0.08); }*/
+
+/*!* Neon accent for titles *!*/
+/*.text-neon { color: var(--accent); text-shadow: 0 6px 20px rgba(0,0,0,0.6); }*/
+
+/*!* Poster / image *!*/
+/*.poster-img { width:100%; height:260px; object-fit:cover; display:block; background:#000; }*/
+
+/*!* subtle glass panels for techy shop cards *!*/
+/*[data-theme="techy"] .card {*/
+/*    backdrop-filter: blur(var(--glass-blur));*/
+/*    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(8,12,16,0.45));*/
+/*}*/
+
+/*!* ---------- Grid helpers ---------- *!*/
+/*!* render.js must wrap each card in <div class="col"> ... </div> *!*/
+/*.row .col { display:flex; align-items:stretch; }*/
+/*.card .card-body { flex:1; display:flex; flex-direction:column; justify-content:space-between; }*/
+
+/*!* ---------- Skeletons ---------- *!*/
+/*.skeleton {*/
+/*    background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.04));*/
+/*    height: 12px;*/
+/*    border-radius:6px;*/
+/*    animation: shimmer 1.4s linear infinite;*/
+/*}*/
+/*@keyframes shimmer {*/
+/*    0%{ background-position:-200px 0; }*/
+/*    100%{ background-position:200px 0; }*/
+/*}*/
+
+/*!* ---------- Ad overlay / CTA ---------- *!*/
+/*.ad-overlay .btn { border-radius: 999px; }*/
+
+/*!* ---------- Small screens ---------- *!*/
+/*@media (max-width:768px){*/
+/*    .poster-img{ height:200px; }*/
+/*    .card{ border-radius:10px; }*/
+/*}*/
+
+/*!* ---------- Accessibility focus ring ---------- *!*/
+/*:focus{ outline:none; box-shadow: 0 0 0 4px rgba(0,0,0,0.12), var(--glow); }*/

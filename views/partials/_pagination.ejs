@@ -1,0 +1,78 @@
+<!-- 🔢 Smart Pagination Component -->
+<% if (totalPages && totalPages > 1) { %>
+    <nav
+            aria-label="Pagination Navigation"
+            class="pagination-wrapper my-4"
+            id="<%= id || 'pagination' %>"
+    >
+        <ul class="pagination justify-content-center flex-wrap gap-1">
+
+            <% const prevDisabled = currentPage <= 1 ? 'disabled' : ''; %>
+            <% const nextDisabled = currentPage >= totalPages ? 'disabled' : ''; %>
+            <% const baseUrl = typeof baseUrl !== 'undefined' ? baseUrl : req.path; %>
+            <% const searchSuffix = currentSearch ? '&search=' + encodeURIComponent(currentSearch) : ''; %>
+
+            <!-- ⬅️ Prev Button -->
+            <li class="page-item <%= prevDisabled %>">
+                <a
+                        class="page-link fw-semibold"
+                        href="<%= prevDisabled ? '#' : `${baseUrl}?page=${currentPage - 1}${searchSuffix}` %>"
+                        aria-label="Previous page"
+                        tabindex="<%= prevDisabled ? '-1' : '0' %>"
+                >
+                    ‹ Prev
+                </a>
+            </li>
+
+            <!-- Dynamic numbered pages -->
+            <% const maxPages = 7;
+                let start = Math.max(1, currentPage - Math.floor(maxPages/2));
+                let end = Math.min(totalPages, start + maxPages - 1);
+                if (end - start < maxPages - 1) start = Math.max(1, end - maxPages + 1);
+            %>
+
+            <% if (start > 1) { %>
+                <li class="page-item">
+                    <a class="page-link" href="<%= `${baseUrl}?page=1${searchSuffix}` %>">1</a>
+                </li>
+                <% if (start > 2) { %>
+                    <li class="page-item disabled"><span class="page-link">…</span></li>
+                <% } %>
+            <% } %>
+
+            <% for (let i = start; i <= end; i++) { %>
+                <li class="page-item <%= currentPage === i ? 'active' : '' %>">
+                    <a
+                            class="page-link fw-semibold"
+                            href="<%= `${baseUrl}?page=${i}${searchSuffix}` %>"
+                            aria-current="<%= currentPage === i ? 'page' : '' %>"
+                    >
+                        <%= i %>
+                    </a>
+                </li>
+            <% } %>
+
+            <% if (end < totalPages) { %>
+                <% if (end < totalPages - 1) { %>
+                    <li class="page-item disabled"><span class="page-link">…</span></li>
+                <% } %>
+                <li class="page-item">
+                    <a class="page-link" href="<%= `${baseUrl}?page=${totalPages}${searchSuffix}` %>"><%= totalPages %></a>
+                </li>
+            <% } %>
+
+            <!-- ➡️ Next Button -->
+            <li class="page-item <%= nextDisabled %>">
+                <a
+                        class="page-link fw-semibold"
+                        href="<%= nextDisabled ? '#' : `${baseUrl}?page=${currentPage + 1}${searchSuffix}` %>"
+                        aria-label="Next page"
+                        tabindex="<%= nextDisabled ? '-1' : '0' %>"
+                >
+                    Next ›
+                </a>
+            </li>
+        </ul>
+    </nav>
+<% } %>
+

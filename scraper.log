@@ -1,0 +1,1304 @@
+2025-09-26T13:57:08.192Z error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2025-09-26T13:58:23.113Z info: ✅ MongoDB connected
+2025-09-26T13:58:23.128Z info: Using Tor on port 9150
+2025-09-26T13:58:55.546Z error: Timed out after 30000 ms while waiting for the WS endpoint URL to appear in stdout!
+2025-09-26T14:06:28.096Z info: ✅ MongoDB connected
+2025-09-26T14:06:28.114Z info: Using Tor on port 9150
+2025-09-26T14:06:29.643Z info: === Category: Fibre ===
+2025-09-26T14:06:30.101Z info: → [LaptopClinic] Fibre page 1: https://laptopclinic.co.ke/search?q=Fibre&page=1
+2025-09-26T14:06:36.752Z info:   found 1 product blocks on page 1
+2025-09-26T14:06:37.234Z info:   updated: 14.1 fibre LAPTOP SCREEN
+2025-09-26T14:06:37.236Z warn: Tor newnym failed: Error connecting to control port: Error: connect ECONNREFUSED 127.0.0.1:9051
+2025-09-26T14:06:39.847Z info: → [LaptopClinic] Fibre page 2: https://laptopclinic.co.ke/search?q=Fibre&page=2
+2025-09-26T14:06:42.798Z info:   found 0 product blocks on page 2
+2025-09-26T14:06:42.798Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:06:42.799Z info: → [LaptopClinic] Fibre page 3: https://laptopclinic.co.ke/search?q=Fibre&page=3
+2025-09-26T14:06:45.025Z info:   found 0 product blocks on page 3
+2025-09-26T14:06:45.025Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:06:45.131Z info: → [Nairobi Computer Shop] Fibre page 1: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=1
+2025-09-26T14:06:50.808Z info:   found 0 product blocks on page 1
+2025-09-26T14:06:50.809Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:06:50.809Z info: → [Nairobi Computer Shop] Fibre page 2: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=2
+2025-09-26T14:06:54.493Z info:   found 0 product blocks on page 2
+2025-09-26T14:06:54.494Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:06:54.524Z info: === Category: Hotspot ===
+2025-09-26T14:06:54.807Z info: → [LaptopClinic] Hotspot page 1: https://laptopclinic.co.ke/search?q=Hotspot&page=1
+2025-09-26T14:06:58.188Z info:   found 8 product blocks on page 1
+2025-09-26T14:06:58.646Z info:   updated: 4G LTE USB MODEM
+2025-09-26T14:06:59.097Z info:   updated: TP-Link TL-WN823N | 300Mbps Mini Wireless N USB Adapter
+2025-09-26T14:06:59.547Z info:   updated: Huawei E8231 wingle airtel modem
+2025-09-26T14:06:59.990Z info:   updated: HP ProDesk 400 G7 MT [i7, 8GB RAM, 1TB HDD+256GB SSD]
+2025-09-26T14:07:00.432Z info:   updated: Apple Lightning to HDMI  Adapter
+2025-09-26T14:07:00.875Z info:   updated: Samsung Galaxy Tab A7 LTE Octa-Core Processor 8.7" TFT WXGA+ Display 3GB RAM 32GB ROM Android 11 (silver)
+2025-09-26T14:07:01.317Z info:   updated: OPPO A14 4GB RAM 64GB ROM 6.5 INCH DISPLAY 4000 mAh Battery
+2025-09-26T14:07:01.761Z info:   updated: ASUS Zenbook 14 OLED (UX3402) Intel Core i7-1260P 16GB RAM 512GB SSD｜Laptops For Home
+2025-09-26T14:09:01.200Z info: SIGINT received. Closing...
+2025-09-26T14:12:02.550Z info: ✅ MongoDB connected
+2025-09-26T14:12:02.565Z info: Using Tor on port 9150
+2025-09-26T14:12:03.616Z info: === Category: Fibre ===
+2025-09-26T14:12:03.983Z info: → [LaptopClinic] Fibre page 1: https://laptopclinic.co.ke/search?q=Fibre&page=1
+2025-09-26T14:12:10.882Z info:   found 1 product blocks on page 1
+2025-09-26T14:12:11.352Z info:   updated: 14.1 fibre LAPTOP SCREEN
+2025-09-26T14:12:11.354Z warn: Tor newnym failed: Error connecting to control port: Error: connect ECONNREFUSED 127.0.0.1:9051
+2025-09-26T14:12:13.879Z info: → [LaptopClinic] Fibre page 2: https://laptopclinic.co.ke/search?q=Fibre&page=2
+2025-09-26T14:12:16.993Z info:   found 0 product blocks on page 2
+2025-09-26T14:12:16.995Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:12:16.995Z info: → [LaptopClinic] Fibre page 3: https://laptopclinic.co.ke/search?q=Fibre&page=3
+2025-09-26T14:12:19.889Z info:   found 0 product blocks on page 3
+2025-09-26T14:12:19.892Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:12:20.155Z info: → [Nairobi Computer Shop] Fibre page 1: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=1
+2025-09-26T14:12:25.559Z info:   found 0 product blocks on page 1
+2025-09-26T14:12:25.559Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:12:25.560Z info: → [Nairobi Computer Shop] Fibre page 2: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=2
+2025-09-26T14:12:29.240Z info:   found 0 product blocks on page 2
+2025-09-26T14:12:29.241Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:12:29.277Z info: === Category: Hotspot ===
+2025-09-26T14:12:29.802Z info: → [LaptopClinic] Hotspot page 1: https://laptopclinic.co.ke/search?q=Hotspot&page=1
+2025-09-26T14:12:33.973Z info:   found 8 product blocks on page 1
+2025-09-26T14:12:34.422Z info:   updated: 4G LTE USB MODEM
+2025-09-26T14:12:34.865Z info:   updated: TP-Link TL-WN823N | 300Mbps Mini Wireless N USB Adapter
+2025-09-26T14:12:35.313Z info:   updated: Huawei E8231 wingle airtel modem
+2025-09-26T14:12:35.760Z info:   updated: HP ProDesk 400 G7 MT [i7, 8GB RAM, 1TB HDD+256GB SSD]
+2025-09-26T14:12:36.204Z info:   updated: Apple Lightning to HDMI  Adapter
+2025-09-26T14:12:36.648Z info:   updated: Samsung Galaxy Tab A7 LTE Octa-Core Processor 8.7" TFT WXGA+ Display 3GB RAM 32GB ROM Android 11 (silver)
+2025-09-26T14:12:37.091Z info:   updated: OPPO A14 4GB RAM 64GB ROM 6.5 INCH DISPLAY 4000 mAh Battery
+2025-09-26T14:12:37.534Z info:   updated: ASUS Zenbook 14 OLED (UX3402) Intel Core i7-1260P 16GB RAM 512GB SSD｜Laptops For Home
+2025-09-26T14:13:59.851Z info: SIGINT received. Closing...
+2025-09-26T14:19:10.381Z info: ✅ MongoDB connected
+2025-09-26T14:19:10.394Z info: Using Tor on port 9150
+2025-09-26T14:19:12.077Z info: === Category: Fibre ===
+2025-09-26T14:19:12.505Z info: → [LaptopClinic] Fibre page 1: https://laptopclinic.co.ke/search?q=Fibre&page=1
+2025-09-26T14:19:21.023Z info:   found 1 product blocks on page 1
+2025-09-26T14:19:21.505Z info:   updated: 14.1 fibre LAPTOP SCREEN
+2025-09-26T14:19:21.507Z warn: Tor newnym failed: Error connecting to control port: Error: connect ECONNREFUSED 127.0.0.1:9051
+2025-09-26T14:19:25.201Z info: → [LaptopClinic] Fibre page 2: https://laptopclinic.co.ke/search?q=Fibre&page=2
+2025-09-26T14:19:28.058Z info:   found 0 product blocks on page 2
+2025-09-26T14:19:28.059Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:19:28.059Z info: → [LaptopClinic] Fibre page 3: https://laptopclinic.co.ke/search?q=Fibre&page=3
+2025-09-26T14:19:32.105Z info:   found 0 product blocks on page 3
+2025-09-26T14:19:32.106Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:19:32.239Z info: → [Nairobi Computer Shop] Fibre page 1: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=1
+2025-09-26T14:19:38.345Z info:   found 0 product blocks on page 1
+2025-09-26T14:19:38.346Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:19:38.346Z info: → [Nairobi Computer Shop] Fibre page 2: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=2
+2025-09-26T14:19:42.103Z info:   found 0 product blocks on page 2
+2025-09-26T14:19:42.109Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:19:42.142Z info: === Category: Hotspot ===
+2025-09-26T14:19:42.441Z info: → [LaptopClinic] Hotspot page 1: https://laptopclinic.co.ke/search?q=Hotspot&page=1
+2025-09-26T14:19:47.509Z info:   found 8 product blocks on page 1
+2025-09-26T14:19:47.978Z info:   updated: 4G LTE USB MODEM
+2025-09-26T14:19:48.624Z info:   updated: TP-Link TL-WN823N | 300Mbps Mini Wireless N USB Adapter
+2025-09-26T14:19:49.064Z info:   updated: Huawei E8231 wingle airtel modem
+2025-09-26T14:19:49.507Z info:   updated: HP ProDesk 400 G7 MT [i7, 8GB RAM, 1TB HDD+256GB SSD]
+2025-09-26T14:19:49.949Z info:   updated: Apple Lightning to HDMI  Adapter
+2025-09-26T14:19:50.402Z info:   updated: Samsung Galaxy Tab A7 LTE Octa-Core Processor 8.7" TFT WXGA+ Display 3GB RAM 32GB ROM Android 11 (silver)
+2025-09-26T14:19:50.845Z info:   updated: OPPO A14 4GB RAM 64GB ROM 6.5 INCH DISPLAY 4000 mAh Battery
+2025-09-26T14:19:51.314Z info:   updated: ASUS Zenbook 14 OLED (UX3402) Intel Core i7-1260P 16GB RAM 512GB SSD｜Laptops For Home
+2025-09-26T14:20:58.299Z info: SIGINT received. Closing...
+2025-09-26T14:33:28.828Z info: ✅ MongoDB connected
+2025-09-26T14:33:28.856Z info: Using Tor on port 9150
+2025-09-26T14:33:30.477Z info: === Category: Fibre ===
+2025-09-26T14:33:31.059Z info: → [LaptopClinic] Fibre page 1: https://laptopclinic.co.ke/search?q=Fibre&page=1
+2025-09-26T14:33:39.094Z info:   found 1 product blocks on page 1
+2025-09-26T14:33:39.516Z info:   updated: 14.1 fibre LAPTOP SCREEN
+2025-09-26T14:33:39.521Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T14:33:41.111Z info: → [LaptopClinic] Fibre page 2: https://laptopclinic.co.ke/search?q=Fibre&page=2
+2025-09-26T14:33:43.397Z info:   found 0 product blocks on page 2
+2025-09-26T14:33:43.397Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:33:43.397Z info: → [LaptopClinic] Fibre page 3: https://laptopclinic.co.ke/search?q=Fibre&page=3
+2025-09-26T14:33:46.007Z info:   found 0 product blocks on page 3
+2025-09-26T14:33:46.007Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:33:46.121Z info: → [Nairobi Computer Shop] Fibre page 1: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=1
+2025-09-26T14:33:51.964Z info:   found 0 product blocks on page 1
+2025-09-26T14:33:51.964Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:33:51.964Z info: → [Nairobi Computer Shop] Fibre page 2: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=2
+2025-09-26T14:33:55.774Z info:   found 0 product blocks on page 2
+2025-09-26T14:33:55.774Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:33:55.811Z info: === Category: Hotspot ===
+2025-09-26T14:33:56.079Z info: → [LaptopClinic] Hotspot page 1: https://laptopclinic.co.ke/search?q=Hotspot&page=1
+2025-09-26T14:33:59.808Z info:   found 8 product blocks on page 1
+2025-09-26T14:34:00.223Z info:   updated: 4G LTE USB MODEM
+2025-09-26T14:34:00.641Z info:   updated: TP-Link TL-WN823N | 300Mbps Mini Wireless N USB Adapter
+2025-09-26T14:34:01.054Z info:   updated: Huawei E8231 wingle airtel modem
+2025-09-26T14:34:01.450Z info:   updated: HP ProDesk 400 G7 MT [i7, 8GB RAM, 1TB HDD+256GB SSD]
+2025-09-26T14:34:01.848Z info:   updated: Apple Lightning to HDMI  Adapter
+2025-09-26T14:34:02.246Z info:   updated: Samsung Galaxy Tab A7 LTE Octa-Core Processor 8.7" TFT WXGA+ Display 3GB RAM 32GB ROM Android 11 (silver)
+2025-09-26T14:34:02.644Z info:   updated: OPPO A14 4GB RAM 64GB ROM 6.5 INCH DISPLAY 4000 mAh Battery
+2025-09-26T14:34:03.050Z info:   updated: ASUS Zenbook 14 OLED (UX3402) Intel Core i7-1260P 16GB RAM 512GB SSD｜Laptops For Home
+2025-09-26T14:34:03.053Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T14:34:06.428Z info: → [LaptopClinic] Hotspot page 2: https://laptopclinic.co.ke/search?q=Hotspot&page=2
+2025-09-26T14:34:09.928Z info:   found 0 product blocks on page 2
+2025-09-26T14:34:09.929Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:34:09.929Z info: → [LaptopClinic] Hotspot page 3: https://laptopclinic.co.ke/search?q=Hotspot&page=3
+2025-09-26T14:34:12.678Z info:   found 0 product blocks on page 3
+2025-09-26T14:34:12.678Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:34:12.819Z info: → [Nairobi Computer Shop] Hotspot page 1: https://nairobicomputershop.co.ke/?s=Hotspot&post_type=product&paged=1
+2025-09-26T14:34:17.004Z info:   found 0 product blocks on page 1
+2025-09-26T14:34:17.004Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:34:17.004Z info: → [Nairobi Computer Shop] Hotspot page 2: https://nairobicomputershop.co.ke/?s=Hotspot&post_type=product&paged=2
+2025-09-26T14:34:20.675Z info:   found 0 product blocks on page 2
+2025-09-26T14:34:20.682Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:34:20.797Z info: === Category: Networking Routers ===
+2025-09-26T14:34:21.256Z info: → [LaptopClinic] Networking Routers page 1: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=1
+2025-09-26T14:34:25.903Z info:   found 10 product blocks on page 1
+2025-09-26T14:34:26.316Z info:   updated: Tp-Link TL-WR840N300Mbps Wireless N Speed  Router
+2025-09-26T14:34:26.712Z info:   updated: TP-Link Archer AX12 AX1500 Dual-Band Wi-Fi 6 Router
+2025-09-26T14:34:27.108Z info:   updated: Starlink Ethernet Adapter For Wired External Network
+2025-09-26T14:34:27.505Z info:   updated: TP Link RE505X AX1500 Wi-Fi Range Extender
+2025-09-26T14:34:27.915Z info:   updated: 4G LTE USB MODEM
+2025-09-26T14:34:28.311Z info:   updated: MERCUSYS Mw300UH 300Mbps High Gain Wireless USB Adapter
+2025-09-26T14:34:28.710Z info:   updated: Huawei E8231 wingle airtel modem
+2025-09-26T14:34:29.109Z info:   updated: Epson EcoTank L5290 A4 Wi-Fi All-in-One Ink Tank Printer with ADF
+2025-09-26T14:34:29.507Z info:   updated: Epson EcoTank L4260 A4 Wi-Fi Duplex All-in-One Ink Tank Printer
+2025-09-26T14:34:29.903Z info:   updated: Lenovo ThinkPad E14 Gen 4 type 21E3 14” Intel Core i5-1235U 8GB RAM 512GB SSD, Intel® Iris® Xe Graphics, 2yrs warranty
+2025-09-26T14:34:29.907Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T14:34:32.500Z info: → [LaptopClinic] Networking Routers page 2: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=2
+2025-09-26T14:34:35.252Z info:   found 0 product blocks on page 2
+2025-09-26T14:34:35.252Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:34:35.252Z info: → [LaptopClinic] Networking Routers page 3: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=3
+2025-09-26T14:34:38.413Z info:   found 0 product blocks on page 3
+2025-09-26T14:34:38.414Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:34:38.548Z info: → [Nairobi Computer Shop] Networking Routers page 1: https://nairobicomputershop.co.ke/?s=Networking%20Routers&post_type=product&paged=1
+2025-09-26T14:34:42.209Z info:   found 0 product blocks on page 1
+2025-09-26T14:34:42.210Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:34:42.210Z info: → [Nairobi Computer Shop] Networking Routers page 2: https://nairobicomputershop.co.ke/?s=Networking%20Routers&post_type=product&paged=2
+2025-09-26T14:34:45.902Z info:   found 0 product blocks on page 2
+2025-09-26T14:34:45.902Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:34:45.938Z info: === Category: Networking Accessories ===
+2025-09-26T14:34:46.199Z info: → [LaptopClinic] Networking Accessories page 1: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=1
+2025-09-26T14:34:50.696Z info:   found 12 product blocks on page 1
+2025-09-26T14:34:51.125Z info:   updated: RJ45 Connectors | Registered Jack-45 - Plastic
+2025-09-26T14:34:51.528Z info:   updated: RJ45 Connectors | Registered Jack-45 - Metallic
+2025-09-26T14:34:51.929Z info:   updated: Gigabit USB 3.0 to Ethernet Adapter
+2025-09-26T14:34:52.327Z info:   updated: Vention 5-in-1 USB-C HUB With Gigabit Ethernet Adapter
+2025-09-26T14:34:52.727Z info:   updated: Type-C 8-in-1 Adapter with HDMI VGA LAN SD USB 3.0 Audio Adapter Support 4K UHD Video 3.5mm Audio Gigabit
+2025-09-26T14:34:53.128Z info:   updated: HP Compaq Elite 8300 Ultraslim SFF Intel Core i5 3rd Gen 4GB RAM 320GB HDD Desktop
+2025-09-26T14:34:53.525Z info:   updated: Apple MacBook Air A1466 (13-inch, 2017) Intel Core i5 8GB 512GB SSD Intel HD Graphics 6000
+2025-09-26T14:34:53.922Z info:   updated: Microsoft Windows 7 – Single License
+2025-09-26T14:34:54.317Z info:   updated: Apple MacBook Air A1466 (13-inch, 2017) Intel Core i7 8GB 512GB SSD Intel HD Graphics 6000
+2025-09-26T14:34:54.714Z info:   updated: Apple MacBook Air A1932 (13-inch, 2018) Intel Core i5 16GB RAM 512GB SSD Intel HD Graphics 617
+2025-09-26T14:34:55.110Z info:   updated: Apple MacBook Air A1932 (13-inch, 2018) Intel Core i5 8GB RAM 256GB SSD Intel HD Graphics 617
+2025-09-26T14:34:55.508Z info:   updated: ASUS TUF Dash F15 (2022) FX517Z P/N 90NR09L3-M008R0
+2025-09-26T14:34:55.513Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T14:34:58.571Z info: → [LaptopClinic] Networking Accessories page 2: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=2
+2025-09-26T14:35:02.514Z info:   found 0 product blocks on page 2
+2025-09-26T14:35:02.514Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:35:02.514Z info: → [LaptopClinic] Networking Accessories page 3: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=3
+2025-09-26T14:35:05.585Z info:   found 0 product blocks on page 3
+2025-09-26T14:35:05.585Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:35:05.689Z info: → [Nairobi Computer Shop] Networking Accessories page 1: https://nairobicomputershop.co.ke/?s=Networking%20Accessories&post_type=product&paged=1
+2025-09-26T14:35:10.158Z info:   found 0 product blocks on page 1
+2025-09-26T14:35:10.159Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:35:10.160Z info: → [Nairobi Computer Shop] Networking Accessories page 2: https://nairobicomputershop.co.ke/?s=Networking%20Accessories&post_type=product&paged=2
+2025-09-26T14:35:14.243Z info:   found 0 product blocks on page 2
+2025-09-26T14:35:14.243Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:35:14.308Z info: === Category: Laptops & Computers ===
+2025-09-26T14:35:14.682Z info: → [LaptopClinic] Laptops & Computers page 1: https://laptopclinic.co.ke/search?q=Laptops%20%26%20Computers&page=1
+2025-09-26T14:35:20.818Z info:   found 15 product blocks on page 1
+2025-09-26T14:35:21.221Z info:   updated: ACCESSORIES FOR CLEANING AIR LAPTOPS AND SCREENS
+2025-09-26T14:35:21.619Z info:   updated: 4GB DDR4 2666 LAPTOP
+2025-09-26T14:35:22.018Z info:   updated: 2 Pin Plug in Computer Power Cables & Connectors
+2025-09-26T14:35:22.414Z info:   updated: Silver Laptop Skins
+2025-09-26T14:35:22.811Z info:   updated: HP 2530p LAPTOP KEYBOARD
+2025-09-26T14:35:23.211Z info:   updated: laptop locks key
+2025-09-26T14:35:23.611Z info:   updated: 16.0 LED LAPTOP SCREENS
+2025-09-26T14:35:24.008Z info:   updated: 14.1 30pin CONNECTOR LAPTOP SCREEN
+2025-09-26T14:35:24.404Z info:   updated: ACER  Aspire 3810 - 4810 Laptop Keyboard
+2025-09-26T14:35:24.803Z info:   updated: LENOVO X220 LAPTOP  KEYBOARD
+2025-09-26T14:35:25.200Z info:   updated: LENOVO T420 LAPTOP KEYBOARD
+2025-09-26T14:35:25.598Z info:   updated: DELL n4110 LAPTOP KEYBOARD
+2025-09-26T14:35:25.996Z info:   updated: DELL E5420 LAPTOP  KEYBOARD
+2025-09-26T14:35:26.393Z info:   updated: UNIVERSAL  LAPTOP ADAPTER 45W
+2025-09-26T14:35:26.793Z info:   updated: Lenovo t61 LAPTOP  KEYBOARD
+2025-09-26T14:35:26.795Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T14:35:29.031Z info: → [LaptopClinic] Laptops & Computers page 2: https://laptopclinic.co.ke/search?q=Laptops%20%26%20Computers&page=2
+2025-09-26T14:35:35.395Z info:   found 20 product blocks on page 2
+2025-09-26T14:35:35.794Z info:   updated: Lenovo t61 LAPTOP  KEYBOARD
+2025-09-26T14:35:36.192Z info:   updated: Samsung N150 Laptop Battery
+2025-09-26T14:35:36.590Z info:   updated: LG 20V 2A Charger Laptop Adapter
+2025-09-26T14:35:36.992Z info:   updated: 12 Inches Laptop Porch Bag
+2025-09-26T14:35:37.389Z info:   updated: 15 Inches Laptop Porch bag
+2025-09-26T14:35:37.785Z info:   updated: DELL D520 LAPTOP KEYBOARD
+2025-09-26T14:35:38.183Z info:   updated: Logitech H540 USB Computer Headset with Noise- Cancellation
+2025-09-26T14:35:38.579Z info:   updated: HP NC6100 Laptop Battery
+2025-09-26T14:35:38.973Z info:   updated: 13.3 SLIM SMALL CONNECTOR LAPTOP SCREEN
+2025-09-26T14:35:39.372Z info:   updated: mouse pad with Anti-fray Stitching, Premium-Textured & Waterproof Computer Mousepad with Non-Slip Rubber Base, Gaming Mouse Mat for Laptop, Office & Home Black
+2025-09-26T14:35:39.771Z info:   updated: lenovo t410 LAPTOP  keyboard
+2025-09-26T14:35:40.178Z info:   updated: Portable Foldable Aluminium Alloy Laptop Stand
+2025-09-26T14:35:40.586Z info:   updated: 14.1 40 PIN CONNECTOR LAPTOP SCREEN
+2025-09-26T14:35:40.993Z info:   updated: Dell Inspiron 5521 and 3521  Laptop Keyboard
+2025-09-26T14:35:41.396Z info:   updated: HP 18.5V 4.9A  5.5*2.5 LAPTOP ADAPTER
+2025-09-26T14:35:41.838Z info:   updated: GTB's Laptop CPU Fan Compatible with HP G62 G72 CQ56 CQ56z CQ62 CQ72 Laptop CPU Cooling Fan
+2025-09-26T14:35:42.298Z info:   updated: TOSHIBA 19V 4.74A  5.5*2.5 LAPTOP ADAPTER
+2025-09-26T14:35:42.695Z info:   updated: Dell Inspiron 14Z-N411Z 13Z-N311Z Laptop Battery
+2025-09-26T14:35:43.102Z info:   updated: Lexar® 8GB 3200MHz DDR4 SODIMM Laptop RAM
+2025-09-26T14:35:43.503Z info:   updated: New Hp Folio 13-2000 laptop CPU fan
+2025-09-26T14:35:47.417Z info: → [LaptopClinic] Laptops & Computers page 3: https://laptopclinic.co.ke/search?q=Laptops%20%26%20Computers&page=3
+2025-09-26T14:35:53.552Z info:   found 20 product blocks on page 3
+2025-09-26T14:35:53.954Z info:   updated: DELL e5400 LAPTOP KEYBOARD
+2025-09-26T14:35:54.350Z info:   updated: Dell Latitude E5500 Replacement LAPTOP LCD Screen 15.4"
+2025-09-26T14:35:54.757Z info:   updated: New Hp Folio 13-2000 laptop CPU fan
+2025-09-26T14:35:55.154Z info:   updated: New HP Pavilion 15-N Series Laptop Touch Screen
+2025-09-26T14:35:55.551Z info:   updated: HP PROBOOK 6460B original laptop LCD screen cable
+2025-09-26T14:35:55.961Z info:   updated: Bluetooth USB Dongle Adapter CSR 4.0 for Desktop and Laptop
+2025-09-26T14:35:56.358Z info:   updated: HP Pavilion DV4 - DV5 - DV6 - CQ60 - Laptop Battery
+2025-09-26T14:35:56.753Z info:   updated: HP 620 – 625- 4320s – 4520s Laptop Battery Kenya
+2025-09-26T14:35:57.150Z info:   updated: SellZone Laptop Keyboard For Samsung NP-RV508 NP-RV510 NP-R517 NP-R523 NP-R525 NP-R528 NP-R530 Internal Laptop Keyboard  (Black)
+2025-09-26T14:35:57.546Z info:   updated: Cover Repair Part for Computer HP Pavilion g6, g6-2000 684164-001 -Black
+2025-09-26T14:35:57.943Z info:   updated: NEW for HP EliteBook 2540P 2540 US Laptop Keyboard black
+2025-09-26T14:35:58.342Z info:   updated: HP Elite x2 1013 G3 Tablet 13" FHD Touch Intel® Core™ i7-8650U + Gifts
+2025-09-26T14:35:58.738Z info:   updated: Lenovo IdeaPad 20V 6.75A 135W Laptop Charger
+2025-09-26T14:35:59.133Z info:   updated: Laptop Charger For Acer One Kav10 Kav60 19V 1.58A 30W
+2025-09-26T14:35:59.529Z info:   updated: Laptop CPU Cooling Fan for Toshiba TECRA A11 M10 UDQFC65E5DT0 New
+2025-09-26T14:35:59.928Z info:   updated: Laptop CPU Cooling Fan for Dell Inspiron 15R N5010 5010 M5010
+2025-09-26T14:36:00.324Z info:   updated: SONY 16V 4A  5.5*2.5 LAPTOP ADAPTER
+2025-09-26T14:36:00.727Z info:   updated: Targus CityLite 15.6 Inch Laptop Briefcase Shoulder Messenger Bag
+2025-09-26T14:36:01.137Z info:   updated: Laptop CPU Cooling Fan for Hp Probook 4320s 4321s 4326s 4420s 4421s 4426s
+2025-09-26T14:36:01.537Z info:   updated: New For Acer Aspire 5336 5736 5736G 5736Z Laptop CPU Cooling Fan DC2800092A0
+2025-09-26T14:36:01.544Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T14:36:04.033Z info: → [Nairobi Computer Shop] Laptops & Computers page 1: https://nairobicomputershop.co.ke/?s=Laptops%20%26%20Computers&post_type=product&paged=1
+2025-09-26T14:36:07.919Z info:   found 0 product blocks on page 1
+2025-09-26T14:36:07.919Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:36:07.920Z info: → [Nairobi Computer Shop] Laptops & Computers page 2: https://nairobicomputershop.co.ke/?s=Laptops%20%26%20Computers&post_type=product&paged=2
+2025-09-26T14:36:11.539Z info:   found 0 product blocks on page 2
+2025-09-26T14:36:11.539Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:36:11.568Z info: === Category: Computer Gadgets ===
+2025-09-26T14:36:11.835Z info: → [LaptopClinic] Computer Gadgets page 1: https://laptopclinic.co.ke/search?q=Computer%20Gadgets&page=1
+2025-09-26T14:36:14.996Z info:   found 2 product blocks on page 1
+2025-09-26T14:36:15.408Z info:   updated: SellZone Laptop Keyboard For Samsung NP-RV508 NP-RV510 NP-R517 NP-R523 NP-R525 NP-R528 NP-R530 Internal Laptop Keyboard  (Black)
+2025-09-26T14:36:15.812Z info:   updated: Microsoft Windows 7 – Single License
+2025-09-26T14:36:15.815Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T14:36:18.958Z info: → [LaptopClinic] Computer Gadgets page 2: https://laptopclinic.co.ke/search?q=Computer%20Gadgets&page=2
+2025-09-26T14:36:22.467Z info:   found 0 product blocks on page 2
+2025-09-26T14:36:22.468Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:36:22.468Z info: → [LaptopClinic] Computer Gadgets page 3: https://laptopclinic.co.ke/search?q=Computer%20Gadgets&page=3
+2025-09-26T14:36:25.178Z info:   found 0 product blocks on page 3
+2025-09-26T14:36:25.178Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:36:25.292Z info: → [Nairobi Computer Shop] Computer Gadgets page 1: https://nairobicomputershop.co.ke/?s=Computer%20Gadgets&post_type=product&paged=1
+2025-09-26T14:36:29.099Z info:   found 0 product blocks on page 1
+2025-09-26T14:36:29.100Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:36:29.100Z info: → [Nairobi Computer Shop] Computer Gadgets page 2: https://nairobicomputershop.co.ke/?s=Computer%20Gadgets&post_type=product&paged=2
+2025-09-26T14:36:32.725Z info:   found 0 product blocks on page 2
+2025-09-26T14:36:32.726Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:36:32.755Z info: === Category: Security Gadgets ===
+2025-09-26T14:36:33.017Z info: → [LaptopClinic] Security Gadgets page 1: https://laptopclinic.co.ke/search?q=Security%20Gadgets&page=1
+2025-09-26T14:36:36.670Z info:   found 1 product blocks on page 1
+2025-09-26T14:36:37.077Z info:   updated: Microsoft Windows 7 – Single License
+2025-09-26T14:36:37.080Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T14:36:40.047Z info: → [LaptopClinic] Security Gadgets page 2: https://laptopclinic.co.ke/search?q=Security%20Gadgets&page=2
+2025-09-26T14:36:42.571Z info:   found 0 product blocks on page 2
+2025-09-26T14:36:42.572Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:36:42.572Z info: → [LaptopClinic] Security Gadgets page 3: https://laptopclinic.co.ke/search?q=Security%20Gadgets&page=3
+2025-09-26T14:36:46.029Z info:   found 0 product blocks on page 3
+2025-09-26T14:36:46.030Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:36:46.133Z info: → [Nairobi Computer Shop] Security Gadgets page 1: https://nairobicomputershop.co.ke/?s=Security%20Gadgets&post_type=product&paged=1
+2025-09-26T14:36:49.860Z info:   found 0 product blocks on page 1
+2025-09-26T14:36:49.860Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:36:49.860Z info: → [Nairobi Computer Shop] Security Gadgets page 2: https://nairobicomputershop.co.ke/?s=Security%20Gadgets&post_type=product&paged=2
+2025-09-26T14:36:53.457Z info:   found 0 product blocks on page 2
+2025-09-26T14:36:53.457Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T14:36:54.118Z info: 🎉 All platforms done
+2025-09-26T15:01:31.029Z info: ✅ MongoDB connected
+2025-09-26T15:01:31.052Z info: Using Tor on port 9050
+2025-09-26T15:01:32.124Z info: === Category: Fibre ===
+2025-09-26T15:01:32.472Z info: → [LaptopClinic] Fibre page 1: https://laptopclinic.co.ke/search?q=Fibre&page=1
+2025-09-26T15:01:38.664Z info:   found 1 product blocks on page 1
+2025-09-26T15:01:39.117Z info:   updated: 14.1 fibre LAPTOP SCREEN
+2025-09-26T15:01:39.120Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:01:42.065Z info: → [LaptopClinic] Fibre page 2: https://laptopclinic.co.ke/search?q=Fibre&page=2
+2025-09-26T15:01:46.452Z info:   found 0 product blocks on page 2
+2025-09-26T15:01:46.453Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:01:46.453Z info: → [LaptopClinic] Fibre page 3: https://laptopclinic.co.ke/search?q=Fibre&page=3
+2025-09-26T15:01:49.911Z info:   found 0 product blocks on page 3
+2025-09-26T15:01:49.911Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:01:50.213Z info: → [Nairobi Computer Shop] Fibre page 1: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=1
+2025-09-26T15:01:59.343Z info:   found 0 product blocks on page 1
+2025-09-26T15:01:59.344Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:01:59.344Z info: → [Nairobi Computer Shop] Fibre page 2: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=2
+2025-09-26T15:02:02.927Z info:   found 0 product blocks on page 2
+2025-09-26T15:02:02.927Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:02:02.976Z info: === Category: Hotspot ===
+2025-09-26T15:02:03.275Z info: → [LaptopClinic] Hotspot page 1: https://laptopclinic.co.ke/search?q=Hotspot&page=1
+2025-09-26T15:02:07.840Z info:   found 8 product blocks on page 1
+2025-09-26T15:02:08.287Z info:   updated: 4G LTE USB MODEM
+2025-09-26T15:02:08.726Z info:   updated: TP-Link TL-WN823N | 300Mbps Mini Wireless N USB Adapter
+2025-09-26T15:02:09.166Z info:   updated: Huawei E8231 wingle airtel modem
+2025-09-26T15:02:09.604Z info:   updated: HP ProDesk 400 G7 MT [i7, 8GB RAM, 1TB HDD+256GB SSD]
+2025-09-26T15:02:10.053Z info:   updated: Apple Lightning to HDMI  Adapter
+2025-09-26T15:02:10.488Z info:   updated: Samsung Galaxy Tab A7 LTE Octa-Core Processor 8.7" TFT WXGA+ Display 3GB RAM 32GB ROM Android 11 (silver)
+2025-09-26T15:02:10.924Z info:   updated: OPPO A14 4GB RAM 64GB ROM 6.5 INCH DISPLAY 4000 mAh Battery
+2025-09-26T15:02:11.364Z info:   updated: ASUS Zenbook 14 OLED (UX3402) Intel Core i7-1260P 16GB RAM 512GB SSD｜Laptops For Home
+2025-09-26T15:02:11.368Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:02:13.349Z info: → [LaptopClinic] Hotspot page 2: https://laptopclinic.co.ke/search?q=Hotspot&page=2
+2025-09-26T15:02:16.887Z info:   found 0 product blocks on page 2
+2025-09-26T15:02:16.888Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:02:16.888Z info: → [LaptopClinic] Hotspot page 3: https://laptopclinic.co.ke/search?q=Hotspot&page=3
+2025-09-26T15:02:19.896Z info:   found 0 product blocks on page 3
+2025-09-26T15:02:19.897Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:02:20.028Z info: → [Nairobi Computer Shop] Hotspot page 1: https://nairobicomputershop.co.ke/?s=Hotspot&post_type=product&paged=1
+2025-09-26T15:02:26.863Z info:   found 0 product blocks on page 1
+2025-09-26T15:02:26.863Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:02:26.863Z info: → [Nairobi Computer Shop] Hotspot page 2: https://nairobicomputershop.co.ke/?s=Hotspot&post_type=product&paged=2
+2025-09-26T15:02:30.752Z info:   found 0 product blocks on page 2
+2025-09-26T15:02:30.753Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:02:30.786Z info: === Category: Networking Routers ===
+2025-09-26T15:02:31.135Z info: → [LaptopClinic] Networking Routers page 1: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=1
+2025-09-26T15:02:35.085Z info:   found 10 product blocks on page 1
+2025-09-26T15:02:35.525Z info:   updated: Tp-Link TL-WR840N300Mbps Wireless N Speed  Router
+2025-09-26T15:02:35.966Z info:   updated: TP-Link Archer AX12 AX1500 Dual-Band Wi-Fi 6 Router
+2025-09-26T15:02:36.400Z info:   updated: Starlink Ethernet Adapter For Wired External Network
+2025-09-26T15:02:36.834Z info:   updated: TP Link RE505X AX1500 Wi-Fi Range Extender
+2025-09-26T15:02:37.279Z info:   updated: 4G LTE USB MODEM
+2025-09-26T15:02:37.715Z info:   updated: MERCUSYS Mw300UH 300Mbps High Gain Wireless USB Adapter
+2025-09-26T15:02:38.154Z info:   updated: Huawei E8231 wingle airtel modem
+2025-09-26T15:02:38.596Z info:   updated: Epson EcoTank L5290 A4 Wi-Fi All-in-One Ink Tank Printer with ADF
+2025-09-26T15:02:39.041Z info:   updated: Epson EcoTank L4260 A4 Wi-Fi Duplex All-in-One Ink Tank Printer
+2025-09-26T15:02:39.502Z info:   updated: Lenovo ThinkPad E14 Gen 4 type 21E3 14” Intel Core i5-1235U 8GB RAM 512GB SSD, Intel® Iris® Xe Graphics, 2yrs warranty
+2025-09-26T15:02:39.504Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:02:41.092Z info: → [LaptopClinic] Networking Routers page 2: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=2
+2025-09-26T15:02:44.942Z info:   found 0 product blocks on page 2
+2025-09-26T15:02:44.948Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:02:44.950Z info: → [LaptopClinic] Networking Routers page 3: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=3
+2025-09-26T15:02:47.342Z info:   found 0 product blocks on page 3
+2025-09-26T15:02:47.342Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:02:47.469Z info: → [Nairobi Computer Shop] Networking Routers page 1: https://nairobicomputershop.co.ke/?s=Networking%20Routers&post_type=product&paged=1
+2025-09-26T15:02:52.613Z info:   found 0 product blocks on page 1
+2025-09-26T15:02:52.614Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:02:52.614Z info: → [Nairobi Computer Shop] Networking Routers page 2: https://nairobicomputershop.co.ke/?s=Networking%20Routers&post_type=product&paged=2
+2025-09-26T15:02:56.551Z info:   found 0 product blocks on page 2
+2025-09-26T15:02:56.552Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:02:56.582Z info: === Category: Networking Accessories ===
+2025-09-26T15:02:56.876Z info: → [LaptopClinic] Networking Accessories page 1: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=1
+2025-09-26T15:03:02.643Z info:   found 12 product blocks on page 1
+2025-09-26T15:03:03.084Z info:   updated: RJ45 Connectors | Registered Jack-45 - Metallic
+2025-09-26T15:03:03.536Z info:   updated: Gigabit USB 3.0 to Ethernet Adapter
+2025-09-26T15:03:03.986Z info:   updated: RJ45 Connectors | Registered Jack-45 - Plastic
+2025-09-26T15:03:04.428Z info:   updated: Vention 5-in-1 USB-C HUB With Gigabit Ethernet Adapter
+2025-09-26T15:03:04.862Z info:   updated: Type-C 8-in-1 Adapter with HDMI VGA LAN SD USB 3.0 Audio Adapter Support 4K UHD Video 3.5mm Audio Gigabit
+2025-09-26T15:03:05.300Z info:   updated: HP Compaq Elite 8300 Ultraslim SFF Intel Core i5 3rd Gen 4GB RAM 320GB HDD Desktop
+2025-09-26T15:03:05.739Z info:   updated: Apple MacBook Air A1466 (13-inch, 2017) Intel Core i5 8GB 512GB SSD Intel HD Graphics 6000
+2025-09-26T15:03:06.182Z info:   updated: Microsoft Windows 7 – Single License
+2025-09-26T15:03:06.618Z info:   updated: Apple MacBook Air A1466 (13-inch, 2017) Intel Core i7 8GB 512GB SSD Intel HD Graphics 6000
+2025-09-26T15:03:07.059Z info:   updated: Apple MacBook Air A1932 (13-inch, 2018) Intel Core i5 16GB RAM 512GB SSD Intel HD Graphics 617
+2025-09-26T15:03:07.497Z info:   updated: Apple MacBook Air A1932 (13-inch, 2018) Intel Core i5 8GB RAM 256GB SSD Intel HD Graphics 617
+2025-09-26T15:03:07.934Z info:   updated: ASUS TUF Dash F15 (2022) FX517Z P/N 90NR09L3-M008R0
+2025-09-26T15:03:07.936Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:03:11.401Z info: → [LaptopClinic] Networking Accessories page 2: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=2
+2025-09-26T15:03:15.260Z info:   found 0 product blocks on page 2
+2025-09-26T15:03:15.260Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:03:15.261Z info: → [LaptopClinic] Networking Accessories page 3: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=3
+2025-09-26T15:03:17.758Z info:   found 0 product blocks on page 3
+2025-09-26T15:03:17.758Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:03:17.893Z info: → [Nairobi Computer Shop] Networking Accessories page 1: https://nairobicomputershop.co.ke/?s=Networking%20Accessories&post_type=product&paged=1
+2025-09-26T15:03:21.889Z info:   found 0 product blocks on page 1
+2025-09-26T15:03:21.890Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:03:21.890Z info: → [Nairobi Computer Shop] Networking Accessories page 2: https://nairobicomputershop.co.ke/?s=Networking%20Accessories&post_type=product&paged=2
+2025-09-26T15:03:25.670Z info:   found 0 product blocks on page 2
+2025-09-26T15:03:25.671Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:03:25.700Z info: === Category: Laptops & Computers ===
+2025-09-26T15:03:25.985Z info: → [LaptopClinic] Laptops & Computers page 1: https://laptopclinic.co.ke/search?q=Laptops%20%26%20Computers&page=1
+2025-09-26T15:03:30.781Z info:   found 15 product blocks on page 1
+2025-09-26T15:03:31.228Z info:   updated: ACCESSORIES FOR CLEANING AIR LAPTOPS AND SCREENS
+2025-09-26T15:03:31.664Z info:   updated: 4GB DDR4 2666 LAPTOP
+2025-09-26T15:03:32.099Z info:   updated: 2 Pin Plug in Computer Power Cables & Connectors
+2025-09-26T15:03:32.546Z info:   updated: Silver Laptop Skins
+2025-09-26T15:03:32.987Z info:   updated: HP 2530p LAPTOP KEYBOARD
+2025-09-26T15:03:33.430Z info:   updated: laptop locks key
+2025-09-26T15:03:33.876Z info:   updated: 16.0 LED LAPTOP SCREENS
+2025-09-26T15:03:34.328Z info:   updated: 14.1 30pin CONNECTOR LAPTOP SCREEN
+2025-09-26T15:03:34.767Z info:   updated: LENOVO X220 LAPTOP  KEYBOARD
+2025-09-26T15:03:35.203Z info:   updated: ACER  Aspire 3810 - 4810 Laptop Keyboard
+2025-09-26T15:03:35.638Z info:   updated: LENOVO T420 LAPTOP KEYBOARD
+2025-09-26T15:03:36.072Z info:   updated: DELL n4110 LAPTOP KEYBOARD
+2025-09-26T15:03:36.506Z info:   updated: UNIVERSAL  LAPTOP ADAPTER 45W
+2025-09-26T15:03:36.942Z info:   updated: DELL E5420 LAPTOP  KEYBOARD
+2025-09-26T15:03:37.378Z info:   updated: 14 Inches Laptop Porch Bag
+2025-09-26T15:03:37.381Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:03:39.625Z info: → [LaptopClinic] Laptops & Computers page 2: https://laptopclinic.co.ke/search?q=Laptops%20%26%20Computers&page=2
+2025-09-26T15:03:44.362Z info:   found 20 product blocks on page 2
+2025-09-26T15:03:44.800Z info:   updated: 14 Inches Laptop Porch Bag
+2025-09-26T15:03:45.233Z info:   updated: Samsung N150 Laptop Battery
+2025-09-26T15:03:45.669Z info:   updated: LG 20V 2A Charger Laptop Adapter
+2025-09-26T15:03:46.106Z info:   updated: DELL D520 LAPTOP KEYBOARD
+2025-09-26T15:03:46.546Z info:   updated: 12 Inches Laptop Porch Bag
+2025-09-26T15:03:46.979Z info:   updated: 15 Inches Laptop Porch bag
+2025-09-26T15:03:47.413Z info:   updated: HP NC6100 Laptop Battery
+2025-09-26T15:03:47.854Z info:   updated: Logitech H540 USB Computer Headset with Noise- Cancellation
+2025-09-26T15:03:48.297Z info:   updated: lenovo t410 LAPTOP  keyboard
+2025-09-26T15:03:48.731Z info:   updated: 13.3 SLIM SMALL CONNECTOR LAPTOP SCREEN
+2025-09-26T15:03:49.175Z info:   updated: mouse pad with Anti-fray Stitching, Premium-Textured & Waterproof Computer Mousepad with Non-Slip Rubber Base, Gaming Mouse Mat for Laptop, Office & Home Black
+2025-09-26T15:03:49.611Z info:   updated: 14.1 40 PIN CONNECTOR LAPTOP SCREEN
+2025-09-26T15:03:50.047Z info:   updated: Dell Inspiron 5521 and 3521  Laptop Keyboard
+2025-09-26T15:03:50.481Z info:   updated: Portable Foldable Aluminium Alloy Laptop Stand
+2025-09-26T15:03:50.919Z info:   updated: HP 18.5V 4.9A  5.5*2.5 LAPTOP ADAPTER
+2025-09-26T15:03:51.355Z info:   updated: GTB's Laptop CPU Fan Compatible with HP G62 G72 CQ56 CQ56z CQ62 CQ72 Laptop CPU Cooling Fan
+2025-09-26T15:03:51.789Z info:   updated: TOSHIBA 19V 4.74A  5.5*2.5 LAPTOP ADAPTER
+2025-09-26T15:03:52.231Z info:   updated: Dell Inspiron 14Z-N411Z 13Z-N311Z Laptop Battery
+2025-09-26T15:03:52.666Z info:   updated: Lexar® 8GB 3200MHz DDR4 SODIMM Laptop RAM
+2025-09-26T15:03:53.102Z info:   updated: DELL e5400 LAPTOP KEYBOARD
+2025-09-26T15:03:56.776Z info: → [LaptopClinic] Laptops & Computers page 3: https://laptopclinic.co.ke/search?q=Laptops%20%26%20Computers&page=3
+2025-09-26T15:04:03.865Z info:   found 20 product blocks on page 3
+2025-09-26T15:04:04.310Z info:   updated: DELL e5400 LAPTOP KEYBOARD
+2025-09-26T15:04:04.765Z info:   updated: Dell Latitude E5500 Replacement LAPTOP LCD Screen 15.4"
+2025-09-26T15:04:05.199Z info:   updated: New Hp Folio 13-2000 laptop CPU fan
+2025-09-26T15:04:05.635Z info:   updated: New HP Pavilion 15-N Series Laptop Touch Screen
+2025-09-26T15:04:06.072Z info:   updated: Bluetooth USB Dongle Adapter CSR 4.0 for Desktop and Laptop
+2025-09-26T15:04:06.511Z info:   updated: HP PROBOOK 6460B original laptop LCD screen cable
+2025-09-26T15:04:06.949Z info:   updated: HP Pavilion DV4 - DV5 - DV6 - CQ60 - Laptop Battery
+2025-09-26T15:04:07.386Z info:   updated: HP 620 – 625- 4320s – 4520s Laptop Battery Kenya
+2025-09-26T15:04:07.836Z info:   updated: SellZone Laptop Keyboard For Samsung NP-RV508 NP-RV510 NP-R517 NP-R523 NP-R525 NP-R528 NP-R530 Internal Laptop Keyboard  (Black)
+2025-09-26T15:04:08.275Z info:   updated: Cover Repair Part for Computer HP Pavilion g6, g6-2000 684164-001 -Black
+2025-09-26T15:04:08.713Z info:   updated: HP Elite x2 1013 G3 Tablet 13" FHD Touch Intel® Core™ i7-8650U + Gifts
+2025-09-26T15:04:09.150Z info:   updated: Lenovo IdeaPad 20V 6.75A 135W Laptop Charger
+2025-09-26T15:04:09.587Z info:   updated: NEW for HP EliteBook 2540P 2540 US Laptop Keyboard black
+2025-09-26T15:04:10.024Z info:   updated: Laptop Charger For Acer One Kav10 Kav60 19V 1.58A 30W
+2025-09-26T15:04:10.463Z info:   updated: Laptop CPU Cooling Fan for Toshiba TECRA A11 M10 UDQFC65E5DT0 New
+2025-09-26T15:04:10.897Z info:   updated: Laptop CPU Cooling Fan for Dell Inspiron 15R N5010 5010 M5010
+2025-09-26T15:04:11.333Z info:   updated: SONY 16V 4A  5.5*2.5 LAPTOP ADAPTER
+2025-09-26T15:04:11.771Z info:   updated: Targus CityLite 15.6 Inch Laptop Briefcase Shoulder Messenger Bag
+2025-09-26T15:04:12.210Z info:   updated: Laptop CPU Cooling Fan for Hp Probook 4320s 4321s 4326s 4420s 4421s 4426s
+2025-09-26T15:04:12.648Z info:   updated: New For Acer Aspire 5336 5736 5736G 5736Z Laptop CPU Cooling Fan DC2800092A0
+2025-09-26T15:04:12.651Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:04:14.739Z info: → [Nairobi Computer Shop] Laptops & Computers page 1: https://nairobicomputershop.co.ke/?s=Laptops%20%26%20Computers&post_type=product&paged=1
+2025-09-26T15:04:19.776Z info:   found 0 product blocks on page 1
+2025-09-26T15:04:19.777Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:04:19.777Z info: → [Nairobi Computer Shop] Laptops & Computers page 2: https://nairobicomputershop.co.ke/?s=Laptops%20%26%20Computers&post_type=product&paged=2
+2025-09-26T15:04:23.645Z info:   found 0 product blocks on page 2
+2025-09-26T15:04:23.645Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:04:23.675Z info: === Category: Computer Gadgets ===
+2025-09-26T15:04:24.426Z info: → [LaptopClinic] Computer Gadgets page 1: https://laptopclinic.co.ke/search?q=Computer%20Gadgets&page=1
+2025-09-26T15:04:28.678Z info:   found 2 product blocks on page 1
+2025-09-26T15:04:29.119Z info:   updated: SellZone Laptop Keyboard For Samsung NP-RV508 NP-RV510 NP-R517 NP-R523 NP-R525 NP-R528 NP-R530 Internal Laptop Keyboard  (Black)
+2025-09-26T15:04:29.560Z info:   updated: Microsoft Windows 7 – Single License
+2025-09-26T15:04:29.563Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:04:33.019Z info: → [LaptopClinic] Computer Gadgets page 2: https://laptopclinic.co.ke/search?q=Computer%20Gadgets&page=2
+2025-09-26T15:04:36.670Z info:   found 0 product blocks on page 2
+2025-09-26T15:04:36.672Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:04:36.673Z info: → [LaptopClinic] Computer Gadgets page 3: https://laptopclinic.co.ke/search?q=Computer%20Gadgets&page=3
+2025-09-26T15:04:40.556Z info:   found 0 product blocks on page 3
+2025-09-26T15:04:40.557Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:04:40.663Z info: → [Nairobi Computer Shop] Computer Gadgets page 1: https://nairobicomputershop.co.ke/?s=Computer%20Gadgets&post_type=product&paged=1
+2025-09-26T15:04:44.692Z info:   found 0 product blocks on page 1
+2025-09-26T15:04:44.692Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:04:44.692Z info: → [Nairobi Computer Shop] Computer Gadgets page 2: https://nairobicomputershop.co.ke/?s=Computer%20Gadgets&post_type=product&paged=2
+2025-09-26T15:04:48.538Z info:   found 0 product blocks on page 2
+2025-09-26T15:04:48.539Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:04:48.570Z info: === Category: Security Gadgets ===
+2025-09-26T15:04:48.862Z info: → [LaptopClinic] Security Gadgets page 1: https://laptopclinic.co.ke/search?q=Security%20Gadgets&page=1
+2025-09-26T15:04:53.542Z info:   found 1 product blocks on page 1
+2025-09-26T15:04:54.002Z info:   updated: Microsoft Windows 7 – Single License
+2025-09-26T15:04:54.035Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:04:55.851Z info: → [LaptopClinic] Security Gadgets page 2: https://laptopclinic.co.ke/search?q=Security%20Gadgets&page=2
+2025-09-26T15:05:04.252Z info:   found 0 product blocks on page 2
+2025-09-26T15:05:04.259Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:05:04.263Z info: → [LaptopClinic] Security Gadgets page 3: https://laptopclinic.co.ke/search?q=Security%20Gadgets&page=3
+2025-09-26T15:05:06.606Z info:   found 0 product blocks on page 3
+2025-09-26T15:05:06.607Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:05:06.735Z info: → [Nairobi Computer Shop] Security Gadgets page 1: https://nairobicomputershop.co.ke/?s=Security%20Gadgets&post_type=product&paged=1
+2025-09-26T15:05:10.550Z info:   found 0 product blocks on page 1
+2025-09-26T15:05:10.550Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:05:10.551Z info: → [Nairobi Computer Shop] Security Gadgets page 2: https://nairobicomputershop.co.ke/?s=Security%20Gadgets&post_type=product&paged=2
+2025-09-26T15:05:14.442Z info:   found 0 product blocks on page 2
+2025-09-26T15:05:14.442Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:05:15.136Z info: 🎉 All platforms done
+2025-09-26T15:07:33.497Z info: ✅ MongoDB connected
+2025-09-26T15:07:33.510Z info: Using Tor on port 9050
+2025-09-26T15:07:34.627Z info: === Category: Fibre ===
+2025-09-26T15:07:35.162Z info: → [LaptopClinic] Fibre page 1: https://laptopclinic.co.ke/search?q=Fibre&page=1
+2025-09-26T15:07:41.364Z info:   found 1 product blocks on page 1
+2025-09-26T15:07:41.818Z info:   updated: 14.1 fibre LAPTOP SCREEN
+2025-09-26T15:07:41.821Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:07:44.007Z info: → [LaptopClinic] Fibre page 2: https://laptopclinic.co.ke/search?q=Fibre&page=2
+2025-09-26T15:07:46.545Z info:   found 0 product blocks on page 2
+2025-09-26T15:07:46.546Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:07:46.546Z info: → [LaptopClinic] Fibre page 3: https://laptopclinic.co.ke/search?q=Fibre&page=3
+2025-09-26T15:07:48.726Z info:   found 0 product blocks on page 3
+2025-09-26T15:07:48.727Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:07:48.863Z info: → [Nairobi Computer Shop] Fibre page 1: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=1
+2025-09-26T15:07:54.389Z info:   found 0 product blocks on page 1
+2025-09-26T15:07:54.393Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:07:54.396Z info: → [Nairobi Computer Shop] Fibre page 2: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=2
+2025-09-26T15:07:58.226Z info:   found 0 product blocks on page 2
+2025-09-26T15:07:58.226Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:07:58.260Z info: === Category: Hotspot ===
+2025-09-26T15:07:58.564Z info: → [LaptopClinic] Hotspot page 1: https://laptopclinic.co.ke/search?q=Hotspot&page=1
+2025-09-26T15:08:02.930Z info:   found 8 product blocks on page 1
+2025-09-26T15:08:03.386Z info:   updated: 4G LTE USB MODEM
+2025-09-26T15:08:03.829Z info:   updated: TP-Link TL-WN823N | 300Mbps Mini Wireless N USB Adapter
+2025-09-26T15:08:04.272Z info:   updated: Huawei E8231 wingle airtel modem
+2025-09-26T15:08:04.719Z info:   updated: HP ProDesk 400 G7 MT [i7, 8GB RAM, 1TB HDD+256GB SSD]
+2025-09-26T15:08:05.164Z info:   updated: Apple Lightning to HDMI  Adapter
+2025-09-26T15:08:05.607Z info:   updated: Samsung Galaxy Tab A7 LTE Octa-Core Processor 8.7" TFT WXGA+ Display 3GB RAM 32GB ROM Android 11 (silver)
+2025-09-26T15:08:06.052Z info:   updated: OPPO A14 4GB RAM 64GB ROM 6.5 INCH DISPLAY 4000 mAh Battery
+2025-09-26T15:08:06.495Z info:   updated: ASUS Zenbook 14 OLED (UX3402) Intel Core i7-1260P 16GB RAM 512GB SSD｜Laptops For Home
+2025-09-26T15:08:06.497Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:08:10.198Z info: → [LaptopClinic] Hotspot page 2: https://laptopclinic.co.ke/search?q=Hotspot&page=2
+2025-09-26T15:08:12.413Z info:   found 0 product blocks on page 2
+2025-09-26T15:08:12.413Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:08:12.414Z info: → [LaptopClinic] Hotspot page 3: https://laptopclinic.co.ke/search?q=Hotspot&page=3
+2025-09-26T15:08:15.622Z info:   found 0 product blocks on page 3
+2025-09-26T15:08:15.623Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:08:15.747Z info: → [Nairobi Computer Shop] Hotspot page 1: https://nairobicomputershop.co.ke/?s=Hotspot&post_type=product&paged=1
+2025-09-26T15:08:20.383Z info:   found 0 product blocks on page 1
+2025-09-26T15:08:20.383Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:08:20.384Z info: → [Nairobi Computer Shop] Hotspot page 2: https://nairobicomputershop.co.ke/?s=Hotspot&post_type=product&paged=2
+2025-09-26T15:08:21.602Z info: SIGINT received. Closing...
+2025-09-26T15:10:30.136Z info: ✅ MongoDB connected
+2025-09-26T15:10:30.149Z info: Using Tor on port 9050
+2025-09-26T15:10:31.187Z info: === Category: Fibre ===
+2025-09-26T15:10:32.001Z info: → [LaptopClinic] Fibre page 1: https://laptopclinic.co.ke/search?q=Fibre&page=1
+2025-09-26T15:10:38.690Z info:   found 1 product blocks on page 1
+2025-09-26T15:10:39.152Z info:   updated: 14.1 fibre LAPTOP SCREEN
+2025-09-26T15:10:39.157Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:10:41.561Z info: → [LaptopClinic] Fibre page 2: https://laptopclinic.co.ke/search?q=Fibre&page=2
+2025-09-26T15:10:44.170Z info:   found 0 product blocks on page 2
+2025-09-26T15:10:44.192Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:10:44.219Z info: → [LaptopClinic] Fibre page 3: https://laptopclinic.co.ke/search?q=Fibre&page=3
+2025-09-26T15:10:47.589Z info:   found 0 product blocks on page 3
+2025-09-26T15:10:47.589Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:10:47.714Z info: → [Nairobi Computer Shop] Fibre page 1: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=1
+2025-09-26T15:10:54.946Z info:   found 0 product blocks on page 1
+2025-09-26T15:10:54.946Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:10:54.946Z info: → [Nairobi Computer Shop] Fibre page 2: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=2
+2025-09-26T15:10:58.903Z info:   found 0 product blocks on page 2
+2025-09-26T15:10:58.903Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:10:58.956Z info: === Category: Hotspot ===
+2025-09-26T15:10:59.274Z info: → [LaptopClinic] Hotspot page 1: https://laptopclinic.co.ke/search?q=Hotspot&page=1
+2025-09-26T15:11:03.437Z info:   found 8 product blocks on page 1
+2025-09-26T15:11:03.890Z info:   updated: 4G LTE USB MODEM
+2025-09-26T15:11:04.366Z info:   updated: TP-Link TL-WN823N | 300Mbps Mini Wireless N USB Adapter
+2025-09-26T15:11:04.817Z info:   updated: Huawei E8231 wingle airtel modem
+2025-09-26T15:11:05.260Z info:   updated: HP ProDesk 400 G7 MT [i7, 8GB RAM, 1TB HDD+256GB SSD]
+2025-09-26T15:11:05.703Z info:   updated: Apple Lightning to HDMI  Adapter
+2025-09-26T15:11:06.166Z info:   updated: Samsung Galaxy Tab A7 LTE Octa-Core Processor 8.7" TFT WXGA+ Display 3GB RAM 32GB ROM Android 11 (silver)
+2025-09-26T15:11:06.613Z info:   updated: OPPO A14 4GB RAM 64GB ROM 6.5 INCH DISPLAY 4000 mAh Battery
+2025-09-26T15:11:07.060Z info:   updated: ASUS Zenbook 14 OLED (UX3402) Intel Core i7-1260P 16GB RAM 512GB SSD｜Laptops For Home
+2025-09-26T15:11:07.063Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:11:08.910Z info: → [LaptopClinic] Hotspot page 2: https://laptopclinic.co.ke/search?q=Hotspot&page=2
+2025-09-26T15:11:30.341Z info:   found 0 product blocks on page 2
+2025-09-26T15:11:30.342Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:11:30.343Z info: → [LaptopClinic] Hotspot page 3: https://laptopclinic.co.ke/search?q=Hotspot&page=3
+2025-09-26T15:11:33.136Z info:   found 0 product blocks on page 3
+2025-09-26T15:11:33.137Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:11:33.255Z info: → [Nairobi Computer Shop] Hotspot page 1: https://nairobicomputershop.co.ke/?s=Hotspot&post_type=product&paged=1
+2025-09-26T15:11:37.970Z info:   found 0 product blocks on page 1
+2025-09-26T15:11:37.971Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:11:37.971Z info: → [Nairobi Computer Shop] Hotspot page 2: https://nairobicomputershop.co.ke/?s=Hotspot&post_type=product&paged=2
+2025-09-26T15:11:41.970Z info:   found 0 product blocks on page 2
+2025-09-26T15:11:41.971Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:11:42.014Z info: === Category: Networking Routers ===
+2025-09-26T15:11:42.301Z info: → [LaptopClinic] Networking Routers page 1: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=1
+2025-09-26T15:11:46.466Z info:   found 10 product blocks on page 1
+2025-09-26T15:11:46.916Z info:   updated: Tp-Link TL-WR840N300Mbps Wireless N Speed  Router
+2025-09-26T15:11:47.360Z info:   updated: TP-Link Archer AX12 AX1500 Dual-Band Wi-Fi 6 Router
+2025-09-26T15:11:47.804Z info:   updated: Starlink Ethernet Adapter For Wired External Network
+2025-09-26T15:11:48.249Z info:   updated: TP Link RE505X AX1500 Wi-Fi Range Extender
+2025-09-26T15:11:48.696Z info:   updated: 4G LTE USB MODEM
+2025-09-26T15:11:49.165Z info:   updated: MERCUSYS Mw300UH 300Mbps High Gain Wireless USB Adapter
+2025-09-26T15:11:49.610Z info:   updated: Huawei E8231 wingle airtel modem
+2025-09-26T15:11:50.051Z info:   updated: Epson EcoTank L5290 A4 Wi-Fi All-in-One Ink Tank Printer with ADF
+2025-09-26T15:11:50.492Z info:   updated: Epson EcoTank L4260 A4 Wi-Fi Duplex All-in-One Ink Tank Printer
+2025-09-26T15:11:50.933Z info:   updated: Lenovo ThinkPad E14 Gen 4 type 21E3 14” Intel Core i5-1235U 8GB RAM 512GB SSD, Intel® Iris® Xe Graphics, 2yrs warranty
+2025-09-26T15:11:50.935Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:11:53.578Z info: → [LaptopClinic] Networking Routers page 2: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=2
+2025-09-26T15:11:56.099Z info:   found 0 product blocks on page 2
+2025-09-26T15:11:56.099Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:11:56.100Z info: → [LaptopClinic] Networking Routers page 3: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=3
+2025-09-26T15:12:00.105Z info:   found 0 product blocks on page 3
+2025-09-26T15:12:00.106Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:12:00.263Z info: → [Nairobi Computer Shop] Networking Routers page 1: https://nairobicomputershop.co.ke/?s=Networking%20Routers&post_type=product&paged=1
+2025-09-26T15:12:05.088Z info:   found 0 product blocks on page 1
+2025-09-26T15:12:05.088Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:12:05.088Z info: → [Nairobi Computer Shop] Networking Routers page 2: https://nairobicomputershop.co.ke/?s=Networking%20Routers&post_type=product&paged=2
+2025-09-26T15:12:09.612Z info:   found 0 product blocks on page 2
+2025-09-26T15:12:09.613Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:12:09.642Z info: === Category: Networking Accessories ===
+2025-09-26T15:12:09.942Z info: → [LaptopClinic] Networking Accessories page 1: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=1
+2025-09-26T15:12:17.051Z info:   found 12 product blocks on page 1
+2025-09-26T15:12:17.501Z info:   updated: RJ45 Connectors | Registered Jack-45 - Plastic
+2025-09-26T15:12:17.942Z info:   updated: RJ45 Connectors | Registered Jack-45 - Metallic
+2025-09-26T15:12:18.386Z info:   updated: Gigabit USB 3.0 to Ethernet Adapter
+2025-09-26T15:12:18.829Z info:   updated: Vention 5-in-1 USB-C HUB With Gigabit Ethernet Adapter
+2025-09-26T15:12:19.271Z info:   updated: Type-C 8-in-1 Adapter with HDMI VGA LAN SD USB 3.0 Audio Adapter Support 4K UHD Video 3.5mm Audio Gigabit
+2025-09-26T15:12:19.712Z info:   updated: HP Compaq Elite 8300 Ultraslim SFF Intel Core i5 3rd Gen 4GB RAM 320GB HDD Desktop
+2025-09-26T15:12:20.154Z info:   updated: Apple MacBook Air A1466 (13-inch, 2017) Intel Core i5 8GB 512GB SSD Intel HD Graphics 6000
+2025-09-26T15:12:20.601Z info:   updated: Microsoft Windows 7 – Single License
+2025-09-26T15:12:21.044Z info:   updated: Apple MacBook Air A1466 (13-inch, 2017) Intel Core i7 8GB 512GB SSD Intel HD Graphics 6000
+2025-09-26T15:12:21.486Z info:   updated: Apple MacBook Air A1932 (13-inch, 2018) Intel Core i5 16GB RAM 512GB SSD Intel HD Graphics 617
+2025-09-26T15:12:21.927Z info:   updated: Apple MacBook Air A1932 (13-inch, 2018) Intel Core i5 8GB RAM 256GB SSD Intel HD Graphics 617
+2025-09-26T15:12:22.369Z info:   updated: ASUS TUF Dash F15 (2022) FX517Z P/N 90NR09L3-M008R0
+2025-09-26T15:12:22.371Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:12:24.137Z info: → [LaptopClinic] Networking Accessories page 2: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=2
+2025-09-26T15:12:31.524Z info:   found 0 product blocks on page 2
+2025-09-26T15:12:31.524Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:12:31.525Z info: → [LaptopClinic] Networking Accessories page 3: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=3
+2025-09-26T15:12:35.505Z info:   found 0 product blocks on page 3
+2025-09-26T15:12:35.506Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:12:35.931Z info: → [Nairobi Computer Shop] Networking Accessories page 1: https://nairobicomputershop.co.ke/?s=Networking%20Accessories&post_type=product&paged=1
+2025-09-26T15:12:39.854Z info:   found 0 product blocks on page 1
+2025-09-26T15:12:39.854Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:12:39.854Z info: → [Nairobi Computer Shop] Networking Accessories page 2: https://nairobicomputershop.co.ke/?s=Networking%20Accessories&post_type=product&paged=2
+2025-09-26T15:12:43.626Z info:   found 0 product blocks on page 2
+2025-09-26T15:12:43.627Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:12:43.661Z info: === Category: Laptops & Computers ===
+2025-09-26T15:12:43.948Z info: → [LaptopClinic] Laptops & Computers page 1: https://laptopclinic.co.ke/search?q=Laptops%20%26%20Computers&page=1
+2025-09-26T15:12:50.511Z info:   found 15 product blocks on page 1
+2025-09-26T15:12:50.955Z info:   updated: ACCESSORIES FOR CLEANING AIR LAPTOPS AND SCREENS
+2025-09-26T15:12:51.398Z info:   updated: 4GB DDR4 2666 LAPTOP
+2025-09-26T15:12:51.845Z info:   updated: 2 Pin Plug in Computer Power Cables & Connectors
+2025-09-26T15:12:52.289Z info:   updated: Silver Laptop Skins
+2025-09-26T15:12:52.760Z info:   updated: HP 2530p LAPTOP KEYBOARD
+2025-09-26T15:12:53.209Z info:   updated: laptop locks key
+2025-09-26T15:12:53.651Z info:   updated: 16.0 LED LAPTOP SCREENS
+2025-09-26T15:12:54.093Z info:   updated: ACER  Aspire 3810 - 4810 Laptop Keyboard
+2025-09-26T15:12:54.541Z info:   updated: 14.1 30pin CONNECTOR LAPTOP SCREEN
+2025-09-26T15:12:54.984Z info:   updated: LENOVO X220 LAPTOP  KEYBOARD
+2025-09-26T15:12:55.448Z info:   updated: LENOVO T420 LAPTOP KEYBOARD
+2025-09-26T15:12:55.895Z info:   updated: DELL n4110 LAPTOP KEYBOARD
+2025-09-26T15:12:56.343Z info:   updated: DELL E5420 LAPTOP  KEYBOARD
+2025-09-26T15:12:56.783Z info:   updated: UNIVERSAL  LAPTOP ADAPTER 45W
+2025-09-26T15:12:57.224Z info:   updated: Lenovo t61 LAPTOP  KEYBOARD
+2025-09-26T15:12:57.230Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:12:58.975Z info: → [LaptopClinic] Laptops & Computers page 2: https://laptopclinic.co.ke/search?q=Laptops%20%26%20Computers&page=2
+2025-09-26T15:13:05.360Z info:   found 20 product blocks on page 2
+2025-09-26T15:13:05.809Z info:   updated: 14 Inches Laptop Porch Bag
+2025-09-26T15:13:06.250Z info:   updated: LG 20V 2A Charger Laptop Adapter
+2025-09-26T15:13:06.692Z info:   updated: Samsung N150 Laptop Battery
+2025-09-26T15:13:07.133Z info:   updated: DELL D520 LAPTOP KEYBOARD
+2025-09-26T15:13:07.573Z info:   updated: 12 Inches Laptop Porch Bag
+2025-09-26T15:13:08.014Z info:   updated: 15 Inches Laptop Porch bag
+2025-09-26T15:13:08.460Z info:   updated: Logitech H540 USB Computer Headset with Noise- Cancellation
+2025-09-26T15:13:08.903Z info:   updated: HP NC6100 Laptop Battery
+2025-09-26T15:13:09.345Z info:   updated: 13.3 SLIM SMALL CONNECTOR LAPTOP SCREEN
+2025-09-26T15:13:09.785Z info:   updated: lenovo t410 LAPTOP  keyboard
+2025-09-26T15:13:10.228Z info:   updated: mouse pad with Anti-fray Stitching, Premium-Textured & Waterproof Computer Mousepad with Non-Slip Rubber Base, Gaming Mouse Mat for Laptop, Office & Home Black
+2025-09-26T15:13:10.671Z info:   updated: 14.1 40 PIN CONNECTOR LAPTOP SCREEN
+2025-09-26T15:13:11.115Z info:   updated: Portable Foldable Aluminium Alloy Laptop Stand
+2025-09-26T15:13:11.559Z info:   updated: Dell Inspiron 5521 and 3521  Laptop Keyboard
+2025-09-26T15:13:12.003Z info:   updated: GTB's Laptop CPU Fan Compatible with HP G62 G72 CQ56 CQ56z CQ62 CQ72 Laptop CPU Cooling Fan
+2025-09-26T15:13:12.448Z info:   updated: HP 18.5V 4.9A  5.5*2.5 LAPTOP ADAPTER
+2025-09-26T15:13:12.891Z info:   updated: TOSHIBA 19V 4.74A  5.5*2.5 LAPTOP ADAPTER
+2025-09-26T15:13:13.332Z info:   updated: Dell Inspiron 14Z-N411Z 13Z-N311Z Laptop Battery
+2025-09-26T15:13:13.778Z info:   updated: Lexar® 8GB 3200MHz DDR4 SODIMM Laptop RAM
+2025-09-26T15:13:14.220Z info:   updated: DELL e5400 LAPTOP KEYBOARD
+2025-09-26T15:13:17.903Z info: → [LaptopClinic] Laptops & Computers page 3: https://laptopclinic.co.ke/search?q=Laptops%20%26%20Computers&page=3
+2025-09-26T15:13:24.065Z info:   found 20 product blocks on page 3
+2025-09-26T15:13:24.509Z info:   updated: DELL e5400 LAPTOP KEYBOARD
+2025-09-26T15:13:24.951Z info:   updated: Dell Latitude E5500 Replacement LAPTOP LCD Screen 15.4"
+2025-09-26T15:13:25.392Z info:   updated: New Hp Folio 13-2000 laptop CPU fan
+2025-09-26T15:13:25.837Z info:   updated: New HP Pavilion 15-N Series Laptop Touch Screen
+2025-09-26T15:13:26.290Z info:   updated: Bluetooth USB Dongle Adapter CSR 4.0 for Desktop and Laptop
+2025-09-26T15:13:26.753Z info:   updated: HP PROBOOK 6460B original laptop LCD screen cable
+2025-09-26T15:13:27.196Z info:   updated: HP Pavilion DV4 - DV5 - DV6 - CQ60 - Laptop Battery
+2025-09-26T15:13:27.650Z info:   updated: HP 620 – 625- 4320s – 4520s Laptop Battery Kenya
+2025-09-26T15:13:28.123Z info:   updated: SellZone Laptop Keyboard For Samsung NP-RV508 NP-RV510 NP-R517 NP-R523 NP-R525 NP-R528 NP-R530 Internal Laptop Keyboard  (Black)
+2025-09-26T15:13:28.566Z info:   updated: Cover Repair Part for Computer HP Pavilion g6, g6-2000 684164-001 -Black
+2025-09-26T15:13:29.009Z info:   updated: HP Elite x2 1013 G3 Tablet 13" FHD Touch Intel® Core™ i7-8650U + Gifts
+2025-09-26T15:13:29.454Z info:   updated: Lenovo IdeaPad 20V 6.75A 135W Laptop Charger
+2025-09-26T15:13:29.897Z info:   updated: NEW for HP EliteBook 2540P 2540 US Laptop Keyboard black
+2025-09-26T15:13:30.341Z info:   updated: Laptop Charger For Acer One Kav10 Kav60 19V 1.58A 30W
+2025-09-26T15:13:30.815Z info:   updated: Laptop CPU Cooling Fan for Toshiba TECRA A11 M10 UDQFC65E5DT0 New
+2025-09-26T15:13:31.258Z info:   updated: Laptop CPU Cooling Fan for Dell Inspiron 15R N5010 5010 M5010
+2025-09-26T15:13:31.702Z info:   updated: SONY 16V 4A  5.5*2.5 LAPTOP ADAPTER
+2025-09-26T15:13:32.146Z info:   updated: Targus CityLite 15.6 Inch Laptop Briefcase Shoulder Messenger Bag
+2025-09-26T15:13:32.610Z info:   updated: Laptop CPU Cooling Fan for Hp Probook 4320s 4321s 4326s 4420s 4421s 4426s
+2025-09-26T15:13:33.053Z info:   updated: New For Acer Aspire 5336 5736 5736G 5736Z Laptop CPU Cooling Fan DC2800092A0
+2025-09-26T15:13:33.058Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:13:34.948Z info: → [Nairobi Computer Shop] Laptops & Computers page 1: https://nairobicomputershop.co.ke/?s=Laptops%20%26%20Computers&post_type=product&paged=1
+2025-09-26T15:13:39.592Z info:   found 0 product blocks on page 1
+2025-09-26T15:13:39.592Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:13:39.592Z info: → [Nairobi Computer Shop] Laptops & Computers page 2: https://nairobicomputershop.co.ke/?s=Laptops%20%26%20Computers&post_type=product&paged=2
+2025-09-26T15:13:43.281Z info:   found 0 product blocks on page 2
+2025-09-26T15:13:43.281Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:13:43.315Z info: === Category: Computer Gadgets ===
+2025-09-26T15:13:43.595Z info: → [LaptopClinic] Computer Gadgets page 1: https://laptopclinic.co.ke/search?q=Computer%20Gadgets&page=1
+2025-09-26T15:13:47.508Z info:   found 2 product blocks on page 1
+2025-09-26T15:13:47.956Z info:   updated: SellZone Laptop Keyboard For Samsung NP-RV508 NP-RV510 NP-R517 NP-R523 NP-R525 NP-R528 NP-R530 Internal Laptop Keyboard  (Black)
+2025-09-26T15:13:48.400Z info:   updated: Microsoft Windows 7 – Single License
+2025-09-26T15:13:48.405Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:13:50.617Z info: → [LaptopClinic] Computer Gadgets page 2: https://laptopclinic.co.ke/search?q=Computer%20Gadgets&page=2
+2025-09-26T15:13:54.225Z info:   found 0 product blocks on page 2
+2025-09-26T15:13:54.225Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:13:54.225Z info: → [LaptopClinic] Computer Gadgets page 3: https://laptopclinic.co.ke/search?q=Computer%20Gadgets&page=3
+2025-09-26T15:13:57.924Z info:   found 0 product blocks on page 3
+2025-09-26T15:13:57.924Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:13:58.037Z info: → [Nairobi Computer Shop] Computer Gadgets page 1: https://nairobicomputershop.co.ke/?s=Computer%20Gadgets&post_type=product&paged=1
+2025-09-26T15:14:01.970Z info:   found 0 product blocks on page 1
+2025-09-26T15:14:01.971Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:14:01.971Z info: → [Nairobi Computer Shop] Computer Gadgets page 2: https://nairobicomputershop.co.ke/?s=Computer%20Gadgets&post_type=product&paged=2
+2025-09-26T15:14:05.942Z info:   found 0 product blocks on page 2
+2025-09-26T15:14:05.946Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:14:06.030Z info: === Category: Security Gadgets ===
+2025-09-26T15:14:06.370Z info: → [LaptopClinic] Security Gadgets page 1: https://laptopclinic.co.ke/search?q=Security%20Gadgets&page=1
+2025-09-26T15:14:10.504Z info:   found 1 product blocks on page 1
+2025-09-26T15:14:10.950Z info:   updated: Microsoft Windows 7 – Single License
+2025-09-26T15:14:10.957Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:14:13.741Z info: → [LaptopClinic] Security Gadgets page 2: https://laptopclinic.co.ke/search?q=Security%20Gadgets&page=2
+2025-09-26T15:14:17.053Z info:   found 0 product blocks on page 2
+2025-09-26T15:14:17.054Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:14:17.054Z info: → [LaptopClinic] Security Gadgets page 3: https://laptopclinic.co.ke/search?q=Security%20Gadgets&page=3
+2025-09-26T15:14:20.482Z info:   found 0 product blocks on page 3
+2025-09-26T15:14:20.483Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:14:20.636Z info: → [Nairobi Computer Shop] Security Gadgets page 1: https://nairobicomputershop.co.ke/?s=Security%20Gadgets&post_type=product&paged=1
+2025-09-26T15:14:24.362Z info:   found 0 product blocks on page 1
+2025-09-26T15:14:24.363Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:14:24.363Z info: → [Nairobi Computer Shop] Security Gadgets page 2: https://nairobicomputershop.co.ke/?s=Security%20Gadgets&post_type=product&paged=2
+2025-09-26T15:14:28.000Z info:   found 0 product blocks on page 2
+2025-09-26T15:14:28.001Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:14:28.601Z info: 🎉 All platforms done
+2025-09-26T15:15:45.045Z info: ✅ MongoDB connected
+2025-09-26T15:15:45.073Z info: Using Tor on port 9050
+2025-09-26T15:15:46.561Z info: === Category: Fibre ===
+2025-09-26T15:15:46.931Z info: → [LaptopClinic] Fibre page 1: https://laptopclinic.co.ke/search?q=Fibre&page=1
+2025-09-26T15:15:54.674Z info:   found 1 product blocks on page 1
+2025-09-26T15:15:55.129Z info:   updated: 14.1 fibre LAPTOP SCREEN
+2025-09-26T15:15:55.132Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:15:57.535Z info: → [LaptopClinic] Fibre page 2: https://laptopclinic.co.ke/search?q=Fibre&page=2
+2025-09-26T15:16:00.423Z info:   found 0 product blocks on page 2
+2025-09-26T15:16:00.423Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:16:00.424Z info: → [LaptopClinic] Fibre page 3: https://laptopclinic.co.ke/search?q=Fibre&page=3
+2025-09-26T15:16:03.910Z info:   found 0 product blocks on page 3
+2025-09-26T15:16:03.915Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:16:04.126Z info: → [Nairobi Computer Shop] Fibre page 1: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=1
+2025-09-26T15:16:06.295Z info: SIGINT received. Closing...
+2025-09-26T15:16:45.862Z info: ✅ MongoDB connected
+2025-09-26T15:16:45.885Z info: Using Tor on port 9050
+2025-09-26T15:16:46.901Z info: === Category: Fibre ===
+2025-09-26T15:16:47.259Z info: → [LaptopClinic] Fibre page 1: https://laptopclinic.co.ke/search?q=Fibre&page=1
+2025-09-26T15:16:54.794Z info:   found 1 product blocks on page 1
+2025-09-26T15:16:55.260Z info:   updated: 14.1 fibre LAPTOP SCREEN
+2025-09-26T15:16:55.265Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:16:59.128Z info: → [LaptopClinic] Fibre page 2: https://laptopclinic.co.ke/search?q=Fibre&page=2
+2025-09-26T15:17:02.131Z info:   found 0 product blocks on page 2
+2025-09-26T15:17:02.131Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:17:02.132Z info: → [LaptopClinic] Fibre page 3: https://laptopclinic.co.ke/search?q=Fibre&page=3
+2025-09-26T15:17:05.419Z info:   found 0 product blocks on page 3
+2025-09-26T15:17:05.419Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:17:05.547Z info: → [Nairobi Computer Shop] Fibre page 1: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=1
+2025-09-26T15:17:13.927Z info: SIGINT received. Closing...
+2025-09-26T15:40:09.642Z info: ✅ MongoDB connected
+2025-09-26T15:40:09.665Z info: Using Tor on port 9050
+2025-09-26T15:40:12.661Z info: === Category: Fibre ===
+2025-09-26T15:40:13.083Z info: → [LaptopClinic] Fibre page 1: https://laptopclinic.co.ke/search?q=Fibre&page=1
+2025-09-26T15:40:19.429Z info:   found 1 product blocks on page 1
+2025-09-26T15:40:19.908Z info:   updated: 14.1 fibre LAPTOP SCREEN
+2025-09-26T15:40:19.911Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:40:22.248Z info: → [LaptopClinic] Fibre page 2: https://laptopclinic.co.ke/search?q=Fibre&page=2
+2025-09-26T15:40:27.242Z info:   found 0 product blocks on page 2
+2025-09-26T15:40:27.242Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:40:27.243Z info: → [LaptopClinic] Fibre page 3: https://laptopclinic.co.ke/search?q=Fibre&page=3
+2025-09-26T15:40:30.530Z info:   found 0 product blocks on page 3
+2025-09-26T15:40:30.530Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:40:30.682Z info: → [Nairobi Computer Shop] Fibre page 1: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=1
+2025-09-26T15:40:35.853Z info:   found 0 product blocks on page 1
+2025-09-26T15:40:35.853Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:40:35.853Z info: → [Nairobi Computer Shop] Fibre page 2: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=2
+2025-09-26T15:40:39.535Z info:   found 0 product blocks on page 2
+2025-09-26T15:40:39.537Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:40:39.576Z info: === Category: Hotspot ===
+2025-09-26T15:40:39.856Z info: → [LaptopClinic] Hotspot page 1: https://laptopclinic.co.ke/search?q=Hotspot&page=1
+2025-09-26T15:40:43.761Z info:   found 8 product blocks on page 1
+2025-09-26T15:40:44.428Z info:   updated: 4G LTE USB MODEM
+2025-09-26T15:40:44.868Z info:   updated: TP-Link TL-WN823N | 300Mbps Mini Wireless N USB Adapter
+2025-09-26T15:40:45.330Z info:   updated: Huawei E8231 wingle airtel modem
+2025-09-26T15:40:45.769Z info:   updated: HP ProDesk 400 G7 MT [i7, 8GB RAM, 1TB HDD+256GB SSD]
+2025-09-26T15:40:46.206Z info:   updated: Apple Lightning to HDMI  Adapter
+2025-09-26T15:40:46.644Z info:   updated: Samsung Galaxy Tab A7 LTE Octa-Core Processor 8.7" TFT WXGA+ Display 3GB RAM 32GB ROM Android 11 (silver)
+2025-09-26T15:40:47.081Z info:   updated: OPPO A14 4GB RAM 64GB ROM 6.5 INCH DISPLAY 4000 mAh Battery
+2025-09-26T15:40:47.519Z info:   updated: ASUS Zenbook 14 OLED (UX3402) Intel Core i7-1260P 16GB RAM 512GB SSD｜Laptops For Home
+2025-09-26T15:40:47.523Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:40:50.396Z info: → [LaptopClinic] Hotspot page 2: https://laptopclinic.co.ke/search?q=Hotspot&page=2
+2025-09-26T15:40:53.260Z info:   found 0 product blocks on page 2
+2025-09-26T15:40:53.261Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:40:53.261Z info: → [LaptopClinic] Hotspot page 3: https://laptopclinic.co.ke/search?q=Hotspot&page=3
+2025-09-26T15:40:56.485Z info:   found 0 product blocks on page 3
+2025-09-26T15:40:56.487Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:40:56.662Z info: → [Nairobi Computer Shop] Hotspot page 1: https://nairobicomputershop.co.ke/?s=Hotspot&post_type=product&paged=1
+2025-09-26T15:41:00.843Z info:   found 0 product blocks on page 1
+2025-09-26T15:41:00.845Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:41:00.845Z info: → [Nairobi Computer Shop] Hotspot page 2: https://nairobicomputershop.co.ke/?s=Hotspot&post_type=product&paged=2
+2025-09-26T15:41:04.655Z info:   found 0 product blocks on page 2
+2025-09-26T15:41:04.656Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:41:04.710Z info: === Category: Networking Routers ===
+2025-09-26T15:41:04.988Z info: → [LaptopClinic] Networking Routers page 1: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=1
+2025-09-26T15:41:10.239Z info:   found 10 product blocks on page 1
+2025-09-26T15:41:10.696Z info:   updated: Tp-Link TL-WR840N300Mbps Wireless N Speed  Router
+2025-09-26T15:41:11.134Z info:   updated: TP-Link Archer AX12 AX1500 Dual-Band Wi-Fi 6 Router
+2025-09-26T15:41:11.576Z info:   updated: Starlink Ethernet Adapter For Wired External Network
+2025-09-26T15:41:12.017Z info:   updated: TP Link RE505X AX1500 Wi-Fi Range Extender
+2025-09-26T15:41:12.479Z info:   updated: 4G LTE USB MODEM
+2025-09-26T15:41:12.916Z info:   updated: MERCUSYS Mw300UH 300Mbps High Gain Wireless USB Adapter
+2025-09-26T15:41:13.362Z info:   updated: Huawei E8231 wingle airtel modem
+2025-09-26T15:41:13.797Z info:   updated: Epson EcoTank L5290 A4 Wi-Fi All-in-One Ink Tank Printer with ADF
+2025-09-26T15:41:14.233Z info:   updated: Epson EcoTank L4260 A4 Wi-Fi Duplex All-in-One Ink Tank Printer
+2025-09-26T15:41:14.670Z info:   updated: Lenovo ThinkPad E14 Gen 4 type 21E3 14” Intel Core i5-1235U 8GB RAM 512GB SSD, Intel® Iris® Xe Graphics, 2yrs warranty
+2025-09-26T15:41:14.673Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:41:18.559Z info: → [LaptopClinic] Networking Routers page 2: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=2
+2025-09-26T15:41:22.051Z info:   found 0 product blocks on page 2
+2025-09-26T15:41:22.055Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:41:22.056Z info: → [LaptopClinic] Networking Routers page 3: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=3
+2025-09-26T15:41:24.934Z info:   found 0 product blocks on page 3
+2025-09-26T15:41:24.934Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:41:25.036Z info: → [Nairobi Computer Shop] Networking Routers page 1: https://nairobicomputershop.co.ke/?s=Networking%20Routers&post_type=product&paged=1
+2025-09-26T15:41:28.755Z info:   found 0 product blocks on page 1
+2025-09-26T15:41:28.755Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:41:28.756Z info: → [Nairobi Computer Shop] Networking Routers page 2: https://nairobicomputershop.co.ke/?s=Networking%20Routers&post_type=product&paged=2
+2025-09-26T15:41:32.376Z info:   found 0 product blocks on page 2
+2025-09-26T15:41:32.376Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:41:32.410Z info: === Category: Networking Accessories ===
+2025-09-26T15:41:32.737Z info: → [LaptopClinic] Networking Accessories page 1: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=1
+2025-09-26T15:41:36.893Z info:   found 12 product blocks on page 1
+2025-09-26T15:41:37.356Z info:   updated: RJ45 Connectors | Registered Jack-45 - Plastic
+2025-09-26T15:41:37.805Z info:   updated: Gigabit USB 3.0 to Ethernet Adapter
+2025-09-26T15:41:38.242Z info:   updated: RJ45 Connectors | Registered Jack-45 - Metallic
+2025-09-26T15:41:38.700Z info:   updated: Vention 5-in-1 USB-C HUB With Gigabit Ethernet Adapter
+2025-09-26T15:41:39.139Z info:   updated: Type-C 8-in-1 Adapter with HDMI VGA LAN SD USB 3.0 Audio Adapter Support 4K UHD Video 3.5mm Audio Gigabit
+2025-09-26T15:41:39.575Z info:   updated: HP Compaq Elite 8300 Ultraslim SFF Intel Core i5 3rd Gen 4GB RAM 320GB HDD Desktop
+2025-09-26T15:41:40.012Z info:   updated: Apple MacBook Air A1466 (13-inch, 2017) Intel Core i5 8GB 512GB SSD Intel HD Graphics 6000
+2025-09-26T15:41:40.457Z info:   updated: Microsoft Windows 7 – Single License
+2025-09-26T15:41:40.893Z info:   updated: Apple MacBook Air A1466 (13-inch, 2017) Intel Core i7 8GB 512GB SSD Intel HD Graphics 6000
+2025-09-26T15:41:41.332Z info:   updated: Apple MacBook Air A1932 (13-inch, 2018) Intel Core i5 16GB RAM 512GB SSD Intel HD Graphics 617
+2025-09-26T15:41:41.775Z info:   updated: Apple MacBook Air A1932 (13-inch, 2018) Intel Core i5 8GB RAM 256GB SSD Intel HD Graphics 617
+2025-09-26T15:41:42.211Z info:   updated: ASUS TUF Dash F15 (2022) FX517Z P/N 90NR09L3-M008R0
+2025-09-26T15:41:42.213Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:41:45.284Z info: → [LaptopClinic] Networking Accessories page 2: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=2
+2025-09-26T15:41:49.471Z info:   found 0 product blocks on page 2
+2025-09-26T15:41:49.471Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:41:49.472Z info: → [LaptopClinic] Networking Accessories page 3: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=3
+2025-09-26T15:41:52.960Z info:   found 0 product blocks on page 3
+2025-09-26T15:41:52.961Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:41:53.152Z info: → [Nairobi Computer Shop] Networking Accessories page 1: https://nairobicomputershop.co.ke/?s=Networking%20Accessories&post_type=product&paged=1
+2025-09-26T15:41:57.719Z info:   found 0 product blocks on page 1
+2025-09-26T15:41:57.719Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:41:57.720Z info: → [Nairobi Computer Shop] Networking Accessories page 2: https://nairobicomputershop.co.ke/?s=Networking%20Accessories&post_type=product&paged=2
+2025-09-26T15:42:01.529Z info:   found 0 product blocks on page 2
+2025-09-26T15:42:01.535Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:42:01.604Z info: === Category: Laptops & Computers ===
+2025-09-26T15:42:01.918Z info: → [LaptopClinic] Laptops & Computers page 1: https://laptopclinic.co.ke/search?q=Laptops%20%26%20Computers&page=1
+2025-09-26T15:42:06.443Z info:   found 15 product blocks on page 1
+2025-09-26T15:42:06.884Z info:   updated: ACCESSORIES FOR CLEANING AIR LAPTOPS AND SCREENS
+2025-09-26T15:42:07.318Z info:   updated: 4GB DDR4 2666 LAPTOP
+2025-09-26T15:42:07.755Z info:   updated: 2 Pin Plug in Computer Power Cables & Connectors
+2025-09-26T15:42:08.190Z info:   updated: Silver Laptop Skins
+2025-09-26T15:42:08.625Z info:   updated: HP 2530p LAPTOP KEYBOARD
+2025-09-26T15:42:09.062Z info:   updated: laptop locks key
+2025-09-26T15:42:09.497Z info:   updated: 16.0 LED LAPTOP SCREENS
+2025-09-26T15:42:09.934Z info:   updated: 14.1 30pin CONNECTOR LAPTOP SCREEN
+2025-09-26T15:42:10.372Z info:   updated: LENOVO X220 LAPTOP  KEYBOARD
+2025-09-26T15:42:10.808Z info:   updated: ACER  Aspire 3810 - 4810 Laptop Keyboard
+2025-09-26T15:42:11.252Z info:   updated: LENOVO T420 LAPTOP KEYBOARD
+2025-09-26T15:42:11.706Z info:   updated: DELL n4110 LAPTOP KEYBOARD
+2025-09-26T15:42:12.153Z info:   updated: UNIVERSAL  LAPTOP ADAPTER 45W
+2025-09-26T15:42:12.594Z info:   updated: DELL E5420 LAPTOP  KEYBOARD
+2025-09-26T15:42:13.030Z info:   updated: Lenovo t61 LAPTOP  KEYBOARD
+2025-09-26T15:42:13.037Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:42:15.016Z info: → [LaptopClinic] Laptops & Computers page 2: https://laptopclinic.co.ke/search?q=Laptops%20%26%20Computers&page=2
+2025-09-26T15:42:21.079Z info:   found 20 product blocks on page 2
+2025-09-26T15:42:21.520Z info:   updated: Lenovo t61 LAPTOP  KEYBOARD
+2025-09-26T15:42:21.963Z info:   updated: LG 20V 2A Charger Laptop Adapter
+2025-09-26T15:42:22.400Z info:   updated: 15 Inches Laptop Porch bag
+2025-09-26T15:42:22.843Z info:   updated: DELL D520 LAPTOP KEYBOARD
+2025-09-26T15:42:23.279Z info:   updated: Samsung N150 Laptop Battery
+2025-09-26T15:42:23.715Z info:   updated: 12 Inches Laptop Porch Bag
+2025-09-26T15:42:24.152Z info:   updated: HP NC6100 Laptop Battery
+2025-09-26T15:42:24.590Z info:   updated: Logitech H540 USB Computer Headset with Noise- Cancellation
+2025-09-26T15:42:25.040Z info:   updated: lenovo t410 LAPTOP  keyboard
+2025-09-26T15:42:25.479Z info:   updated: mouse pad with Anti-fray Stitching, Premium-Textured & Waterproof Computer Mousepad with Non-Slip Rubber Base, Gaming Mouse Mat for Laptop, Office & Home Black
+2025-09-26T15:42:25.935Z info:   updated: 13.3 SLIM SMALL CONNECTOR LAPTOP SCREEN
+2025-09-26T15:42:26.374Z info:   updated: Dell Inspiron 5521 and 3521  Laptop Keyboard
+2025-09-26T15:42:26.813Z info:   updated: 14.1 40 PIN CONNECTOR LAPTOP SCREEN
+2025-09-26T15:42:27.248Z info:   updated: Portable Foldable Aluminium Alloy Laptop Stand
+2025-09-26T15:42:27.695Z info:   updated: HP 18.5V 4.9A  5.5*2.5 LAPTOP ADAPTER
+2025-09-26T15:42:28.133Z info:   updated: GTB's Laptop CPU Fan Compatible with HP G62 G72 CQ56 CQ56z CQ62 CQ72 Laptop CPU Cooling Fan
+2025-09-26T15:42:28.568Z info:   updated: TOSHIBA 19V 4.74A  5.5*2.5 LAPTOP ADAPTER
+2025-09-26T15:42:29.003Z info:   updated: Dell Inspiron 14Z-N411Z 13Z-N311Z Laptop Battery
+2025-09-26T15:42:29.439Z info:   updated: Lexar® 8GB 3200MHz DDR4 SODIMM Laptop RAM
+2025-09-26T15:42:29.875Z info:   updated: New 11.6 LED/LCD HD 40pins Laptop screen
+2025-09-26T15:42:33.489Z info: → [LaptopClinic] Laptops & Computers page 3: https://laptopclinic.co.ke/search?q=Laptops%20%26%20Computers&page=3
+2025-09-26T15:42:39.501Z info:   found 20 product blocks on page 3
+2025-09-26T15:42:39.938Z info:   updated: New 11.6 LED/LCD HD 40pins Laptop screen
+2025-09-26T15:42:40.374Z info:   updated: DELL e5400 LAPTOP KEYBOARD
+2025-09-26T15:42:40.811Z info:   updated: Dell Latitude E5500 Replacement LAPTOP LCD Screen 15.4"
+2025-09-26T15:42:41.248Z info:   updated: New HP Pavilion 15-N Series Laptop Touch Screen
+2025-09-26T15:42:41.699Z info:   updated: HP PROBOOK 6460B original laptop LCD screen cable
+2025-09-26T15:42:42.135Z info:   updated: Bluetooth USB Dongle Adapter CSR 4.0 for Desktop and Laptop
+2025-09-26T15:42:42.573Z info:   updated: HP 620 – 625- 4320s – 4520s Laptop Battery Kenya
+2025-09-26T15:42:43.011Z info:   updated: HP Pavilion DV4 - DV5 - DV6 - CQ60 - Laptop Battery
+2025-09-26T15:42:43.455Z info:   updated: SellZone Laptop Keyboard For Samsung NP-RV508 NP-RV510 NP-R517 NP-R523 NP-R525 NP-R528 NP-R530 Internal Laptop Keyboard  (Black)
+2025-09-26T15:42:43.896Z info:   updated: Cover Repair Part for Computer HP Pavilion g6, g6-2000 684164-001 -Black
+2025-09-26T15:42:44.333Z info:   updated: NEW for HP EliteBook 2540P 2540 US Laptop Keyboard black
+2025-09-26T15:42:44.771Z info:   updated: HP Elite x2 1013 G3 Tablet 13" FHD Touch Intel® Core™ i7-8650U + Gifts
+2025-09-26T15:42:45.206Z info:   updated: Lenovo IdeaPad 20V 6.75A 135W Laptop Charger
+2025-09-26T15:42:45.645Z info:   updated: Laptop Charger For Acer One Kav10 Kav60 19V 1.58A 30W
+2025-09-26T15:42:46.082Z info:   updated: Laptop CPU Cooling Fan for Dell Inspiron 15R N5010 5010 M5010
+2025-09-26T15:42:46.518Z info:   updated: Laptop CPU Cooling Fan for Toshiba TECRA A11 M10 UDQFC65E5DT0 New
+2025-09-26T15:42:46.956Z info:   updated: SONY 16V 4A  5.5*2.5 LAPTOP ADAPTER
+2025-09-26T15:42:47.392Z info:   updated: Targus CityLite 15.6 Inch Laptop Briefcase Shoulder Messenger Bag
+2025-09-26T15:42:47.830Z info:   updated: Laptop CPU Cooling Fan for Hp Probook 4320s 4321s 4326s 4420s 4421s 4426s
+2025-09-26T15:42:48.268Z info:   updated: New For Acer Aspire 5336 5736 5736G 5736Z Laptop CPU Cooling Fan DC2800092A0
+2025-09-26T15:42:48.271Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:42:52.092Z info: → [Nairobi Computer Shop] Laptops & Computers page 1: https://nairobicomputershop.co.ke/?s=Laptops%20%26%20Computers&post_type=product&paged=1
+2025-09-26T15:42:55.827Z info:   found 0 product blocks on page 1
+2025-09-26T15:42:55.827Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:42:55.827Z info: → [Nairobi Computer Shop] Laptops & Computers page 2: https://nairobicomputershop.co.ke/?s=Laptops%20%26%20Computers&post_type=product&paged=2
+2025-09-26T15:42:59.873Z info:   found 0 product blocks on page 2
+2025-09-26T15:42:59.873Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:42:59.907Z info: === Category: Computer Gadgets ===
+2025-09-26T15:43:00.185Z info: → [LaptopClinic] Computer Gadgets page 1: https://laptopclinic.co.ke/search?q=Computer%20Gadgets&page=1
+2025-09-26T15:43:56.042Z info:   found 2 product blocks on page 1
+2025-09-26T15:43:57.689Z info:   updated: SellZone Laptop Keyboard For Samsung NP-RV508 NP-RV510 NP-R517 NP-R523 NP-R525 NP-R528 NP-R530 Internal Laptop Keyboard  (Black)
+2025-09-26T15:43:58.094Z info:   updated: Microsoft Windows 7 – Single License
+2025-09-26T15:43:58.098Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:44:00.142Z info: → [LaptopClinic] Computer Gadgets page 2: https://laptopclinic.co.ke/search?q=Computer%20Gadgets&page=2
+2025-09-26T15:44:04.849Z info:   found 0 product blocks on page 2
+2025-09-26T15:44:04.849Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:44:04.849Z info: → [LaptopClinic] Computer Gadgets page 3: https://laptopclinic.co.ke/search?q=Computer%20Gadgets&page=3
+2025-09-26T15:44:07.592Z info:   found 0 product blocks on page 3
+2025-09-26T15:44:07.592Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:44:07.695Z info: → [Nairobi Computer Shop] Computer Gadgets page 1: https://nairobicomputershop.co.ke/?s=Computer%20Gadgets&post_type=product&paged=1
+2025-09-26T15:44:12.426Z info:   found 0 product blocks on page 1
+2025-09-26T15:44:12.426Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:44:12.427Z info: → [Nairobi Computer Shop] Computer Gadgets page 2: https://nairobicomputershop.co.ke/?s=Computer%20Gadgets&post_type=product&paged=2
+2025-09-26T15:44:16.095Z info:   found 0 product blocks on page 2
+2025-09-26T15:44:16.096Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:44:16.151Z info: === Category: Security Gadgets ===
+2025-09-26T15:44:16.411Z info: → [LaptopClinic] Security Gadgets page 1: https://laptopclinic.co.ke/search?q=Security%20Gadgets&page=1
+2025-09-26T15:44:19.409Z info:   found 1 product blocks on page 1
+2025-09-26T15:44:19.813Z info:   updated: Microsoft Windows 7 – Single License
+2025-09-26T15:44:19.816Z warn: Tor newnym failed: Authentication failed with message: 515 Authentication failed: Password did not match HashedControlPassword value from configuration
+
+2025-09-26T15:44:22.536Z info: → [LaptopClinic] Security Gadgets page 2: https://laptopclinic.co.ke/search?q=Security%20Gadgets&page=2
+2025-09-26T15:44:25.446Z info:   found 0 product blocks on page 2
+2025-09-26T15:44:25.446Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:44:25.447Z info: → [LaptopClinic] Security Gadgets page 3: https://laptopclinic.co.ke/search?q=Security%20Gadgets&page=3
+2025-09-26T15:44:28.078Z info:   found 0 product blocks on page 3
+2025-09-26T15:44:28.078Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:44:28.198Z info: → [Nairobi Computer Shop] Security Gadgets page 1: https://nairobicomputershop.co.ke/?s=Security%20Gadgets&post_type=product&paged=1
+2025-09-26T15:44:32.079Z info:   found 0 product blocks on page 1
+2025-09-26T15:44:32.079Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:44:32.080Z info: → [Nairobi Computer Shop] Security Gadgets page 2: https://nairobicomputershop.co.ke/?s=Security%20Gadgets&post_type=product&paged=2
+2025-09-26T15:44:35.680Z info:   found 0 product blocks on page 2
+2025-09-26T15:44:35.681Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:44:36.293Z info: 🎉 All platforms done
+2025-09-26T15:59:39.452Z info: ✅ MongoDB connected
+2025-09-26T15:59:39.466Z info: Using Tor on port 9050
+2025-09-26T15:59:40.619Z info: === Category: Fibre ===
+2025-09-26T15:59:41.063Z info: → [LaptopClinic] Fibre page 1: https://laptopclinic.co.ke/search?q=Fibre&page=1
+2025-09-26T15:59:51.594Z info:   found 1 product blocks on page 1
+2025-09-26T15:59:52.055Z info:   updated: 14.1 fibre LAPTOP SCREEN
+2025-09-26T15:59:52.095Z info: Tor identity refreshed.
+2025-09-26T15:59:55.160Z info: → [LaptopClinic] Fibre page 2: https://laptopclinic.co.ke/search?q=Fibre&page=2
+2025-09-26T15:59:58.634Z info:   found 0 product blocks on page 2
+2025-09-26T15:59:58.635Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T15:59:58.635Z info: → [LaptopClinic] Fibre page 3: https://laptopclinic.co.ke/search?q=Fibre&page=3
+2025-09-26T16:00:00.932Z info:   found 0 product blocks on page 3
+2025-09-26T16:00:00.935Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:00:01.136Z info: → [Nairobi Computer Shop] Fibre page 1: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=1
+2025-09-26T16:00:07.060Z info:   found 0 product blocks on page 1
+2025-09-26T16:00:07.060Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:00:07.060Z info: → [Nairobi Computer Shop] Fibre page 2: https://nairobicomputershop.co.ke/?s=Fibre&post_type=product&paged=2
+2025-09-26T16:00:12.381Z info:   found 0 product blocks on page 2
+2025-09-26T16:00:12.382Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:00:12.419Z info: === Category: Hotspot ===
+2025-09-26T16:00:12.736Z info: → [LaptopClinic] Hotspot page 1: https://laptopclinic.co.ke/search?q=Hotspot&page=1
+2025-09-26T16:00:16.796Z info:   found 8 product blocks on page 1
+2025-09-26T16:00:17.259Z info:   updated: 4G LTE USB MODEM
+2025-09-26T16:00:17.706Z info:   updated: TP-Link TL-WN823N | 300Mbps Mini Wireless N USB Adapter
+2025-09-26T16:00:18.165Z info:   updated: Huawei E8231 wingle airtel modem
+2025-09-26T16:00:18.630Z info:   updated: HP ProDesk 400 G7 MT [i7, 8GB RAM, 1TB HDD+256GB SSD]
+2025-09-26T16:00:19.074Z info:   updated: Apple Lightning to HDMI  Adapter
+2025-09-26T16:00:19.518Z info:   updated: Samsung Galaxy Tab A7 LTE Octa-Core Processor 8.7" TFT WXGA+ Display 3GB RAM 32GB ROM Android 11 (silver)
+2025-09-26T16:00:19.962Z info:   updated: OPPO A14 4GB RAM 64GB ROM 6.5 INCH DISPLAY 4000 mAh Battery
+2025-09-26T16:00:20.405Z info:   updated: ASUS Zenbook 14 OLED (UX3402) Intel Core i7-1260P 16GB RAM 512GB SSD｜Laptops For Home
+2025-09-26T16:00:20.438Z info: Tor identity refreshed.
+2025-09-26T16:00:22.292Z info: → [LaptopClinic] Hotspot page 2: https://laptopclinic.co.ke/search?q=Hotspot&page=2
+2025-09-26T16:00:26.832Z info:   found 0 product blocks on page 2
+2025-09-26T16:00:26.833Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:00:26.833Z info: → [LaptopClinic] Hotspot page 3: https://laptopclinic.co.ke/search?q=Hotspot&page=3
+2025-09-26T16:00:29.134Z info:   found 0 product blocks on page 3
+2025-09-26T16:00:29.134Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:00:29.286Z info: → [Nairobi Computer Shop] Hotspot page 1: https://nairobicomputershop.co.ke/?s=Hotspot&post_type=product&paged=1
+2025-09-26T16:00:34.226Z info:   found 0 product blocks on page 1
+2025-09-26T16:00:34.229Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:00:34.229Z info: → [Nairobi Computer Shop] Hotspot page 2: https://nairobicomputershop.co.ke/?s=Hotspot&post_type=product&paged=2
+2025-09-26T16:00:38.306Z info:   found 0 product blocks on page 2
+2025-09-26T16:00:38.306Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:00:38.350Z info: === Category: Networking Routers ===
+2025-09-26T16:00:38.649Z info: → [LaptopClinic] Networking Routers page 1: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=1
+2025-09-26T16:00:42.945Z info:   found 10 product blocks on page 1
+2025-09-26T16:00:43.395Z info:   updated: Tp-Link TL-WR840N300Mbps Wireless N Speed  Router
+2025-09-26T16:00:43.836Z info:   updated: TP-Link Archer AX12 AX1500 Dual-Band Wi-Fi 6 Router
+2025-09-26T16:00:44.279Z info:   updated: Starlink Ethernet Adapter For Wired External Network
+2025-09-26T16:00:44.729Z info:   updated: TP Link RE505X AX1500 Wi-Fi Range Extender
+2025-09-26T16:00:45.174Z info:   updated: 4G LTE USB MODEM
+2025-09-26T16:00:45.616Z info:   updated: MERCUSYS Mw300UH 300Mbps High Gain Wireless USB Adapter
+2025-09-26T16:00:46.075Z info:   updated: Huawei E8231 wingle airtel modem
+2025-09-26T16:00:46.532Z info:   updated: Epson EcoTank L5290 A4 Wi-Fi All-in-One Ink Tank Printer with ADF
+2025-09-26T16:00:46.984Z info:   updated: Lenovo ThinkPad E14 Gen 4 type 21E3 14” Intel Core i5-1235U 8GB RAM 512GB SSD, Intel® Iris® Xe Graphics, 2yrs warranty
+2025-09-26T16:00:47.425Z info:   updated: Epson EcoTank L4260 A4 Wi-Fi Duplex All-in-One Ink Tank Printer
+2025-09-26T16:00:47.454Z info: Tor identity refreshed.
+2025-09-26T16:00:50.495Z info: → [LaptopClinic] Networking Routers page 2: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=2
+2025-09-26T16:00:52.785Z info:   found 0 product blocks on page 2
+2025-09-26T16:00:52.786Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:00:52.786Z info: → [LaptopClinic] Networking Routers page 3: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=3
+2025-09-26T16:00:55.675Z info:   found 0 product blocks on page 3
+2025-09-26T16:00:55.675Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:00:55.802Z info: → [Nairobi Computer Shop] Networking Routers page 1: https://nairobicomputershop.co.ke/?s=Networking%20Routers&post_type=product&paged=1
+2025-09-26T16:00:59.874Z info:   found 0 product blocks on page 1
+2025-09-26T16:00:59.875Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:00:59.876Z info: → [Nairobi Computer Shop] Networking Routers page 2: https://nairobicomputershop.co.ke/?s=Networking%20Routers&post_type=product&paged=2
+2025-09-26T16:01:03.703Z info:   found 0 product blocks on page 2
+2025-09-26T16:01:03.703Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:01:03.750Z info: === Category: Networking Accessories ===
+2025-09-26T16:01:04.039Z info: → [LaptopClinic] Networking Accessories page 1: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=1
+2025-09-26T16:01:09.114Z info:   found 12 product blocks on page 1
+2025-09-26T16:01:09.565Z info:   updated: RJ45 Connectors | Registered Jack-45 - Metallic
+2025-09-26T16:01:10.009Z info:   updated: Gigabit USB 3.0 to Ethernet Adapter
+2025-09-26T16:01:10.453Z info:   updated: RJ45 Connectors | Registered Jack-45 - Plastic
+2025-09-26T16:01:10.894Z info:   updated: Vention 5-in-1 USB-C HUB With Gigabit Ethernet Adapter
+2025-09-26T16:01:11.334Z info:   updated: Type-C 8-in-1 Adapter with HDMI VGA LAN SD USB 3.0 Audio Adapter Support 4K UHD Video 3.5mm Audio Gigabit
+2025-09-26T16:01:11.778Z info:   updated: HP Compaq Elite 8300 Ultraslim SFF Intel Core i5 3rd Gen 4GB RAM 320GB HDD Desktop
+2025-09-26T16:01:12.229Z info:   updated: Apple MacBook Air A1466 (13-inch, 2017) Intel Core i5 8GB 512GB SSD Intel HD Graphics 6000
+2025-09-26T16:01:12.679Z info:   updated: Microsoft Windows 7 – Single License
+2025-09-26T16:01:13.121Z info:   updated: Apple MacBook Air A1466 (13-inch, 2017) Intel Core i7 8GB 512GB SSD Intel HD Graphics 6000
+2025-09-26T16:01:13.561Z info:   updated: Apple MacBook Air A1932 (13-inch, 2018) Intel Core i5 16GB RAM 512GB SSD Intel HD Graphics 617
+2025-09-26T16:01:14.003Z info:   updated: Apple MacBook Air A1932 (13-inch, 2018) Intel Core i5 8GB RAM 256GB SSD Intel HD Graphics 617
+2025-09-26T16:01:14.448Z info:   updated: ASUS TUF Dash F15 (2022) FX517Z P/N 90NR09L3-M008R0
+2025-09-26T16:01:14.479Z info: Tor identity refreshed.
+2025-09-26T16:01:16.576Z info: → [LaptopClinic] Networking Accessories page 2: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=2
+2025-09-26T16:01:20.124Z info:   found 0 product blocks on page 2
+2025-09-26T16:01:20.124Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:01:20.125Z info: → [LaptopClinic] Networking Accessories page 3: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=3
+2025-09-26T16:01:22.801Z info:   found 0 product blocks on page 3
+2025-09-26T16:01:22.801Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:01:22.978Z info: → [Nairobi Computer Shop] Networking Accessories page 1: https://nairobicomputershop.co.ke/?s=Networking%20Accessories&post_type=product&paged=1
+2025-09-26T16:01:28.904Z info:   found 0 product blocks on page 1
+2025-09-26T16:01:28.904Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:01:28.904Z info: → [Nairobi Computer Shop] Networking Accessories page 2: https://nairobicomputershop.co.ke/?s=Networking%20Accessories&post_type=product&paged=2
+2025-09-26T16:01:32.713Z info:   found 0 product blocks on page 2
+2025-09-26T16:01:32.714Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:01:32.754Z info: === Category: Laptops & Computers ===
+2025-09-26T16:01:33.038Z info: → [LaptopClinic] Laptops & Computers page 1: https://laptopclinic.co.ke/search?q=Laptops%20%26%20Computers&page=1
+2025-09-26T16:01:38.026Z info:   found 15 product blocks on page 1
+2025-09-26T16:01:38.471Z info:   updated: ACCESSORIES FOR CLEANING AIR LAPTOPS AND SCREENS
+2025-09-26T16:01:38.926Z info:   updated: 4GB DDR4 2666 LAPTOP
+2025-09-26T16:01:39.380Z info:   updated: 2 Pin Plug in Computer Power Cables & Connectors
+2025-09-26T16:01:39.821Z info:   updated: Silver Laptop Skins
+2025-09-26T16:01:40.275Z info:   updated: HP 2530p LAPTOP KEYBOARD
+2025-09-26T16:01:40.716Z info:   updated: laptop locks key
+2025-09-26T16:01:41.160Z info:   updated: 16.0 LED LAPTOP SCREENS
+2025-09-26T16:01:41.601Z info:   updated: 14.1 30pin CONNECTOR LAPTOP SCREEN
+2025-09-26T16:01:42.045Z info:   updated: ACER  Aspire 3810 - 4810 Laptop Keyboard
+2025-09-26T16:01:42.486Z info:   updated: LENOVO X220 LAPTOP  KEYBOARD
+2025-09-26T16:01:42.928Z info:   updated: LENOVO T420 LAPTOP KEYBOARD
+2025-09-26T16:01:43.367Z info:   updated: UNIVERSAL  LAPTOP ADAPTER 45W
+2025-09-26T16:01:43.810Z info:   updated: DELL E5420 LAPTOP  KEYBOARD
+2025-09-26T16:01:44.254Z info:   updated: DELL n4110 LAPTOP KEYBOARD
+2025-09-26T16:01:44.693Z info:   updated: Lenovo t61 LAPTOP  KEYBOARD
+2025-09-26T16:01:44.725Z info: Tor identity refreshed.
+2025-09-26T16:01:47.566Z info: → [LaptopClinic] Laptops & Computers page 2: https://laptopclinic.co.ke/search?q=Laptops%20%26%20Computers&page=2
+2025-09-26T16:01:53.358Z info:   found 20 product blocks on page 2
+2025-09-26T16:01:53.801Z info:   updated: 14 Inches Laptop Porch Bag
+2025-09-26T16:01:54.251Z info:   updated: Samsung N150 Laptop Battery
+2025-09-26T16:01:54.693Z info:   updated: LG 20V 2A Charger Laptop Adapter
+2025-09-26T16:01:55.135Z info:   updated: 12 Inches Laptop Porch Bag
+2025-09-26T16:01:55.575Z info:   updated: DELL D520 LAPTOP KEYBOARD
+2025-09-26T16:01:56.015Z info:   updated: 15 Inches Laptop Porch bag
+2025-09-26T16:01:56.462Z info:   updated: HP NC6100 Laptop Battery
+2025-09-26T16:01:56.902Z info:   updated: Logitech H540 USB Computer Headset with Noise- Cancellation
+2025-09-26T16:01:57.345Z info:   updated: lenovo t410 LAPTOP  keyboard
+2025-09-26T16:01:57.787Z info:   updated: 13.3 SLIM SMALL CONNECTOR LAPTOP SCREEN
+2025-09-26T16:01:58.237Z info:   updated: mouse pad with Anti-fray Stitching, Premium-Textured & Waterproof Computer Mousepad with Non-Slip Rubber Base, Gaming Mouse Mat for Laptop, Office & Home Black
+2025-09-26T16:01:58.696Z info:   updated: Portable Foldable Aluminium Alloy Laptop Stand
+2025-09-26T16:01:59.153Z info:   updated: 14.1 40 PIN CONNECTOR LAPTOP SCREEN
+2025-09-26T16:01:59.595Z info:   updated: Dell Inspiron 5521 and 3521  Laptop Keyboard
+2025-09-26T16:02:00.037Z info:   updated: GTB's Laptop CPU Fan Compatible with HP G62 G72 CQ56 CQ56z CQ62 CQ72 Laptop CPU Cooling Fan
+2025-09-26T16:02:00.480Z info:   updated: HP 18.5V 4.9A  5.5*2.5 LAPTOP ADAPTER
+2025-09-26T16:02:00.919Z info:   updated: TOSHIBA 19V 4.74A  5.5*2.5 LAPTOP ADAPTER
+2025-09-26T16:02:01.360Z info:   updated: Dell Inspiron 14Z-N411Z 13Z-N311Z Laptop Battery
+2025-09-26T16:02:01.799Z info:   updated: Lexar® 8GB 3200MHz DDR4 SODIMM Laptop RAM
+2025-09-26T16:02:02.240Z info:   updated: New Hp Folio 13-2000 laptop CPU fan
+2025-09-26T16:02:04.705Z info: → [LaptopClinic] Laptops & Computers page 3: https://laptopclinic.co.ke/search?q=Laptops%20%26%20Computers&page=3
+2025-09-26T16:02:10.356Z info:   found 20 product blocks on page 3
+2025-09-26T16:02:10.796Z info:   updated: DELL e5400 LAPTOP KEYBOARD
+2025-09-26T16:02:11.263Z info:   updated: Dell Latitude E5500 Replacement LAPTOP LCD Screen 15.4"
+2025-09-26T16:02:11.714Z info:   updated: New Hp Folio 13-2000 laptop CPU fan
+2025-09-26T16:02:12.158Z info:   updated: New HP Pavilion 15-N Series Laptop Touch Screen
+2025-09-26T16:02:12.629Z info:   updated: HP PROBOOK 6460B original laptop LCD screen cable
+2025-09-26T16:02:13.069Z info:   updated: Bluetooth USB Dongle Adapter CSR 4.0 for Desktop and Laptop
+2025-09-26T16:02:13.509Z info:   updated: HP Pavilion DV4 - DV5 - DV6 - CQ60 - Laptop Battery
+2025-09-26T16:02:13.952Z info:   updated: HP 620 – 625- 4320s – 4520s Laptop Battery Kenya
+2025-09-26T16:02:14.401Z info:   updated: SellZone Laptop Keyboard For Samsung NP-RV508 NP-RV510 NP-R517 NP-R523 NP-R525 NP-R528 NP-R530 Internal Laptop Keyboard  (Black)
+2025-09-26T16:02:14.845Z info:   updated: Cover Repair Part for Computer HP Pavilion g6, g6-2000 684164-001 -Black
+2025-09-26T16:02:15.289Z info:   updated: NEW for HP EliteBook 2540P 2540 US Laptop Keyboard black
+2025-09-26T16:02:15.729Z info:   updated: HP Elite x2 1013 G3 Tablet 13" FHD Touch Intel® Core™ i7-8650U + Gifts
+2025-09-26T16:02:16.175Z info:   updated: Lenovo IdeaPad 20V 6.75A 135W Laptop Charger
+2025-09-26T16:02:16.618Z info:   updated: Laptop Charger For Acer One Kav10 Kav60 19V 1.58A 30W
+2025-09-26T16:02:17.064Z info:   updated: Laptop CPU Cooling Fan for Toshiba TECRA A11 M10 UDQFC65E5DT0 New
+2025-09-26T16:02:17.505Z info:   updated: Laptop CPU Cooling Fan for Dell Inspiron 15R N5010 5010 M5010
+2025-09-26T16:02:17.948Z info:   updated: SONY 16V 4A  5.5*2.5 LAPTOP ADAPTER
+2025-09-26T16:02:18.390Z info:   updated: Targus CityLite 15.6 Inch Laptop Briefcase Shoulder Messenger Bag
+2025-09-26T16:02:18.833Z info:   updated: Laptop CPU Cooling Fan for Hp Probook 4320s 4321s 4326s 4420s 4421s 4426s
+2025-09-26T16:02:19.274Z info:   updated: New For Acer Aspire 5336 5736 5736G 5736Z Laptop CPU Cooling Fan DC2800092A0
+2025-09-26T16:02:19.306Z info: Tor identity refreshed.
+2025-09-26T16:02:21.434Z info: → [Nairobi Computer Shop] Laptops & Computers page 1: https://nairobicomputershop.co.ke/?s=Laptops%20%26%20Computers&post_type=product&paged=1
+2025-09-26T16:02:25.394Z info:   found 0 product blocks on page 1
+2025-09-26T16:02:25.395Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:02:25.395Z info: → [Nairobi Computer Shop] Laptops & Computers page 2: https://nairobicomputershop.co.ke/?s=Laptops%20%26%20Computers&post_type=product&paged=2
+2025-09-26T16:02:29.727Z info:   found 0 product blocks on page 2
+2025-09-26T16:02:29.728Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:02:29.764Z info: === Category: Computer Gadgets ===
+2025-09-26T16:02:30.045Z info: → [LaptopClinic] Computer Gadgets page 1: https://laptopclinic.co.ke/search?q=Computer%20Gadgets&page=1
+2025-09-26T16:02:33.791Z info:   found 2 product blocks on page 1
+2025-09-26T16:02:34.237Z info:   updated: SellZone Laptop Keyboard For Samsung NP-RV508 NP-RV510 NP-R517 NP-R523 NP-R525 NP-R528 NP-R530 Internal Laptop Keyboard  (Black)
+2025-09-26T16:02:34.680Z info:   updated: Microsoft Windows 7 – Single License
+2025-09-26T16:02:34.711Z info: Tor identity refreshed.
+2025-09-26T16:02:37.931Z info: → [LaptopClinic] Computer Gadgets page 2: https://laptopclinic.co.ke/search?q=Computer%20Gadgets&page=2
+2025-09-26T16:02:40.670Z info:   found 0 product blocks on page 2
+2025-09-26T16:02:40.671Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:02:40.671Z info: → [LaptopClinic] Computer Gadgets page 3: https://laptopclinic.co.ke/search?q=Computer%20Gadgets&page=3
+2025-09-26T16:02:43.133Z info:   found 0 product blocks on page 3
+2025-09-26T16:02:43.134Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:02:43.241Z info: → [Nairobi Computer Shop] Computer Gadgets page 1: https://nairobicomputershop.co.ke/?s=Computer%20Gadgets&post_type=product&paged=1
+2025-09-26T16:02:48.168Z info:   found 0 product blocks on page 1
+2025-09-26T16:02:48.168Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:02:48.169Z info: → [Nairobi Computer Shop] Computer Gadgets page 2: https://nairobicomputershop.co.ke/?s=Computer%20Gadgets&post_type=product&paged=2
+2025-09-26T16:02:51.948Z info:   found 0 product blocks on page 2
+2025-09-26T16:02:51.948Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:02:51.990Z info: === Category: Security Gadgets ===
+2025-09-26T16:02:52.280Z info: → [LaptopClinic] Security Gadgets page 1: https://laptopclinic.co.ke/search?q=Security%20Gadgets&page=1
+2025-09-26T16:02:55.359Z info:   found 1 product blocks on page 1
+2025-09-26T16:02:55.802Z info:   updated: Microsoft Windows 7 – Single License
+2025-09-26T16:02:55.830Z info: Tor identity refreshed.
+2025-09-26T16:02:58.857Z info: → [LaptopClinic] Security Gadgets page 2: https://laptopclinic.co.ke/search?q=Security%20Gadgets&page=2
+2025-09-26T16:03:01.015Z info:   found 0 product blocks on page 2
+2025-09-26T16:03:01.016Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:03:01.016Z info: → [LaptopClinic] Security Gadgets page 3: https://laptopclinic.co.ke/search?q=Security%20Gadgets&page=3
+2025-09-26T16:03:03.973Z info:   found 0 product blocks on page 3
+2025-09-26T16:03:03.973Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:03:04.163Z info: → [Nairobi Computer Shop] Security Gadgets page 1: https://nairobicomputershop.co.ke/?s=Security%20Gadgets&post_type=product&paged=1
+2025-09-26T16:03:10.064Z info:   found 0 product blocks on page 1
+2025-09-26T16:03:10.065Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:03:10.065Z info: → [Nairobi Computer Shop] Security Gadgets page 2: https://nairobicomputershop.co.ke/?s=Security%20Gadgets&post_type=product&paged=2
+2025-09-26T16:03:13.982Z info:   found 0 product blocks on page 2
+2025-09-26T16:03:13.983Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T16:03:14.597Z info: 🎉 All platforms done
+2025-09-26T17:07:35.610Z info: ✅ MongoDB connected
+2025-09-26T17:07:35.625Z info: Using Tor on port 9050
+2025-09-26T17:07:37.279Z info: === Category: Fibre ===
+2025-09-26T17:07:37.702Z info: → [Slot Nigeria] Fibre page 1: https://slot.ng/catalogsearch/result/?q=Fibre&p=1
+2025-09-26T17:07:49.323Z info:   found 0 product blocks on page 1
+2025-09-26T17:07:49.324Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:07:49.324Z info: → [Slot Nigeria] Fibre page 2: https://slot.ng/catalogsearch/result/?q=Fibre&p=2
+2025-09-26T17:07:52.491Z info:   found 0 product blocks on page 2
+2025-09-26T17:07:52.496Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:07:52.716Z info: → [PC International] Fibre page 1: https://pcinternational.co.za/?s=Fibre&post_type=product&paged=1
+2025-09-26T17:07:56.304Z info:   found 0 product blocks on page 1
+2025-09-26T17:07:56.304Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:07:56.305Z info: → [PC International] Fibre page 2: https://pcinternational.co.za/?s=Fibre&post_type=product&paged=2
+2025-09-26T17:07:58.042Z info:   found 0 product blocks on page 2
+2025-09-26T17:07:58.043Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:07:58.129Z info: → [Laptop Clinic Kenya] Fibre page 1: https://laptopclinic.co.ke/search?q=Fibre&page=1
+2025-09-26T17:08:04.872Z info:   found 0 product blocks on page 1
+2025-09-26T17:08:04.872Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:08:04.872Z info: → [Laptop Clinic Kenya] Fibre page 2: https://laptopclinic.co.ke/search?q=Fibre&page=2
+2025-09-26T17:08:08.306Z info:   found 0 product blocks on page 2
+2025-09-26T17:08:08.306Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:08:08.361Z info: === Category: Hotspot ===
+2025-09-26T17:08:08.635Z info: → [Slot Nigeria] Hotspot page 1: https://slot.ng/catalogsearch/result/?q=Hotspot&p=1
+2025-09-26T17:08:15.745Z info:   found 0 product blocks on page 1
+2025-09-26T17:08:15.747Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:08:15.748Z info: → [Slot Nigeria] Hotspot page 2: https://slot.ng/catalogsearch/result/?q=Hotspot&p=2
+2025-09-26T17:08:18.818Z info:   found 0 product blocks on page 2
+2025-09-26T17:08:18.819Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:08:18.911Z info: → [PC International] Hotspot page 1: https://pcinternational.co.za/?s=Hotspot&post_type=product&paged=1
+2025-09-26T17:08:21.483Z info:   found 0 product blocks on page 1
+2025-09-26T17:08:21.484Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:08:21.484Z info: → [PC International] Hotspot page 2: https://pcinternational.co.za/?s=Hotspot&post_type=product&paged=2
+2025-09-26T17:08:23.228Z info:   found 0 product blocks on page 2
+2025-09-26T17:08:23.229Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:08:23.324Z info: → [Laptop Clinic Kenya] Hotspot page 1: https://laptopclinic.co.ke/search?q=Hotspot&page=1
+2025-09-26T17:08:28.141Z info:   found 0 product blocks on page 1
+2025-09-26T17:08:28.141Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:08:28.142Z info: → [Laptop Clinic Kenya] Hotspot page 2: https://laptopclinic.co.ke/search?q=Hotspot&page=2
+2025-09-26T17:08:31.443Z info:   found 0 product blocks on page 2
+2025-09-26T17:08:31.447Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:08:31.524Z info: === Category: Networking Routers ===
+2025-09-26T17:08:31.800Z info: → [Slot Nigeria] Networking Routers page 1: https://slot.ng/catalogsearch/result/?q=Networking%20Routers&p=1
+2025-09-26T17:08:53.891Z info:   found 0 product blocks on page 1
+2025-09-26T17:08:53.891Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:08:53.891Z info: → [Slot Nigeria] Networking Routers page 2: https://slot.ng/catalogsearch/result/?q=Networking%20Routers&p=2
+2025-09-26T17:09:12.673Z info:   found 0 product blocks on page 2
+2025-09-26T17:09:12.676Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:09:12.836Z info: → [PC International] Networking Routers page 1: https://pcinternational.co.za/?s=Networking%20Routers&post_type=product&paged=1
+2025-09-26T17:09:15.113Z info:   found 0 product blocks on page 1
+2025-09-26T17:09:15.113Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:09:15.113Z info: → [PC International] Networking Routers page 2: https://pcinternational.co.za/?s=Networking%20Routers&post_type=product&paged=2
+2025-09-26T17:09:16.670Z info:   found 0 product blocks on page 2
+2025-09-26T17:09:16.670Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:09:16.769Z info: → [Laptop Clinic Kenya] Networking Routers page 1: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=1
+2025-09-26T17:09:22.626Z info:   found 0 product blocks on page 1
+2025-09-26T17:09:22.636Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:09:22.636Z info: → [Laptop Clinic Kenya] Networking Routers page 2: https://laptopclinic.co.ke/search?q=Networking%20Routers&page=2
+2025-09-26T17:09:26.056Z info:   found 0 product blocks on page 2
+2025-09-26T17:09:26.057Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:09:26.084Z info: === Category: Networking Accessories ===
+2025-09-26T17:09:26.354Z info: → [Slot Nigeria] Networking Accessories page 1: https://slot.ng/catalogsearch/result/?q=Networking%20Accessories&p=1
+2025-09-26T17:09:46.236Z info:   found 0 product blocks on page 1
+2025-09-26T17:09:46.237Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:09:46.237Z info: → [Slot Nigeria] Networking Accessories page 2: https://slot.ng/catalogsearch/result/?q=Networking%20Accessories&p=2
+2025-09-26T17:10:04.811Z info:   found 0 product blocks on page 2
+2025-09-26T17:10:04.811Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:10:04.964Z info: → [PC International] Networking Accessories page 1: https://pcinternational.co.za/?s=Networking%20Accessories&post_type=product&paged=1
+2025-09-26T17:10:07.208Z info:   found 0 product blocks on page 1
+2025-09-26T17:10:07.208Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:10:07.208Z info: → [PC International] Networking Accessories page 2: https://pcinternational.co.za/?s=Networking%20Accessories&post_type=product&paged=2
+2025-09-26T17:10:08.792Z info:   found 0 product blocks on page 2
+2025-09-26T17:10:08.792Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:10:08.884Z info: → [Laptop Clinic Kenya] Networking Accessories page 1: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=1
+2025-09-26T17:10:15.277Z info:   found 0 product blocks on page 1
+2025-09-26T17:10:15.299Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:10:15.339Z info: → [Laptop Clinic Kenya] Networking Accessories page 2: https://laptopclinic.co.ke/search?q=Networking%20Accessories&page=2
+2025-09-26T17:10:19.622Z info:   found 0 product blocks on page 2
+2025-09-26T17:10:19.622Z warn: ⚠️ No products. Possible selector or captcha.
+2025-09-26T17:10:19.654Z info: === Category: Laptops & Computers ===
+2025-09-26T17:10:19.957Z info: → [Slot Nigeria] Laptops & Computers page 1: https://slot.ng/catalogsearch/result/?q=Laptops%20%26%20Computers&p=1
+2025-09-26T17:10:24.090Z info: SIGINT received. Closing...
+2025-09-26T17:16:28.416Z error: Server record does not share hostname with parent URI
+2025-09-26T17:17:09.989Z error: Server record does not share hostname with parent URI
+2025-09-26T17:18:04.675Z error: Server record does not share hostname with parent URI

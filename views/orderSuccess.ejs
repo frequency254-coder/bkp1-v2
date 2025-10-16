@@ -1,0 +1,83 @@
+<div class="container my-5 d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card border-0 shadow-lg p-5 text-center"
+         style="background: radial-gradient(circle at top, #0a0a0a, #000 80%);
+                border-radius: 20px;
+                box-shadow: 0 0 30px rgba(0,255,150,0.2), 0 0 60px rgba(0,255,255,0.1);
+                max-width: 600px; width: 100%;">
+
+        <!-- ✅ Animated Success Icon -->
+        <div class="mb-4">
+            <div class="checkmark-circle mx-auto mb-3">
+                <i class="bi bi-check-lg"></i>
+            </div>
+        </div>
+
+        <!-- 📝 Confirmation Text -->
+        <h2 class="fw-bold text-neon mb-3">Order Confirmed!</h2>
+        <p class="lead text-light mb-2">
+            Thank you, <span class="fw-semibold text-info"><%= customerName %></span>!
+        </p>
+        <p class="text-muted mb-4">
+            Your order has been successfully placed and will be delivered to your address soon.<br>
+            <span class="text-success">Payment will be made on delivery.</span>
+        </p>
+
+        <!-- 🛍️ Call-to-Action -->
+        <a href="/shop" class="btn btn-neon px-4 py-2">
+            <i class="bi bi-shop me-2"></i> Continue Shopping
+        </a>
+    </div>
+</div>
+
+<style>
+    .text-neon {
+        color: #00ffff;
+        text-shadow: 0 0 10px #00ffff, 0 0 30px #00ff99;
+    }
+
+    .btn-neon {
+        background: linear-gradient(90deg, #00ffff, #00ff99);
+        border: none;
+        color: #000;
+        font-weight: 600;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    }
+    .btn-neon:hover {
+        box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
+        transform: translateY(-2px);
+    }
+
+    .checkmark-circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 4px solid rgba(0,255,150,0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        animation: pulseGlow 2s infinite;
+    }
+    .checkmark-circle i {
+        color: #00ff99;
+        font-size: 2.5rem;
+        animation: popIn 0.6s ease-out forwards;
+    }
+
+    @keyframes pulseGlow {
+        0%, 100% { box-shadow: 0 0 10px rgba(0,255,150,0.5), 0 0 20px rgba(0,255,255,0.2); }
+        50% { box-shadow: 0 0 25px rgba(0,255,150,0.8), 0 0 50px rgba(0,255,255,0.4); }
+    }
+
+    @keyframes popIn {
+        0% { transform: scale(0); opacity: 0; }
+        80% { transform: scale(1.1); opacity: 1; }
+        100% { transform: scale(1); }
+    }
+
+    body {
+        background-color: #000;
+    }
+</style>
